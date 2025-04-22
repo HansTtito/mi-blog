@@ -58,9 +58,8 @@ Aquí te dejo una guía con algunos de los contenidos básicos y útiles para co
 
 Si tienes preguntas, sugerencias o simplemente quieres conversar sobre programación, ciencia o visualización de datos, puedes escribirme:
 
-- [LinkedIn](https://linkedin.com/in/hans-ttito)
-- [GitHub](https://github.com/htitto)
-- [Email](mailto:hans.ttito@alumnos.udec.cl)
+- [GitHub](https://github.com/HansTtito)
+- [Email](mailto:hansttito06@gmail.com)
 
 ---
 
