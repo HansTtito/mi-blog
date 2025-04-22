@@ -2,13 +2,15 @@
    Variables CSS
    ====================== */
    :root {
-    --primary-color: #6366f1;
-    --secondary-color: #a855f7;
-    --accent-color: #ec4899;
+    /* Palette más armoniosa */
+    --primary-color: #6b6bc6;
+    --secondary-color: #9333ea;
+    --accent-color: #e11d48;
     --text-color: #334155;
     --bg-color: #ffffff;
     --gray-light: #f8fafc;
     --gray-medium: #e2e8f0;
+    --gray-dark: #64748b;
     --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
@@ -23,6 +25,10 @@
   body {
     color: var(--text-color);
     line-height: 1.6;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
   }
   
   .page-layout-custom {
@@ -44,8 +50,9 @@
      ====================== */
   .navbar {
     box-shadow: var(--shadow-sm);
-    padding: 0.5rem 0;
-    background-color: var(--gray-light);
+    padding: 0.75rem 0;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--gray-medium);
   }
   
   .navbar-brand {
@@ -53,7 +60,7 @@
     font-size: 1.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
-    background-clip: var(--text-color);
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
@@ -62,6 +69,7 @@
     transition: var(--transition);
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
+    color: var(--text-color);
   }
   
   .navbar-nav .nav-link:hover {
@@ -77,7 +85,7 @@
     color: white;
     padding: 4rem 2rem;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
     margin: 2rem 0 3rem;
     box-shadow: var(--shadow-lg);
   }
@@ -119,6 +127,7 @@
     padding: 2rem;
     background: var(--gray-light);
     border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
   }
   
   .content-section h2 {
@@ -129,12 +138,11 @@
   
   blockquote {
     border-left: 4px solid var(--accent-color);
-    padding-left: 1.5rem;
+    padding: 1.5rem;
     margin: 2rem 0;
     font-style: italic;
     color: var(--text-color);
     background: white;
-    padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-sm);
   }
@@ -153,14 +161,14 @@
     padding: 2rem;
     background: white;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     text-align: center;
   }
   
   .feature:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
   }
   
   .feature h3 {
@@ -179,15 +187,16 @@
   .quarto-post {
     background: white;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     transition: var(--transition);
     overflow: hidden;
     margin-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   
   .quarto-post:hover {
     transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-md);
   }
   
   .quarto-post .thumbnail img {
@@ -196,14 +205,19 @@
     object-fit: cover;
   }
   
+  .quarto-post .body {
+    padding: 1.5rem;
+  }
+  
   .post-title {
     font-weight: 700;
     font-size: 1.5rem;
     margin: 1rem 0;
+    color: var(--text-color);
   }
   
   .post-description {
-    color: #64748b;
+    color: var(--gray-dark);
     font-size: 0.95rem;
     margin-bottom: 1rem;
   }
@@ -230,31 +244,34 @@
     color: white;
   }
   
-  /* Post text color overrides */
-  .quarto-post .post-title {
-    color: white;
+  /* Eliminamos los colores que forzaban texto blanco en los posts */
+  /* Añadimos estilos específicos para las tarjetas de post */
+  .quarto-post .listing-title {
+    color: var(--text-color);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
   }
   
-  .quarto-post .post-description {
-    color: white;
-  }
-  
-  .quarto-post p, 
-  .quarto-post h2, 
-  .quarto-post h3, 
-  .quarto-post h4,
+  .quarto-post .listing-subtitle,
   .quarto-post .listing-description {
-    color: white;
+    color: var(--gray-dark);
   }
   
   .quarto-post .listing-category,
   .quarto-post .listing-date,
   .quarto-post .listing-author {
-    color: white;
+    color: var(--gray-dark);
+    font-size: 0.85rem;
   }
   
   .quarto-post a:not(.post-category) {
-    color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .quarto-post a:not(.post-category):hover {
+    text-decoration: underline;
   }
   
   /* ======================
@@ -289,6 +306,7 @@
     height: auto;
     border-radius: var(--border-radius);
     margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
   }
   
   .quarto-post-contents pre {
@@ -304,9 +322,10 @@
      ====================== */
   .footer {
     background: var(--gray-light);
-    padding: 1rem;
-    margin-top: 1rem;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
     text-align: center;
+    border-top: 1px solid var(--gray-medium);
   }
   
   .footer-contents {
@@ -320,10 +339,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     text-align: center;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding: 1rem 0;
     background-color: var(--gray-light);
   }
   
@@ -371,6 +389,7 @@
       --bg-color: #0f172a;
       --gray-light: #1e293b;
       --gray-medium: #334155;
+      --gray-dark: #94a3b8;
     }
     
     body {
@@ -378,12 +397,31 @@
     }
     
     .quarto-post,
-    .feature,
-    .content-section {
+    .feature {
       background: var(--gray-light);
     }
     
+    .quarto-post .post-title,
+    .quarto-post .listing-title {
+      color: #e2e8f0;
+    }
+    
+    .quarto-post .post-description,
+    .quarto-post .listing-description {
+      color: #94a3b8;
+    }
+    
     blockquote {
+      background: var(--gray-medium);
+      color: #e2e8f0;
+    }
+    
+    .navbar {
+      background-color: var(--bg-color);
+      border-bottom: 1px solid var(--gray-medium);
+    }
+    
+    .post-category {
       background: var(--gray-medium);
     }
   }
