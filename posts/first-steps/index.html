@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
+<meta name="author" content="Hans Ttito">
 <meta name="dcterms.date" content="2025-04-21">
+<meta name="description" content="Una introducción para quienes vienen de otras disciplinas y quieren iniciarse en la programación.">
 
-<title>Post With Code</title>
+<title>Comenzar aquí</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,14 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6c49c5477b92c77c9eb341f9299c235f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b3aed8deb8408878d0e4e165d993d59e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-4913dc41de1e81582468a3e935c6e3dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-b3aed8deb8408878d0e4e165d993d59e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-451c895cda47d75efce66772fc31bdcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,167 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    window.setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      window.setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    window.hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(darkModeDefault) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const darkModeDefault = false;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-    };
-    // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -278,33 +115,22 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Post With Code</li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post With Code</h1>
-                                <div class="quarto-categories">
+      <h1 class="title">Comenzar aquí</h1>
+                  <div>
+        <div class="description">
+          Una introducción para quienes vienen de otras disciplinas y quieren iniciarse en la programación.
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
               </div>
                   </div>
   </div>
@@ -315,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Hans Ttito </p>
             </div>
     </div>
       
@@ -332,18 +158,8 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -351,27 +167,85 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="bienvenido-a-mi-blog" class="level2">
+<h2 class="anchored" data-anchor-id="bienvenido-a-mi-blog">👋 ¡Bienvenido a mi blog!</h2>
+<p>Soy Hans Ttito, biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción. A lo largo de mi carrera he usado la programación como una herramienta para resolver preguntas científicas, automatizar procesos y explorar el impacto del cambio climático en los ecosistemas marinos.</p>
+<p>Este blog nace del deseo de <strong>compartir lo que he aprendido con quienes no necesariamente vienen del mundo de la informática</strong>. Si eres biólogo, sociólogo, estudiante, investigador o simplemente curioso, estás en el lugar correcto.</p>
+<hr>
+</section>
+<section id="para-quién-es-este-blog" class="level2">
+<h2 class="anchored" data-anchor-id="para-quién-es-este-blog">🧭 ¿Para quién es este blog?</h2>
+<ul>
+<li>Personas sin experiencia previa en programación</li>
+<li>Investigadores o estudiantes que trabajan con datos</li>
+<li>Profesionales que quieren automatizar tareas repetitivas</li>
+<li>Curiosos que quieren usar la tecnología como herramienta</li>
+</ul>
+<hr>
+</section>
+<section id="por-dónde-empezar" class="level2">
+<h2 class="anchored" data-anchor-id="por-dónde-empezar">🚀 ¿Por dónde empezar?</h2>
+<p>Aquí te dejo una guía con algunos de los contenidos básicos y útiles para comenzar:</p>
+<section id="introducción-a-la-programación" class="level3">
+<h3 class="anchored" data-anchor-id="introducción-a-la-programación">📘 Introducción a la programación</h3>
+<ul>
+<li>👉 <a href="tutoriales/que-es-programacion.qmd">¿Qué es la programación y por qué aprenderla?</a></li>
+<li>👉 <a href="tutoriales/conceptos-basicos.qmd">Conceptos clave explicados fácil</a></li>
+</ul>
+</section>
+<section id="primeros-pasos-en-r-y-python" class="level3">
+<h3 class="anchored" data-anchor-id="primeros-pasos-en-r-y-python">🛠️ Primeros pasos en R y Python</h3>
+<ul>
+<li>👉 <a href="tutoriales/primer-script-r.qmd">Mi primer script en R</a></li>
+<li>👉 <a href="tutoriales/primer-script-python.qmd">Mi primer script en Python</a></li>
+</ul>
+</section>
+<section id="automatización-útil" class="level3">
+<h3 class="anchored" data-anchor-id="automatización-útil">🤖 Automatización útil</h3>
+<ul>
+<li>👉 <a href="tutoriales/automatizacion.qmd">Cómo automatizar tareas con código</a></li>
+<li>👉 <a href="tutoriales/limpieza-datos.qmd">Ejemplo práctico: limpiar datos de Excel automáticamente</a></li>
+</ul>
+</section>
+<section id="visualización-de-datos" class="level3">
+<h3 class="anchored" data-anchor-id="visualización-de-datos">📊 Visualización de datos</h3>
+<ul>
+<li>👉 <a href="tutoriales/ggplot2-intro.qmd">Graficar datos en R con ggplot2</a></li>
+<li>👉 <a href="tutoriales/plotly.qmd">Visualización interactiva con plotly</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="consejos-para-aprender-a-programar" class="level2">
+<h2 class="anchored" data-anchor-id="consejos-para-aprender-a-programar">💡 Consejos para aprender a programar</h2>
+<ul>
+<li>No necesitas ser experto en matemáticas, solo tener curiosidad y paciencia.</li>
+<li>Copiar y modificar código es parte del aprendizaje.</li>
+<li>Los errores no son fallas, ¡son parte del camino!</li>
+<li>Empieza con pequeños proyectos relacionados con lo que te apasiona.</li>
+</ul>
+<hr>
+</section>
+<section id="conectemos" class="level2">
+<h2 class="anchored" data-anchor-id="conectemos">🤝 Conectemos</h2>
+<p>Si tienes preguntas, sugerencias o simplemente quieres conversar sobre programación, ciencia o visualización de datos, puedes escribirme:</p>
+<ul>
+<li><a href="https://github.com/HansTtito">GitHub</a></li>
+<li><a href="mailto:hansttito06@gmail.com">Email</a></li>
+</ul>
+<hr>
+</section>
+<section id="y-ahora" class="level2">
+<h2 class="anchored" data-anchor-id="y-ahora">🌟 ¿Y ahora?</h2>
+<p>Navega por las secciones del blog, guarda tus artículos favoritos y no dudes en escribirme si te pierdes en el camino. ¡Estoy aquí para ayudarte!</p>
+<hr>
 
-<p>This is a post with executable code.</p>
 
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
