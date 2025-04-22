@@ -1,0 +1,56 @@
+---
+title: "Programación para no programadores"
+page-layout: custom
+toc: false
+---
+
+::: {.hero-banner}
+# Aprendiendo juntos a programar sin miedo
+
+### Tu guía amigable al mundo del código
+
+[Comienza aquí](/posts/primeros-pasos) [Ver todos los posts](/posts.html)
+:::
+
+::: {.content-section}
+## ¿Por qué este blog?
+
+Durante años, trabajé en [tu campo anterior] y siempre pensé que la programación era algo inalcanzable. Un día decidí intentarlo y descubrí que:
+
+> "La programación no es sobre ser un genio matemático, es sobre resolver problemas de manera creativa."
+
+Ahora mi misión es ayudarte a descubrir que tú también puedes programar, sin importar tu background.
+:::
+
+::: {.features}
+## Lo que hace único a este blog
+
+:::: {.feature}
+### 🎯 Sin jerga técnica
+Explicaciones claras y ejemplos del mundo real
+::::
+
+:::: {.feature}
+### 🤝 Comunidad amigable
+Un espacio seguro para hacer preguntas "tontas"
+::::
+
+:::: {.feature}
+### 📚 Aprende a tu ritmo
+Contenido organizado de básico a avanzado
+::::
+:::
+
+::: {.latest-posts}
+## Comienza tu viaje
+
+### [¿Por qué todos deberían aprender a programar?](/posts/por-que-programar)
+Descubre cómo la programación puede cambiar tu forma de pensar
+
+### [Tu primer programa en 10 minutos](/posts/primer-programa)
+¡Sí, en solo 10 minutos escribirás tu primer código!
+
+### [Los 5 mitos sobre programación que debes olvidar](/posts/mitos-programacion)
+Desmintiendo las creencias que te alejan del código
+:::
+

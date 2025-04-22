@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: ""
+  description: "Un blog sobre R, Python y más..."
+  favicon: "favicon.ico"
+  
+  navbar:
+    background: primary
+    search: true
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Sobre mí"
+        href: about.qmd
+      - text: "Blog"
+        href: posts.qmd
+    right:
+      - icon: github
+        href: https://github.com/HansTtito
+      - icon: linkedin
+        href: https://linkedin.com/in/hansttito
+  
+  sidebar:
+    style: "floating"
+    search: true
+    
+  page-footer:
+    left: "© 2025 Hans Ttito"
+    right:
+      - icon: github
+        href: https://github.com/HansTtito
+      - icon: linkedin
+        href: https://linkedin.com/in/hansttito
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true

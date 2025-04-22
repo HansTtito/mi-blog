@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nApr 21, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nApr 18, 2025\n\n\nTristan O’Malley\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "Soy Biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción (Chile). Me especializo en estudiar el impacto del salmón Chinook (Oncorhynchus tshawytscha) sobre peces pelágicos pequeños en el sur de Chile, explorando cómo las especies invasoras, el cambio climático y las actividades humanas afectan la sostenibilidad de nuestros recursos marinos.\n\n\nComo muchos científicos, mi camino en la programación nació de una necesidad: analizar grandes volúmenes de datos ecológicos y pesqueros sin perderme en el proceso. Lo que comenzó como una herramienta se convirtió en una pasión. Descubrí que con R, Python y Quarto podía:\n\n🔄 Automatizar tareas repetitivas que antes me tomaban días\n📊 Crear visualizaciones que comunican ciencia de manera clara\n🧮 Desarrollar modelos bioenergéticos y demográficos complejos\n🖥️ Construir dashboards y aplicaciones reproducibles\n\nLa programación no es solo una herramienta técnica; es un puente entre la ciencia, la gestión pesquera y la sociedad.\n\n\n\nSé lo intimidante que puede ser empezar a programar, especialmente cuando tu formación es en ciencias naturales. Por eso creé este blog: para compartir lo que aprendo de manera accesible y práctica. Aquí encontrarás:\n\n🐟 Aplicaciones prácticas de R y Python en ciencias marinas\n📊 Tutoriales paso a paso sin jerga técnica innecesaria\n🌍 Ejemplos reales de análisis de datos ecológicos\n📦 Recetas para automatizar tu flujo de trabajo científico\n\nMi misión es desmitificar la programación y mostrar que cualquier científico puede aprender a codificar, sin importar su background técnico.\n\n\n\nCuando no estoy programando o analizando datos, me encontrarás:\n\n📖 Investigando sobre ecología trófica y especies invasoras\n🎣 En terreno, recolectando muestras con pescadores artesanales\n☕ Pensando en cómo la ciencia puede contribuir a la conservación marina\n\n\n\n\nSi eres científico y quieres aprender a programar, o si ya programas y te interesa la ecología marina, me encantaría conectar contigo. Puedes encontrarme en LinkedIn o escribirme a kvttitos@gmail.com.\n¿Tienes datos biológicos que necesitas procesar? ¿Quieres aprender a modelar una red trófica? ¿O simplemente necesitas ayuda para dar tus primeros pasos en programación? ¡Estoy aquí para ayudarte!"
+  },
+  {
+    "objectID": "about.html#hola-soy-hans-ttito",
+    "href": "about.html#hola-soy-hans-ttito",
+    "title": "Sobre mí",
+    "section": "",
+    "text": "Soy Biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción (Chile). Me especializo en estudiar el impacto del salmón Chinook (Oncorhynchus tshawytscha) sobre peces pelágicos pequeños en el sur de Chile, explorando cómo las especies invasoras, el cambio climático y las actividades humanas afectan la sostenibilidad de nuestros recursos marinos.\n\n\nComo muchos científicos, mi camino en la programación nació de una necesidad: analizar grandes volúmenes de datos ecológicos y pesqueros sin perderme en el proceso. Lo que comenzó como una herramienta se convirtió en una pasión. Descubrí que con R, Python y Quarto podía:\n\n🔄 Automatizar tareas repetitivas que antes me tomaban días\n📊 Crear visualizaciones que comunican ciencia de manera clara\n🧮 Desarrollar modelos bioenergéticos y demográficos complejos\n🖥️ Construir dashboards y aplicaciones reproducibles\n\nLa programación no es solo una herramienta técnica; es un puente entre la ciencia, la gestión pesquera y la sociedad.\n\n\n\nSé lo intimidante que puede ser empezar a programar, especialmente cuando tu formación es en ciencias naturales. Por eso creé este blog: para compartir lo que aprendo de manera accesible y práctica. Aquí encontrarás:\n\n🐟 Aplicaciones prácticas de R y Python en ciencias marinas\n📊 Tutoriales paso a paso sin jerga técnica innecesaria\n🌍 Ejemplos reales de análisis de datos ecológicos\n📦 Recetas para automatizar tu flujo de trabajo científico\n\nMi misión es desmitificar la programación y mostrar que cualquier científico puede aprender a codificar, sin importar su background técnico.\n\n\n\nCuando no estoy programando o analizando datos, me encontrarás:\n\n📖 Investigando sobre ecología trófica y especies invasoras\n🎣 En terreno, recolectando muestras con pescadores artesanales\n☕ Pensando en cómo la ciencia puede contribuir a la conservación marina\n\n\n\n\nSi eres científico y quieres aprender a programar, o si ya programas y te interesa la ecología marina, me encantaría conectar contigo. Puedes encontrarme en LinkedIn o escribirme a kvttitos@gmail.com.\n¿Tienes datos biológicos que necesitas procesar? ¿Quieres aprender a modelar una red trófica? ¿O simplemente necesitas ayuda para dar tus primeros pasos en programación? ¡Estoy aquí para ayudarte!"
+  },
+  {
+    "objectID": "index.html#por-qué-este-blog",
+    "href": "index.html#por-qué-este-blog",
+    "title": "Programación para no programadores",
+    "section": "¿Por qué este blog?",
+    "text": "¿Por qué este blog?\nDurante años, trabajé en [tu campo anterior] y siempre pensé que la programación era algo inalcanzable. Un día decidí intentarlo y descubrí que:\n\n“La programación no es sobre ser un genio matemático, es sobre resolver problemas de manera creativa.”\n\nAhora mi misión es ayudarte a descubrir que tú también puedes programar, sin importar tu background."
+  },
+  {
+    "objectID": "index.html#lo-que-hace-único-a-este-blog",
+    "href": "index.html#lo-que-hace-único-a-este-blog",
+    "title": "Programación para no programadores",
+    "section": "Lo que hace único a este blog",
+    "text": "Lo que hace único a este blog\n\n🎯 Sin jerga técnica\nExplicaciones claras y ejemplos del mundo real\n\n\n🤝 Comunidad amigable\nUn espacio seguro para hacer preguntas “tontas”\n\n\n📚 Aprende a tu ritmo\nContenido organizado de básico a avanzado"
+  },
+  {
+    "objectID": "index.html#comienza-tu-viaje",
+    "href": "index.html#comienza-tu-viaje",
+    "title": "Programación para no programadores",
+    "section": "Comienza tu viaje",
+    "text": "Comienza tu viaje\n\n¿Por qué todos deberían aprender a programar?\nDescubre cómo la programación puede cambiar tu forma de pensar\n\n\nTu primer programa en 10 minutos\n¡Sí, en solo 10 minutos escribirás tu primer código!\n\n\nLos 5 mitos sobre programación que debes olvidar\nDesmintiendo las creencias que te alejan del código"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]
