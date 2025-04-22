@@ -45,6 +45,7 @@
   .navbar {
     box-shadow: var(--shadow-sm);
     padding: 0.5rem 0;
+    background-color: var(--gray-light);
   }
   
   .navbar-brand {
@@ -52,6 +53,7 @@
     font-size: 1.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
+    background-clip: var(--text-color);
     -webkit-text-fill-color: transparent;
   }
   
@@ -228,6 +230,33 @@
     color: white;
   }
   
+  /* Post text color overrides */
+  .quarto-post .post-title {
+    color: white;
+  }
+  
+  .quarto-post .post-description {
+    color: white;
+  }
+  
+  .quarto-post p, 
+  .quarto-post h2, 
+  .quarto-post h3, 
+  .quarto-post h4,
+  .quarto-post .listing-description {
+    color: white;
+  }
+  
+  .quarto-post .listing-category,
+  .quarto-post .listing-date,
+  .quarto-post .listing-author {
+    color: white;
+  }
+  
+  .quarto-post a:not(.post-category) {
+    color: white;
+  }
+  
   /* ======================
      Artículo Individual
      ====================== */
@@ -275,8 +304,8 @@
      ====================== */
   .footer {
     background: var(--gray-light);
-    padding: 3rem 0;
-    margin-top: 4rem;
+    padding: 1rem;
+    margin-top: 1rem;
     text-align: center;
   }
   
@@ -284,6 +313,32 @@
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 1rem;
+  }
+  
+  .nav-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: var(--gray-light);
+  }
+  
+  /* ======================
+     Animaciones
+     ====================== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .quarto-post,
+  .feature,
+  .content-section {
+    animation: fadeIn 0.6s ease-out forwards;
   }
   
   /* ======================
@@ -305,20 +360,6 @@
     .navbar-nav {
       text-align: center;
     }
-  }
-  
-  /* ======================
-     Animaciones
-     ====================== */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .quarto-post,
-  .feature,
-  .content-section {
-    animation: fadeIn 0.6s ease-out forwards;
   }
   
   /* ======================

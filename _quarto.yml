@@ -23,10 +23,19 @@ website:
       - icon: linkedin
         href: https://linkedin.com/in/hansttito
   
-  sidebar:
-    style: "floating"
-    search: true
+  # sidebar:
+  #   style: "floating"
+  #   search: true
+  #   contents:
+  #     - section: "Blog"
+  #       contents:
+  #         - posts.qmd
+  #     - section: "Recursos"
+  #       contents:
+  #         - text: "Enlaces útiles"
+  #           href: resources.qmd
     
+  
   page-footer:
     left: "© 2025 Hans Ttito"
     right:
@@ -37,8 +46,5 @@ website:
 
 format:
   html:
-    theme: 
-      light: cosmo
-      dark: darkly
+    default-theme: darkly
     css: styles.css
-    toc: true

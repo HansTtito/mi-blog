@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Programación para no programadores</title>
+<title>index</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -37,14 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6c49c5477b92c77c9eb341f9299c235f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b3aed8deb8408878d0e4e165d993d59e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-4913dc41de1e81582468a3e935c6e3dc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-b3aed8deb8408878d0e4e165d993d59e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-451c895cda47d75efce66772fc31bdcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,167 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    window.setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      window.setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    window.hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(darkModeDefault) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const darkModeDefault = false;
-      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-    };
-    // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -276,7 +112,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -288,68 +123,53 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Programación para no programadores</h1>
-</div>
 
 
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="aprendiendo-juntos-a-programar-sin-miedo" class="level1 hero-banner">
-<h1>Aprendiendo juntos a programar sin miedo</h1>
-<section id="tu-guía-amigable-al-mundo-del-código" class="level3">
-<h3 data-anchor-id="tu-guía-amigable-al-mundo-del-código">Tu guía amigable al mundo del código</h3>
-<p><a href=".\posts/primeros-pasos">Comienza aquí</a> <a href=".\posts.html">Ver todos los posts</a></p>
+<section id="programación-para-no-programadores" class="level1 hero-banner">
+<h1>Programación para no programadores</h1>
+<section id="una-guía-amigable-para-quienes-vienen-de-otras-disciplinas" class="level3">
+<h3 data-anchor-id="una-guía-amigable-para-quienes-vienen-de-otras-disciplinas">Una guía amigable para quienes vienen de otras disciplinas</h3>
+<p><a href="posts/first-steps/">Comienza aquí</a> <a href=".\posts.html">Ver todos los posts</a></p>
 </section>
 </section>
 <section id="por-qué-este-blog" class="level2 content-section">
 <h2 data-anchor-id="por-qué-este-blog">¿Por qué este blog?</h2>
-<p>Durante años, trabajé en [tu campo anterior] y siempre pensé que la programación era algo inalcanzable. Un día decidí intentarlo y descubrí que:</p>
+<p>Durante años, me enfoqué en el estudio de las ciencias del mar y la pesca, y siempre pensé que la programación era algo reservado para ingenieros o personas con una fuerte base en matemáticas. Pero al empezar mi investigación sobre los efectos del cambio climático y las interacciones entre especies, descubrí que:</p>
 <blockquote class="blockquote">
-<p>“La programación no es sobre ser un genio matemático, es sobre resolver problemas de manera creativa.”</p>
+<p>“La programación no es solo para crear software, es una herramienta poderosa para entender y explicar el mundo.”</p>
 </blockquote>
-<p>Ahora mi misión es ayudarte a descubrir que tú también puedes programar, sin importar tu background.</p>
+<p>Hoy, mi meta es ayudarte —especialmente si vienes de las ciencias, biología, pesca o áreas similares— a perderle el miedo al código y empezar a usarlo como una herramienta más en tu caja de herramientas científica.</p>
 </section>
-<section id="lo-que-hace-único-a-este-blog" class="level2 features">
+<section id="lo-que-hace-único-a-este-blog" class="level2">
 <h2 data-anchor-id="lo-que-hace-único-a-este-blog">Lo que hace único a este blog</h2>
-<section id="sin-jerga-técnica" class="level3 feature">
-<h3 data-anchor-id="sin-jerga-técnica">🎯 Sin jerga técnica</h3>
-<p>Explicaciones claras y ejemplos del mundo real</p>
+<div class="features">
+<section id="sin-jerga-innecesaria" class="level3 feature">
+<h3 data-anchor-id="sin-jerga-innecesaria">🎯 Sin jerga innecesaria</h3>
+<p>Explicaciones claras y ejemplos prácticos aplicados a problemas reales</p>
 </section>
-<section id="comunidad-amigable" class="level3 feature">
-<h3 data-anchor-id="comunidad-amigable">🤝 Comunidad amigable</h3>
-<p>Un espacio seguro para hacer preguntas “tontas”</p>
+<section id="pensado-para-quienes-no-son-programadores" class="level3 feature">
+<h3 data-anchor-id="pensado-para-quienes-no-son-programadores">🤝 Pensado para quienes no son programadores</h3>
+<p>Un espacio seguro para aprender desde cero, sin miedo a equivocarse</p>
 </section>
-<section id="aprende-a-tu-ritmo" class="level3 feature">
-<h3 data-anchor-id="aprende-a-tu-ritmo">📚 Aprende a tu ritmo</h3>
-<p>Contenido organizado de básico a avanzado</p>
+<section id="desde-lo-básico-a-lo-aplicado" class="level3 feature">
+<h3 data-anchor-id="desde-lo-básico-a-lo-aplicado">📚 Desde lo básico a lo aplicado</h3>
+<p>Contenido que avanza paso a paso, con ejemplos del mundo de la investigación</p>
 </section>
+</div>
 </section>
 <section id="comienza-tu-viaje" class="level2 latest-posts">
 <h2 data-anchor-id="comienza-tu-viaje">Comienza tu viaje</h2>
 <section id="por-qué-todos-deberían-aprender-a-programar" class="level3">
 <h3 data-anchor-id="por-qué-todos-deberían-aprender-a-programar"><a href=".\posts/por-que-programar">¿Por qué todos deberían aprender a programar?</a></h3>
-<p>Descubre cómo la programación puede cambiar tu forma de pensar</p>
+<p>Descubre cómo el código puede ayudarte incluso si vienes de biología, pesca o ciencias ambientales</p>
 </section>
 <section id="tu-primer-programa-en-10-minutos" class="level3">
 <h3 data-anchor-id="tu-primer-programa-en-10-minutos"><a href=".\posts/primer-programa">Tu primer programa en 10 minutos</a></h3>
-<p>¡Sí, en solo 10 minutos escribirás tu primer código!</p>
+<p>Sí, incluso sin experiencia puedes escribir tu primer código hoy</p>
 </section>
-<section id="los-5-mitos-sobre-programación-que-debes-olvidar" class="level3">
-<h3 data-anchor-id="los-5-mitos-sobre-programación-que-debes-olvidar"><a href=".\posts/mitos-programacion">Los 5 mitos sobre programación que debes olvidar</a></h3>
-<p>Desmintiendo las creencias que te alejan del código</p>
+<section id="mitos-sobre-la-programación-que-debes-olvidar" class="level3">
+<h3 data-anchor-id="mitos-sobre-la-programación-que-debes-olvidar"><a href=".\posts/mitos-programacion">5 mitos sobre la programación que debes olvidar</a></h3>
+<p>Desmitificando las creencias que alejan a investigadores y estudiantes del código</p>
 </section>
 </section>
 
@@ -358,19 +178,6 @@ ul.task-list li input[type="checkbox"] {
 
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

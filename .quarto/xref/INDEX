@@ -13,5 +13,14 @@
   },
   "posts.qmd": {
     "posts.html": "0f055603"
+  },
+  "posts/primeros-pasos/index.qmd": {
+    "index.html": "db9c73aa"
+  },
+  "posts/fisrt-steps/index.qmd": {
+    "index.html": "2c9a8d04"
+  },
+  "posts/first-steps/index.qmd": {
+    "index.html": "70f60592"
   }
 }

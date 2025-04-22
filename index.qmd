@@ -1,43 +1,45 @@
 ---
-title: "Programación para no programadores"
+title: ""
 page-layout: custom
 toc: false
 ---
 
 ::: {.hero-banner}
-# Aprendiendo juntos a programar sin miedo
+# Programación para no programadores
 
-### Tu guía amigable al mundo del código
+### Una guía amigable para quienes vienen de otras disciplinas
 
-[Comienza aquí](/posts/primeros-pasos) [Ver todos los posts](/posts.html)
+[Comienza aquí](posts/first-steps/) [Ver todos los posts](/posts.html)
 :::
 
 ::: {.content-section}
 ## ¿Por qué este blog?
 
-Durante años, trabajé en [tu campo anterior] y siempre pensé que la programación era algo inalcanzable. Un día decidí intentarlo y descubrí que:
+Durante años, me enfoqué en el estudio de las ciencias del mar y la pesca, y siempre pensé que la programación era algo reservado para ingenieros o personas con una fuerte base en matemáticas. Pero al empezar mi investigación sobre los efectos del cambio climático y las interacciones entre especies, descubrí que:
 
-> "La programación no es sobre ser un genio matemático, es sobre resolver problemas de manera creativa."
+> “La programación no es solo para crear software, es una herramienta poderosa para entender y explicar el mundo.”
 
-Ahora mi misión es ayudarte a descubrir que tú también puedes programar, sin importar tu background.
+Hoy, mi meta es ayudarte —especialmente si vienes de las ciencias, biología, pesca o áreas similares— a perderle el miedo al código y empezar a usarlo como una herramienta más en tu caja de herramientas científica.
 :::
 
-::: {.features}
+
 ## Lo que hace único a este blog
-
+::: {.features}
 :::: {.feature}
-### 🎯 Sin jerga técnica
-Explicaciones claras y ejemplos del mundo real
+### 🎯 Sin jerga innecesaria
+Explicaciones claras y ejemplos prácticos aplicados a problemas reales
+
 ::::
 
 :::: {.feature}
-### 🤝 Comunidad amigable
-Un espacio seguro para hacer preguntas "tontas"
+### 🤝 Pensado para quienes no son programadores
+Un espacio seguro para aprender desde cero, sin miedo a equivocarse
+
 ::::
 
 :::: {.feature}
-### 📚 Aprende a tu ritmo
-Contenido organizado de básico a avanzado
+### 📚 Desde lo básico a lo aplicado
+Contenido que avanza paso a paso, con ejemplos del mundo de la investigación
 ::::
 :::
 
@@ -45,12 +47,11 @@ Contenido organizado de básico a avanzado
 ## Comienza tu viaje
 
 ### [¿Por qué todos deberían aprender a programar?](/posts/por-que-programar)
-Descubre cómo la programación puede cambiar tu forma de pensar
+Descubre cómo el código puede ayudarte incluso si vienes de biología, pesca o ciencias ambientales
 
 ### [Tu primer programa en 10 minutos](/posts/primer-programa)
-¡Sí, en solo 10 minutos escribirás tu primer código!
+Sí, incluso sin experiencia puedes escribir tu primer código hoy
 
-### [Los 5 mitos sobre programación que debes olvidar](/posts/mitos-programacion)
-Desmintiendo las creencias que te alejan del código
+### [5 mitos sobre la programación que debes olvidar](/posts/mitos-programacion)
+Desmitificando las creencias que alejan a investigadores y estudiantes del código
 :::
-

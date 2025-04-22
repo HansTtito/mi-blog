@@ -1,0 +1,72 @@
+---
+title: "Comenzar aquí"
+author: "Hans Ttito"
+date: "2025-04-21"
+categories: [news]
+description: "Una introducción para quienes vienen de otras disciplinas y quieren iniciarse en la programación."
+---
+
+## 👋 ¡Bienvenido a mi blog!
+
+Soy Hans Ttito, biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción. A lo largo de mi carrera he usado la programación como una herramienta para resolver preguntas científicas, automatizar procesos y explorar el impacto del cambio climático en los ecosistemas marinos.
+
+Este blog nace del deseo de **compartir lo que he aprendido con quienes no necesariamente vienen del mundo de la informática**. Si eres biólogo, sociólogo, estudiante, investigador o simplemente curioso, estás en el lugar correcto.
+
+---
+
+## 🧭 ¿Para quién es este blog?
+
+- Personas sin experiencia previa en programación
+- Investigadores o estudiantes que trabajan con datos
+- Profesionales que quieren automatizar tareas repetitivas
+- Curiosos que quieren usar la tecnología como herramienta
+
+---
+
+## 🚀 ¿Por dónde empezar?
+
+Aquí te dejo una guía con algunos de los contenidos básicos y útiles para comenzar:
+
+### 📘 Introducción a la programación
+- 👉 [¿Qué es la programación y por qué aprenderla?](tutoriales/que-es-programacion.qmd)
+- 👉 [Conceptos clave explicados fácil](tutoriales/conceptos-basicos.qmd)
+
+### 🛠️ Primeros pasos en R y Python
+- 👉 [Mi primer script en R](tutoriales/primer-script-r.qmd)
+- 👉 [Mi primer script en Python](tutoriales/primer-script-python.qmd)
+
+### 🤖 Automatización útil
+- 👉 [Cómo automatizar tareas con código](tutoriales/automatizacion.qmd)
+- 👉 [Ejemplo práctico: limpiar datos de Excel automáticamente](tutoriales/limpieza-datos.qmd)
+
+### 📊 Visualización de datos
+- 👉 [Graficar datos en R con ggplot2](tutoriales/ggplot2-intro.qmd)
+- 👉 [Visualización interactiva con plotly](tutoriales/plotly.qmd)
+
+---
+
+## 💡 Consejos para aprender a programar
+
+- No necesitas ser experto en matemáticas, solo tener curiosidad y paciencia.
+- Copiar y modificar código es parte del aprendizaje.
+- Los errores no son fallas, ¡son parte del camino!
+- Empieza con pequeños proyectos relacionados con lo que te apasiona.
+
+---
+
+## 🤝 Conectemos
+
+Si tienes preguntas, sugerencias o simplemente quieres conversar sobre programación, ciencia o visualización de datos, puedes escribirme:
+
+- [LinkedIn](https://linkedin.com/in/hans-ttito)
+- [GitHub](https://github.com/htitto)
+- [Email](mailto:hans.ttito@alumnos.udec.cl)
+
+---
+
+## 🌟 ¿Y ahora?
+
+Navega por las secciones del blog, guarda tus artículos favoritos y no dudes en escribirme si te pierdes en el camino. ¡Estoy aquí para ayudarte!
+
+---
+
