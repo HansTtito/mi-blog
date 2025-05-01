@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/docker-python/index.html",
       "/posts/first-steps/index.html"
     ]
   }
