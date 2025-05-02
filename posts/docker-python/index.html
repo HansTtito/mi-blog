@@ -207,59 +207,95 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Esta solución me permitiría configurar el proceso una vez y olvidarme de eso, sin tener que preocuparme por mantener mi computadora encendida durante días o lidiar con interrupciones de internet en casa. En este post, quiero documentar paso a paso cómo logré empaquetar mi script de Python para la descarga de datos oceanográficos en un contenedor Docker funcional. Mi objetivo es que, si te encuentras en una situación similar (ya sea trabajando con datos científicos voluminosos o cualquier otra tarea intensiva), puedas seguir estos pasos para llevar tu código a la nube de manera efectiva. Así que prepara tu terminal, un café, y vamos a sumergirnos en el mundo de la containerización con Docker. (Próximamente te explicaré como desplegar ese contenedor en la nube de Amazon Web Services - AWS):</p>
 <p>¡¡Empecemos!!</p>
-<p>Primero y antes que nada, necesitamos nuestro script, ya sea de la función que queremos ejecutar, del aplicativo que queremos ejecutar, en mi caso, solo será el script de descarga de copernicus.</p>
-<div id="526a7e82" class="cell" data-execution_count="1">
+<p>Primero y antes que nada, necesitamos nuestro script, ya sea de la función que queremos ejecutar, del aplicativo que queremos ejecutar, en mi caso, solo será el script de descarga de copernicus, lo llamaremos “descarga_copernicus.py”.</p>
+<div id="52aa460e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> copernicusmarine</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> boto3</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dataset_id <span class="op">=</span> <span class="st">"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="st">"thetao"</span>]</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>min_lon, max_lon <span class="op">=</span> <span class="op">-</span><span class="dv">140</span>, <span class="op">-</span><span class="dv">40</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>min_lat, max_lat <span class="op">=</span> <span class="op">-</span><span class="dv">60</span>, <span class="dv">0</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>min_depth, max_depth <span class="op">=</span> <span class="fl">0.5</span>, <span class="dv">500</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> <span class="st">"copernicus-data"</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>bucket_name <span class="op">=</span> <span class="st">"tu-bucket-s3"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>s3_prefix <span class="op">=</span> <span class="st">"copernicus"</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>os.makedirs(output_dir, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> boto3.client(<span class="st">"s3"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2022</span>, <span class="dv">2026</span>):</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">-01-01T00:00:00"</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">-12-31T00:00:00"</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    output_file <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>dataset_id<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">.nc"</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    output_path <span class="op">=</span> os.path.join(output_dir, output_file)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Descargando datos de </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">..."</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dataset_id <span class="op">=</span> <span class="st">"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m"</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="st">"thetao"</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>min_lon, max_lon <span class="op">=</span> <span class="op">-</span><span class="dv">140</span>, <span class="op">-</span><span class="dv">40</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>min_lat, max_lat <span class="op">=</span> <span class="op">-</span><span class="dv">60</span>, <span class="dv">0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>min_depth, max_depth <span class="op">=</span> <span class="fl">0.5</span>, <span class="dv">500</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> <span class="st">"copernicus-data"</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>s3_bucket <span class="op">=</span> os.environ[<span class="st">"S3_BUCKET"</span>]</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>s3_prefix <span class="op">=</span> os.environ.get(<span class="st">"S3_PREFIX"</span>, <span class="st">"copernicus"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>username <span class="op">=</span> os.environ[<span class="st">"CMEMS_USER"</span>]</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>password <span class="op">=</span> os.environ[<span class="st">"CMEMS_PASS"</span>]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>os.makedirs(output_dir, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> boto3.client(<span class="st">"s3"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2022</span>, <span class="dv">2026</span>):</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">-01-01T00:00:00"</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">-12-31T00:00:00"</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    output_file <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>dataset_id<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">.nc"</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    output_path <span class="op">=</span> os.path.join(output_dir, output_file)</span>
 <span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    copernicusmarine.subset(</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        dataset_id<span class="op">=</span>dataset_id,</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        variables<span class="op">=</span>variables,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        minimum_longitude<span class="op">=</span>min_lon,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        maximum_longitude<span class="op">=</span>max_lon,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        minimum_latitude<span class="op">=</span>min_lat,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        maximum_latitude<span class="op">=</span>max_lat,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        start_datetime<span class="op">=</span>start,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        end_datetime<span class="op">=</span>end,</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        minimum_depth<span class="op">=</span>min_depth,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        maximum_depth<span class="op">=</span>max_depth,</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        force_download<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        subset_method<span class="op">=</span><span class="st">"strict"</span>,</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        disable_progress_bar<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        output_directory<span class="op">=</span>output_dir,</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        output_filename<span class="op">=</span>output_file</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Subiendo </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss"> a S3..."</span>)</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    s3.upload_file(Filename<span class="op">=</span>output_path, Bucket<span class="op">=</span>bucket_name, Key<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>s3_prefix<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Descargando datos de </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">..."</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    copernicusmarine.subset(</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        dataset_id<span class="op">=</span>dataset_id,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        variables<span class="op">=</span>variables,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        minimum_longitude<span class="op">=</span>min_lon,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        maximum_longitude<span class="op">=</span>max_lon,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        minimum_latitude<span class="op">=</span>min_lat,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        maximum_latitude<span class="op">=</span>max_lat,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        start_datetime<span class="op">=</span>start,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        end_datetime<span class="op">=</span>end,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        minimum_depth<span class="op">=</span>min_depth,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        maximum_depth<span class="op">=</span>max_depth,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        force_download<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        subset_method<span class="op">=</span><span class="st">"strict"</span>,</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        disable_progress_bar<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        username<span class="op">=</span>username,</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        password<span class="op">=</span>password,</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        output_directory<span class="op">=</span>output_dir,</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        output_filename<span class="op">=</span>output_file</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Eliminando archivo local </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">..."</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    os.remove(output_path)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Subiendo </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss"> a S3..."</span>)</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    s3.upload_file(Filename<span class="op">=</span>output_path, Bucket<span class="op">=</span>s3_bucket, Key<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>s3_prefix<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proceso completado."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Eliminando archivo local </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">..."</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    os.remove(output_path)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Proceso completado."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Ya teniendo nuestro código (En este apartado no voy a explicar qué significa cada detalle del código); ahora sigue lo más importante, tener un archivo Dockerfile.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.10-slim</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Establecer directorio de trabajo</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WORKDIR</span> /app</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Copiar archivos de requisitos e instalar dependencias</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> requirements.txt .</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">pip</span> install <span class="at">--no-cache-dir</span> <span class="at">-r</span> requirements.txt</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Copiar el código de la aplicación</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> descargar_copernicus.py .</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar el script al iniciar el contenedor</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">"python"</span>, <span class="st">"descargar_copernicus.py"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Tu carpeta debería quedar algo como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/carpeta-con-files.png" class="img-fluid figure-img"></p>
+<figcaption>files-docker</figcaption>
+</figure>
+</div>
+<p>Ahora, ya teniendo tu archivo Dockerfile (Si tiene que llamarse así, sin ninguna extensión, y tenerlo en la misma carpeta de tu script), pasaremos a abrir docker (el programa - Docker Desktop); cualquier cosa, pueden descargarlo en <a href="https://www.docker.com/">este enlace</a>.</p>
+<p>Ahora, pasamos a abrir nuestro terminal, pero recuerda que el terminal debes abrirlo desde la misma carpeta donde están tus archivos Una manera sencilla de hacerlo, y que me gusta mucho, es la siguiente:</p>
+<video width="100%" controls="">
+<source src="videos/abriendo-terminal.mp4" type="video/mp4">
+</video>
+<p>Ya teniendo abierto el docker, y tu terminal, pasaremos a ejecutar las siguiente lineas de comandos.</p>
+<div id="7d79ca52" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dentro del directorio del proyecto</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>docker build <span class="op">-</span>t copernicus<span class="op">-</span>downloader .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Esto permitirá levantar el docker, ahora puedes abrir tu docker y deberías ver algo como:..</p>
 
 
 
