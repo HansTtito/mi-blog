@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hans Ttito">
-<meta name="dcterms.date" content="2025-05-01">
-<meta name="description" content="Un resumen de cómo desplegar una función de python en Docker">
+<meta name="dcterms.date" content="2025-05-03">
+<meta name="description" content="Un resumen de cómo desplegar una función de Python en Docker">
 
-<title>Desplegando mi función de python en Docker step-by-step</title>
+<title>Desplegando mi función de Python en Docker paso a paso</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -158,10 +158,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Desplegando mi función de python en Docker step-by-step</h1>
+      <h1 class="title">Desplegando mi función de Python en Docker paso a paso</h1>
                   <div>
         <div class="description">
-          Un resumen de cómo desplegar una función de python en Docker
+          Un resumen de cómo desplegar una función de Python en Docker
         </div>
       </div>
                 </div>
@@ -180,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 1, 2025</p>
+        <p class="date">May 3, 2025</p>
       </div>
     </div>
     
@@ -199,85 +199,76 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>¡Hola amigos! Como parte de mi tesis, me he enfrentado al desafío de descargar enormes cantidades de datos de temperatura provenientes de satélites y modelos oceanográficos. Para este propósito, elegí trabajar con la plataforma <a href="https://www.copernicus.eu/en">Copernicus</a>, que ofrece un extenso catálogo de datos tanto satelitales como de modelación. Si alguno de ustedes ha trabajado con datos oceanográficos, probablemente esté familiarizado con los archivos NetCDF (Network Common Data Form), comúnmente identificados por su extensión “.nc”. El problema es que estos archivos son exageradamente grandes, y descargarlos y procesarlos en mi computadora personal simplemente no era viable para la cantidad de datos que necesitaba analizar. Después de romperme la cabeza pensando en soluciones, llegué a la conclusión de que necesitaba:</p>
+<p>¡Qué tal, gente! Hoy quiero contarles una pequeña historia de supervivencia académica. Si alguna vez han estado en el infierno de la tesis, seguramente me entienden. Ahí estaba yo, con mi laptop echando humo como locomotora antigua cada vez que intentaba ejecutar esos modelitos de machine learning que tanto dolor de cabeza me causan. La pobre máquina me suplicaba “¡Déjame vivir!” mientras yo esperaba horas y HORAS para ver resultados. Una pesadilla. Hasta que un día dije: ¡BASTA! Mi laptop merece mejor vida y yo necesito conservar lo poco que queda de mi salud mental. Fue cuando descubrí mi salvación: Docker + la nube. ¿Docker? Sí, esa cosa de la que todos hablan en tech pero que suena intimidante al principio. Resulta que no es tan complicado y se ha convertido en mi mejor aliado.</p>
+<p>En este apartado, me gustaría explicarles un poco sobre Docker, cómo subir sus scripts y cómo ejecutarlos.</p>
+<p>¿Por qué Docker?</p>
+<p>Básicamente, Docker me permite empaquetar todo mi código y sus dependencias en un contenedor bien bonito que puedo enviar a la nube como quien manda un paquete por correo. “¡Hey, nube! Aquí te va este proceso pesadísimo, ejecútalo tú mientras yo veo Netflix, ¿va?”.</p>
+<p>Lo mejor es que:</p>
+<p>Mi laptop ya no suena como avión despegando Puedo seguir usando mi computadora para otras cosas mientras los procesos corren en la nube No tengo que preocuparme por “en mi máquina sí funciona” porque Docker garantiza que todo se ejecute igual donde sea</p>
+<p>Ahora explicaré cómo normalmente suelo hacerlo</p>
 <ol type="1">
-<li>Crear una función en Python que automatizara la descarga de estos datos</li>
-<li>Empaquetar esta función en un contenedor Docker</li>
-<li>Desplegar este contenedor en la nube para que pudiera ejecutarse independientemente de mi equipo</li>
+<li><p>Organizar mi caos: Necesito 3 archvos principales, mi script de python (script.py); mi archivo de dependencias (requirements.txt) que necesita mi script para funcionar; y mi archivo Dockerfile (es la configuración adecuada para que mi script se ejecute adecuadamente)</p></li>
+<li><p>Construir mi “paquete mágico”: Con un par de comandos, levanto todo en un contenedor de docker listo para ser ejecutado.</p></li>
+<li><p>Correr: Finalmente, solo lo ejecuto, y ¡Plum!, maravilla, ya está!</p></li>
 </ol>
-<p>Esta solución me permitiría configurar el proceso una vez y olvidarme de eso, sin tener que preocuparme por mantener mi computadora encendida durante días o lidiar con interrupciones de internet en casa. En este post, quiero documentar paso a paso cómo logré empaquetar mi script de Python para la descarga de datos oceanográficos en un contenedor Docker funcional. Mi objetivo es que, si te encuentras en una situación similar (ya sea trabajando con datos científicos voluminosos o cualquier otra tarea intensiva), puedas seguir estos pasos para llevar tu código a la nube de manera efectiva. Así que prepara tu terminal, un café, y vamos a sumergirnos en el mundo de la containerización con Docker. (Próximamente te explicaré como desplegar ese contenedor en la nube de Amazon Web Services - AWS):</p>
+<p>Les explicaré cada paso detalladamente con un ejemplo bastante sencillo</p>
 <p>¡¡Empecemos!!</p>
-<p>Primero y antes que nada, necesitamos nuestro script, ya sea de la función que queremos ejecutar, del aplicativo que queremos ejecutar, en mi caso, solo será el script de descarga de copernicus, lo llamaremos “descarga_copernicus.py”.</p>
-<div id="52aa460e" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> copernicusmarine</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> boto3</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Parámetros</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dataset_id <span class="op">=</span> <span class="st">"cmems_mod_glo_phy-thetao_anfc_0.083deg_P1D-m"</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> [<span class="st">"thetao"</span>]</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>min_lon, max_lon <span class="op">=</span> <span class="op">-</span><span class="dv">140</span>, <span class="op">-</span><span class="dv">40</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>min_lat, max_lat <span class="op">=</span> <span class="op">-</span><span class="dv">60</span>, <span class="dv">0</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>min_depth, max_depth <span class="op">=</span> <span class="fl">0.5</span>, <span class="dv">500</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>output_dir <span class="op">=</span> <span class="st">"copernicus-data"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>s3_bucket <span class="op">=</span> os.environ[<span class="st">"S3_BUCKET"</span>]</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>s3_prefix <span class="op">=</span> os.environ.get(<span class="st">"S3_PREFIX"</span>, <span class="st">"copernicus"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>username <span class="op">=</span> os.environ[<span class="st">"CMEMS_USER"</span>]</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>password <span class="op">=</span> os.environ[<span class="st">"CMEMS_PASS"</span>]</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>os.makedirs(output_dir, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>s3 <span class="op">=</span> boto3.client(<span class="st">"s3"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> year <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2022</span>, <span class="dv">2026</span>):</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">-01-01T00:00:00"</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">-12-31T00:00:00"</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    output_file <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>dataset_id<span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">.nc"</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    output_path <span class="op">=</span> os.path.join(output_dir, output_file)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Descargando datos de </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss">..."</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    copernicusmarine.subset(</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        dataset_id<span class="op">=</span>dataset_id,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        variables<span class="op">=</span>variables,</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>        minimum_longitude<span class="op">=</span>min_lon,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        maximum_longitude<span class="op">=</span>max_lon,</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        minimum_latitude<span class="op">=</span>min_lat,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        maximum_latitude<span class="op">=</span>max_lat,</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        start_datetime<span class="op">=</span>start,</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        end_datetime<span class="op">=</span>end,</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        minimum_depth<span class="op">=</span>min_depth,</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        maximum_depth<span class="op">=</span>max_depth,</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        force_download<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        subset_method<span class="op">=</span><span class="st">"strict"</span>,</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        disable_progress_bar<span class="op">=</span><span class="va">False</span>,</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        username<span class="op">=</span>username,</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        password<span class="op">=</span>password,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        output_directory<span class="op">=</span>output_dir,</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        output_filename<span class="op">=</span>output_file</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Subiendo </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss"> a S3..."</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    s3.upload_file(Filename<span class="op">=</span>output_path, Bucket<span class="op">=</span>s3_bucket, Key<span class="op">=</span><span class="ss">f"</span><span class="sc">{</span>s3_prefix<span class="sc">}</span><span class="ss">/</span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Eliminando archivo local </span><span class="sc">{</span>output_file<span class="sc">}</span><span class="ss">..."</span>)</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    os.remove(output_path)</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"✅ Proceso completado."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Primero y antes que nada, necesitamos nuestro script, ya sea de una función o de una aplicación que queramos ejecutar, en mi caso, solo será un script sencillo que dice hola desde docker, lo llamaremos “saluditos.py”.</p>
+<div id="cd7c1fec" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> argparse</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> lambda_handler(event<span class="op">=</span><span class="va">None</span>, context<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> event <span class="kw">and</span> <span class="st">"nombres"</span> <span class="kw">in</span> event:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        nombres <span class="op">=</span> event[<span class="st">"nombres"</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        nombres <span class="op">=</span> [<span class="st">'Ana'</span>, <span class="st">'Luis'</span>]</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame({<span class="st">'Nombre'</span>: nombres})</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    saludos <span class="op">=</span> [<span class="ss">f"Hola, </span><span class="sc">{</span>nombre<span class="sc">}</span><span class="ss">, desde Docker"</span> <span class="cf">for</span> nombre <span class="kw">in</span> df[<span class="st">'Nombre'</span>]]</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> saludo <span class="kw">in</span> saludos:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(saludo)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">'statusCode'</span>: <span class="dv">200</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">'body'</span>: saludos</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">'__main__'</span>:</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    parser <span class="op">=</span> argparse.ArgumentParser()</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    parser.add_argument(<span class="st">'--nombres'</span>, nargs<span class="op">=</span><span class="st">'*'</span>, <span class="bu">help</span><span class="op">=</span><span class="st">'Lista de nombres'</span>, default<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> parser.parse_args()</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    event <span class="op">=</span> {<span class="st">"nombres"</span>: args.nombres} <span class="cf">if</span> args.nombres <span class="cf">else</span> <span class="va">None</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    lambda_handler(event)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Ya teniendo nuestro código (En este apartado no voy a explicar qué significa cada detalle del código); ahora sigue lo más importante, tener un archivo Dockerfile.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.10-slim</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Establecer directorio de trabajo</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WORKDIR</span> /app</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Copiar archivos de requisitos e instalar dependencias</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> requirements.txt .</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">pip</span> install <span class="at">--no-cache-dir</span> <span class="at">-r</span> requirements.txt</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Copiar el código de la aplicación</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> descargar_copernicus.py .</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar el script al iniciar el contenedor</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">"python"</span>, <span class="st">"descargar_copernicus.py"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ya teniendo nuestro código (En este apartado no voy a explicar qué significa cada detalle del código); ahora debemos crear dos archivos más, un archivo donde estén todas las librerias que necesitaremos para el correcto funcionamiento del script, y lo llamaremos “requirements.txt”; y el otro archivo lo llamaremos “Dockerfile” (sin extensión) donde pondremos la configuración adecuada para que el código se ejecute en Docker.</p>
+<p>El archivo requirements.txt, en mi caso, sería lo siguiente:</p>
+<div id="57b1aa0c" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pandas</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>argparse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>y el Dockerfile es el siguiente:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode dockerfile code-with-copy"><code class="sourceCode dockerfile"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> python:3.10-slim</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WORKDIR</span> /app</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Copiar e instalar requisitos</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> requirements.txt .</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">pip</span> install <span class="at">--no-cache-dir</span> <span class="at">-r</span> requirements.txt</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Copiar script</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> saluditos.py .</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar como usuario no root para mejor seguridad</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="ex">useradd</span> <span class="at">-m</span> appuser</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">RUN</span> <span class="fu">chown</span> <span class="at">-R</span> appuser:appuser /app</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">USER</span> appuser</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar el script</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">ENTRYPOINT</span> [<span class="st">"python"</span>, <span class="st">"saluditos.py"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Tu carpeta debería quedar algo como:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -285,17 +276,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>files-docker</figcaption>
 </figure>
 </div>
-<p>Ahora, ya teniendo tu archivo Dockerfile (Si tiene que llamarse así, sin ninguna extensión, y tenerlo en la misma carpeta de tu script), pasaremos a abrir docker (el programa - Docker Desktop); cualquier cosa, pueden descargarlo en <a href="https://www.docker.com/">este enlace</a>.</p>
-<p>Ahora, pasamos a abrir nuestro terminal, pero recuerda que el terminal debes abrirlo desde la misma carpeta donde están tus archivos Una manera sencilla de hacerlo, y que me gusta mucho, es la siguiente:</p>
+<p>Ahora, ya teniendo tu archivo Dockerfile (Sí tiene que llamarse así, sin ninguna extensión, y tenerlo en la misma carpeta de tu script), pasaremos a abrir docker (el programa - Docker Desktop); cualquier cosa, pueden descargarlo en <a href="https://www.docker.com/">este enlace</a>.</p>
+<p>Después, pasamos a abrir nuestro terminal, pero recuerda que el terminal debes abrirlo desde la misma carpeta donde están tus archivos Una manera sencilla de hacerlo, y que me gusta mucho, es la siguiente:</p>
 <video width="100%" controls="">
 <source src="videos/abriendo-terminal.mp4" type="video/mp4">
 </video>
 <p>Ya teniendo abierto el docker, y tu terminal, pasaremos a ejecutar las siguiente lineas de comandos.</p>
-<div id="7d79ca52" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dentro del directorio del proyecto</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>docker build <span class="op">-</span>t copernicus<span class="op">-</span>downloader .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c7ae9351" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>docker build <span class="op">-</span>t saluditos<span class="op">-</span>docker .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Esto permitirá levantar el docker, ahora puedes abrir tu docker y deberías ver algo como:..</p>
+<p>Esto permitirá levantar el docker, ahora puedes abrir tu docker y deberías ver algo como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/construyendo-imagen-docker.png" class="img-fluid figure-img"></p>
+<figcaption>construyendo-imagen-docker</figcaption>
+</figure>
+</div>
+<p>Y ahora para ejecutarlo, es algo tan sencillo como:</p>
+<div id="ec81d389" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>docker run saluditos<span class="op">-</span>docker</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Obtendrías algo como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/run-docker.png" class="img-fluid figure-img"></p>
+<figcaption>run-docker</figcaption>
+</figure>
+</div>
+<p>Sin embargo, me dirás..!Hans, mi función recibe parámetros! ¿cómo hago si quiero pasarle? Pues izi! usamos los siguientes comandos:</p>
+<div id="ff9d6ecc" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>docker run saluditos<span class="op">-</span>docker <span class="op">--</span>nombres Hans Jaime</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Este comando nos permite agregar los argumentos en nuestro script.</p>
+<p>y obtenemos algo como:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/run-docker-argumentos.png" class="img-fluid figure-img"></p>
+<figcaption>run-arguments</figcaption>
+</figure>
+</div>
+<p>Ahora, si eres cuidadoso, podrás observar en mi Dockerfile un detalle: en muchos otros blogs, en la última parte encontrarás solo “CMD[python, ”script.py”]”; sin embargo, en mi caso puse ENTRYPOINT, este comando me permite agregarlo como argumento lo que sea que venga después.</p>
+<p>Ahora, resulta lo siguiente, nosotros ya ejecutamos nuestro script desde docker, y ya finalizó y lo podemos verificar desde</p>
+<div id="589646ff" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>docker ps <span class="op">-</span>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>esto nos mostrará todos los contenedores que se están ejecutando o que se ejecutaron en el sistema.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/containers-total-docker.png" class="img-fluid figure-img"></p>
+<figcaption>containers-list</figcaption>
+</figure>
+</div>
+<p>Sin embargo, a pesar de estar como “Exited”; siguen ocupando un espacio en el sistema, por lo que es recomendable “eliminarlos”</p>
+<p>Si queremos eliminar todos los contenedores, usamos:</p>
+<div id="101b5b9f" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>docker container prune</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>ahora, si queremos eliminar uno en específico, también podemos usar el comando “rm” agregado del ID del contenedor, que lo obtuvimos al hacer docker ps -a anteriormente; en mi caso sería lo siguiente</p>
+<div id="7adb5e34" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>docker rm db2db69bccd0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>después de esto, si verificamos con docker ps -a; ya no tenemos contenedores cargados en nuestro sistema!!</p>
+<p>¡Y eso es todo, amigos!</p>
+<p>¿Ven qué fácil es? Con estos sencillos pasos, acabo de liberar a mi laptop de años de tortura. Si yo pude hacerlo en medio del caos de mi tesis, créanme que ustedes también pueden. Un pequeño consejo extra: no se olviden de ese comando docker container prune después de terminar. Es como limpiar la cocina después de preparar un festín—nadie quiere hacerlo, pero todos agradecemos el espacio libre después. Mi nuevo flujo de trabajo es simple: preparar mi script, empaquetarlo en Docker, enviarlo a la nube y… ¡a disfrutar de la vida mientras las máquinas trabajan por mí! La semana pasada dejé corriendo un modelo durante 12 horas mientras me fui a pasear por ahí. ¿El resultado? Datos analizados y recuerdos creados. ¡Win-win! Si les sirvió este tutorial o tienen alguna duda, déjenme un correo o algo. Y si tienen algún truco para mejorar este proceso, ¡compártanlo! Todos estamos aprendiendo en este viaje.</p>
+<p>En otro apartado, les explicaré cómo subir su contenedor a la nube.</p>
+<p>¡Hasta la próxima!</p>
 
 
 
