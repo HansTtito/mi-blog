@@ -3,6 +3,7 @@
     "listing": "/projects.html",
     "items": [
       "/projects/biodiversity-dashboard/index.html",
+      "/projects/invasal/index.html",
       "/projects/shiny-hackathon/index.html",
       "/projects/Tivy/index.html"
     ]
