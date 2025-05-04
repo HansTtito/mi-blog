@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://hansttito.github.io/mi-blog/projects.html</loc>
+    <lastmod>2025-05-04T06:17:06.923Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hansttito.github.io/mi-blog/projects/shiny-hackathon/index.html</loc>
+    <lastmod>2025-05-04T07:36:17.925Z</lastmod>
+  </url>
+  <url>
     <loc>https://hansttito.github.io/mi-blog/posts.html</loc>
     <lastmod>2025-04-22T18:23:31.640Z</lastmod>
   </url>
@@ -31,5 +39,13 @@
   <url>
     <loc>https://hansttito.github.io/mi-blog/posts/que-es-programacion/index.html</loc>
     <lastmod>2025-05-04T01:53:58.411Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hansttito.github.io/mi-blog/projects/biodiversity-dashboard/index.html</loc>
+    <lastmod>2025-05-04T07:36:30.634Z</lastmod>
+  </url>
+  <url>
+    <loc>https://hansttito.github.io/mi-blog/projects/Tivy/index.html</loc>
+    <lastmod>2025-05-04T07:22:26.351Z</lastmod>
   </url>
 </urlset>

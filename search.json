@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Mis Proyectos",
+    "section": "",
+    "text": "Shiny Biodiversity Dashboard\n\n\n\nShiny\n\nR\n\n\n\nShiny Biodiversity Dashboard allows the visualization of biodiversity species observations in the world\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Hackathon\n\n\n\nShiny\n\nR\n\n\n\nApplication developed in Shiny for the Appsilon Hackathon - 2025\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTivy\n\n\n\nR\n\nAnálisis de Datos\n\n\n\nToolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/shiny-hackathon/index.html",
+    "href": "projects/shiny-hackathon/index.html",
+    "title": "Shiny Hackathon",
+    "section": "",
+    "text": "This web application was developed as part of the Hackathon organized by Appsilon\n\n\n\nshiny-hackathon"
+  },
+  {
+    "objectID": "projects/shiny-hackathon/index.html#about-this-project",
+    "href": "projects/shiny-hackathon/index.html#about-this-project",
+    "title": "Shiny Hackathon",
+    "section": "",
+    "text": "This web application was developed as part of the Hackathon organized by Appsilon\n\n\n\nshiny-hackathon"
+  },
+  {
+    "objectID": "projects/shiny-hackathon/index.html#how-to-access",
+    "href": "projects/shiny-hackathon/index.html#how-to-access",
+    "title": "Shiny Hackathon",
+    "section": "How to access",
+    "text": "How to access\nThe application is available on shinyapps.io."
+  },
+  {
+    "objectID": "projects/shiny-hackathon/index.html#source-code",
+    "href": "projects/shiny-hackathon/index.html#source-code",
+    "title": "Shiny Hackathon",
+    "section": "Source code",
+    "text": "Source code\nThe source code is available on GitHub."
+  },
+  {
     "objectID": "posts.html",
     "href": "posts.html",
     "title": "",
@@ -250,5 +285,61 @@
     "title": "¿Qué es la programación y por qué aprenderla?",
     "section": "Algunas razones por las que a mí me sirvió:",
     "text": "Algunas razones por las que a mí me sirvió:\n🧬 Pude analizar grandes volúmenes de datos sin depender de Excel (ni de terceros).\n🐟 Automatizo reportes y procesos que antes me tomaban horas.\n🐛 Puedo desarrollar herramientas propias para estudios ecológicos, pesqueros o de cualquier tipo.\n🌱 Empecé a colaborar con gente de otras disciplinas porque podía aportar desde mi área… ¡con código!\n\nY no necesitas volverte desarrollador de software. Con lo básico ya puedes hacer cosas realmente útiles. ¿Pero cómo empiezo?\nAsí empecé yo, y así puedes hacerlo tú también:\n\nCuriosidad: Lo primero es querer entender cómo demonios funciona esto.\nTutoriales en YouTube: Buscas “R o Python para principiantes”, y te armas de paciencia.\nCopiar, pegar y romper cosas: Así aprendemos.\nProyectos pequeños: Haz algo útil para ti, como automatizar un Excel o graficar tus datos.\nComunidad: Únete a foros, grupos de Discord, X o donde sea que puedas preguntar y compartir.\n\nYo comencé con Python y lo recomiendo un montón. Es fácil de leer, muy usado en ciencia, y tiene librerías para todo: desde estadísticas hasta mapas y machine learning. Lo mejor de todo\nProgramar no es solo para “techies”. Es una herramienta poderosa para cualquier disciplina. Y si eres de ciencias como yo, créeme: puede darte un superpoder.\nA mí me permitió hacer más con menos, colaborar con gente increíble y ver mi carrera desde otra perspectiva.\nAsí que si estás dudando, dale una oportunidad. Quizás no lo aprendas todo en una semana, pero poco a poco vas construyendo algo que realmente puede transformar tu forma de trabajar.\n¿Tú en qué área crees que podrías aplicar programación? ¡Te leo!"
+  },
+  {
+    "objectID": "projects/biodiversity-dashboard/index.html",
+    "href": "projects/biodiversity-dashboard/index.html",
+    "title": "Shiny Biodiversity Dashboard",
+    "section": "",
+    "text": "This Shiny app allows the visualization of biodiversity species observations in the world. Users can search for species by their common or scientific name, and then view their observations on an interactive map. They can also explore a timeline showing when the selected species were observed.\n\n\n\nshiny-biodiversity-dashboard"
+  },
+  {
+    "objectID": "projects/biodiversity-dashboard/index.html#about-this-project",
+    "href": "projects/biodiversity-dashboard/index.html#about-this-project",
+    "title": "Shiny Biodiversity Dashboard",
+    "section": "",
+    "text": "This Shiny app allows the visualization of biodiversity species observations in the world. Users can search for species by their common or scientific name, and then view their observations on an interactive map. They can also explore a timeline showing when the selected species were observed.\n\n\n\nshiny-biodiversity-dashboard"
+  },
+  {
+    "objectID": "projects/biodiversity-dashboard/index.html#how-to-access",
+    "href": "projects/biodiversity-dashboard/index.html#how-to-access",
+    "title": "Shiny Biodiversity Dashboard",
+    "section": "How to access",
+    "text": "How to access\nThe application is available on shinyapps.io."
+  },
+  {
+    "objectID": "projects/biodiversity-dashboard/index.html#source-code",
+    "href": "projects/biodiversity-dashboard/index.html#source-code",
+    "title": "Shiny Biodiversity Dashboard",
+    "section": "Source Code",
+    "text": "Source Code\nThe source code is available on GitHub."
+  },
+  {
+    "objectID": "projects/Tivy/index.html",
+    "href": "projects/Tivy/index.html",
+    "title": "Tivy",
+    "section": "",
+    "text": "Tivy is an R package specialized in processing and analyzing fisheries data from Peru. It facilitates the handling of information from fishing trip logbooks, size records, hauls, and official announcements issued by the Ministry of Production for preventive closures.\n\n\n\nTivy"
+  },
+  {
+    "objectID": "projects/Tivy/index.html#about-this-project",
+    "href": "projects/Tivy/index.html#about-this-project",
+    "title": "Tivy",
+    "section": "",
+    "text": "Tivy is an R package specialized in processing and analyzing fisheries data from Peru. It facilitates the handling of information from fishing trip logbooks, size records, hauls, and official announcements issued by the Ministry of Production for preventive closures.\n\n\n\nTivy"
+  },
+  {
+    "objectID": "projects/Tivy/index.html#main-features",
+    "href": "projects/Tivy/index.html#main-features",
+    "title": "Tivy",
+    "section": "Main Features",
+    "text": "Main Features\n\nLoading and processing fishing logbook data.\nIntegration of haul, size, and fishing trip data.\nEstimation of biological index.\nAnalysis of preventive closures"
+  },
+  {
+    "objectID": "projects/Tivy/index.html#how-to-access",
+    "href": "projects/Tivy/index.html#how-to-access",
+    "title": "Tivy",
+    "section": "How to access",
+    "text": "How to access\nThe package is available on GitHub."
   }
 ]

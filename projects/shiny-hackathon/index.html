@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hans Ttito">
-<meta name="dcterms.date" content="2025-05-03">
-<meta name="description" content="Un pequeño post de porqué creo que deben aprender a programar">
+<meta name="dcterms.date" content="2025-05-04">
+<meta name="description" content="Application developed in Shiny for the Appsilon Hackathon - 2025">
 
-<title>¿Qué es la programación y por qué aprenderla?</title>
+<title>Shiny Hackathon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -75,17 +75,21 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="¿Qué es la programación y por qué aprenderla?">
-<meta property="og:description" content="Un pequeño post de porqué creo que deben aprender a programar">
-<meta property="og:image" content="https://hansttito.github.io/mi-blog/posts/que-es-programacion/starting.jpg">
-<meta name="twitter:title" content="¿Qué es la programación y por qué aprenderla?">
-<meta name="twitter:description" content="Un pequeño post de porqué creo que deben aprender a programar">
-<meta name="twitter:image" content="https://hansttito.github.io/mi-blog/posts/que-es-programacion/starting.jpg">
+<meta property="og:title" content="Shiny Hackathon">
+<meta property="og:description" content="Application developed in Shiny for the Appsilon Hackathon - 2025">
+<meta property="og:image" content="https://hansttito.github.io/mi-blog/projects/shiny-hackathon/images/shiny-hackathon.png">
+<meta property="og:image:height" content="1264">
+<meta property="og:image:width" content="2518">
+<meta name="twitter:title" content="Shiny Hackathon">
+<meta name="twitter:description" content="Application developed in Shiny for the Appsilon Hackathon - 2025">
+<meta name="twitter:image" content="https://hansttito.github.io/mi-blog/projects/shiny-hackathon/images/shiny-hackathon.png">
+<meta name="twitter:image-height" content="1264">
+<meta name="twitter:image-width" content="2518">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://hansttito.github.io/mi-blog/">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -141,15 +145,15 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">¿Qué es la programación y por qué aprenderla?</h1>
+      <h1 class="title">Shiny Hackathon</h1>
                   <div>
         <div class="description">
-          Un pequeño post de porqué creo que deben aprender a programar
+          Application developed in Shiny for the Appsilon Hackathon - 2025
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">programming</div>
+                <div class="quarto-category">Shiny</div>
+                <div class="quarto-category">R</div>
               </div>
                   </div>
   </div>
@@ -167,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 3, 2025</p>
+        <p class="date">May 4, 2025</p>
       </div>
     </div>
     
@@ -178,7 +182,17 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About this project</a></li>
+  <li><a href="#how-to-access" id="toc-how-to-access" class="nav-link" data-scroll-target="#how-to-access">How to access</a></li>
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source code</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -186,37 +200,23 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>¡Hola, hola! Hoy quiero hablarles de algo que cambió completamente la forma en la que trabajo (y, sinceramente, también cómo pienso e incluso, cómo vivo): la programación.</p>
-<p>Y antes de que digas “nah, eso no es para mí”, déjame contarte algo: yo soy biólogo. No ingeniero, no matemático, ni nada de eso. Aprendí a programar solo, viendo videos en YouTube, leyendo foros, copiando código que no entendía del todo, y probando hasta que algo salía. Jajaja, realmente, si te sientes identificado, esto es para tí, así partí yo, te entiendo totalmente.</p>
-<p>Spoiler: sí se puede. Y vale totalmente la pena.</p>
-<section id="qué-es-programar" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-programar">¿Qué es programar?</h2>
-<p>Es básicamente darle instrucciones a una computadora para que haga lo que tú quieras. Y eso va desde algo simple como decirle “muéstrame este mensajito” hasta procesar miles de datos, hacer análisis, crear una app o automatizar tareas repetitivas.</p>
-<p>La mejor parte es que tú decides qué quieres hacer con eso. Y en biología, créeme, las posibilidades son infinitas. ¿Y por qué me serviría si soy biólogo (o de otra carrera)?</p>
-<p>Porque vivimos en una era donde los datos están por todos lados. Y si tú sabes cómo manejarlos, analizarlos y sacarles provecho, tienes una ventaja enorme.</p>
-<hr>
+<section id="about-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-project">About this project</h2>
+<p>This web application was developed as part of the Hackathon organized by <a href="https://www.appsilon.com/">Appsilon</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/shiny-hackathon.png" class="img-fluid figure-img"></p>
+<figcaption>shiny-hackathon</figcaption>
+</figure>
+</div>
 </section>
-<section id="algunas-razones-por-las-que-a-mí-me-sirvió" class="level2">
-<h2 class="anchored" data-anchor-id="algunas-razones-por-las-que-a-mí-me-sirvió">Algunas razones por las que a mí me sirvió:</h2>
-<p>🧬 Pude analizar grandes volúmenes de datos sin depender de Excel (ni de terceros).</p>
-<p>🐟 Automatizo reportes y procesos que antes me tomaban horas.</p>
-<p>🐛 Puedo desarrollar herramientas propias para estudios ecológicos, pesqueros o de cualquier tipo.</p>
-<p>🌱 Empecé a colaborar con gente de otras disciplinas porque podía aportar desde mi área… ¡con código!</p>
-<hr>
-<p>Y no necesitas volverte desarrollador de software. Con lo básico ya puedes hacer cosas realmente útiles. ¿Pero cómo empiezo?</p>
-<p>Así empecé yo, y así puedes hacerlo tú también:</p>
-<hr>
-<p>Curiosidad: Lo primero es querer entender cómo demonios funciona esto.</p>
-<p>Tutoriales en YouTube: Buscas “R o Python para principiantes”, y te armas de paciencia.</p>
-<p>Copiar, pegar y romper cosas: Así aprendemos.</p>
-<p>Proyectos pequeños: Haz algo útil para ti, como automatizar un Excel o graficar tus datos.</p>
-<p>Comunidad: Únete a foros, grupos de Discord, X o donde sea que puedas preguntar y compartir.</p>
-<hr>
-<p>Yo comencé con Python y lo recomiendo un montón. Es fácil de leer, muy usado en ciencia, y tiene librerías para todo: desde estadísticas hasta mapas y machine learning. Lo mejor de todo</p>
-<p>Programar no es solo para “techies”. Es una herramienta poderosa para cualquier disciplina. Y si eres de ciencias como yo, créeme: puede darte un superpoder.</p>
-<p>A mí me permitió hacer más con menos, colaborar con gente increíble y ver mi carrera desde otra perspectiva.</p>
-<p>Así que si estás dudando, dale una oportunidad. Quizás no lo aprendas todo en una semana, pero poco a poco vas construyendo algo que realmente puede transformar tu forma de trabajar.</p>
-<p>¿Tú en qué área crees que podrías aplicar programación? ¡Te leo!</p>
+<section id="how-to-access" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-access">How to access</h2>
+<p>The application is available on <a href="https://kevin-ttito.shinyapps.io/shiny-tiny-hackathon/">shinyapps.io</a>.</p>
+</section>
+<section id="source-code" class="level2">
+<h2 class="anchored" data-anchor-id="source-code">Source code</h2>
+<p>The source code is available on <a href="https://github.com/HansTtito/shiny-tiny-hackathon">GitHub</a>.</p>
 
 
 </section>
@@ -621,10 +621,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<script src="https://giscus.app/client.js" data-repo="HansTtito/mi-blog" data-repo-id="R_kgDOOddWpA" data-category="[NOMBRE CATEGORÍA]" data-category-id="[ID CATEGORÍA]" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
-</script>
-<input type="hidden" id="giscus-base-theme" value="dark">
-<input type="hidden" id="giscus-alt-theme" value="dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -1,5 +1,13 @@
 [
   {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/biodiversity-dashboard/index.html",
+      "/projects/shiny-hackathon/index.html",
+      "/projects/Tivy/index.html"
+    ]
+  },
+  {
     "listing": "/posts.html",
     "items": [
       "/posts/conceptos-claves-facil/index.html",
