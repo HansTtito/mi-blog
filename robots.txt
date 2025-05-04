@@ -1,1 +1,3 @@
-Sitemap: https://HansTtito.github.io/mi-blog/sitemap.xml
+User-agent: *
+Allow: /
+Sitemap: https://hansttito.github.io/mi-blog/sitemap.xml
