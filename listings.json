@@ -11,6 +11,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/mi-primer-script-python/index.html",
       "/posts/conceptos-claves-facil/index.html",
       "/posts/docker-python/index.html",
       "/posts/mi-primer-script-R/index.html",
