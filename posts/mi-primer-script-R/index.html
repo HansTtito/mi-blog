@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Hans Ttito">
+<meta name="dcterms.date" content="2025-05-03">
+<meta name="description" content="Guía para hacer tu primer script en R - usando R-studio">
 
-<title>posts</title>
+<title>Mi primer script de R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +23,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-451c895cda47d75efce66772fc31bdcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-451c895cda47d75efce66772fc31bdcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,70 +106,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -146,15 +124,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">Sobre mí</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./posts.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -177,181 +155,157 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Mi primer script de R</h1>
+                  <div>
+        <div class="description">
+          Guía para hacer tu primer script en R - usando R-studio
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+                <div class="quarto-category">programming</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hans Ttito </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">May 3, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(4)</span></div><div class="category" data-category="cHJvZ3JhbW1pbmc=">programming <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="mi-primer-script-en-r" class="level2">
+<h2 class="anchored" data-anchor-id="mi-primer-script-en-r">🧪 Mi primer script en R</h2>
+<p>Recuerdo clarito el primer script que escribí en R. Tenía como tres líneas y aún así me sentía un hacker de película. No entendía casi nada, pero ver que el código hacía algo fue mágico. ¿Estás empezando con R y no sabes por dónde comenzar? Tranqui, todos hemos pasado por esa etapa de “¿qué rayos estoy haciendo?”. En este post te guiaré desde cero para que puedas escribir tu primer script en R y empezar tu camino en el fascinante mundo del análisis de datos.</p>
+</section>
+<section id="por-qué-r" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-r">¿Por qué R?</h2>
+<p>Antes de meternos en código, déjame contarte por qué R es genial:</p>
+<p>Es gratis y open source (tu bolsillo te lo agradecerá) Tiene una comunidad enorme dispuesta a ayudar Es especializado en estadística y visualización (esas gráficas bonitas que ves en papers científicos, probablemente fueron hechas en R) Tiene más de 18,000 paquetes para casi cualquier cosa que imagines</p>
+</section>
+<section id="instalando-lo-necesario" class="level2">
+<h2 class="anchored" data-anchor-id="instalando-lo-necesario">Instalando lo necesario</h2>
+<p>Primero, necesitas dos cosas:</p>
+<p>R - el lenguaje de programación en sí RStudio - un entorno de desarrollo que hace que usar R sea muuucho más fácil</p>
+<p>Descarga R desde <a href="https://cran.r-project.org/">CRAN</a> y <a href="https://posit.co/download/rstudio-desktop/">RStudio</a> desde su sitio oficial. La instalación es bastante directa, como cualquier otro programa. Abriendo RStudio por primera vez</p>
+<p>Cuando abras RStudio, verás algo como esto:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/r-studio-view.png" class="img-fluid figure-img"></p>
+<figcaption>r-studio-view</figcaption>
+</figure>
+</div>
+<p>El siguiente paso es abrir un script con el comando Ctrl + Shift + N o de la siguiente manera:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/abrir-script.png" class="img-fluid figure-img"></p>
+<figcaption>open-script</figcaption>
+</figure>
+</div>
+<p>de manera sencilla, Rstudio te ayuda a ordenarte en 4 componentes principales “Scripts”, “Consola”, “Ambiente de Variables”, “Ayuda-plots”; se visualiza en el siguiente gráfico:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/rstudio-structura.png" class="img-fluid figure-img"></p>
+<figcaption>rstudio-structure</figcaption>
+</figure>
+</div>
+<p>Los comandos podemos escribirlos, tanto en la consola, como en la zona de los scripts, la diferencia es que, la consola es como si fuera un borrador, puedes poner lo que deseas, pero no tendrás la opción de guardarlo; por otro lado, en la zona de los scripts, tienes la opción de guardar las líneas de código que deseas, sería algo así como, en la consola haces todas las pruebas que deseas hasta encontrar el código que te sirve, y ese código, lo pasas al script para poder guardarlo luego.</p>
+</section>
+<section id="tu-primer-hola-mundo-en-r" class="level2">
+<h2 class="anchored" data-anchor-id="tu-primer-hola-mundo-en-r">Tu primer “Hola Mundo” en R</h2>
+<p>Vamos a empezar con algo súper simple. En la consola, escribe:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"¡Hola, mundo del análisis de datos!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Presiona Enter y… ¡BOOM! Acabas de ejecutar tu primer comando en R. No es gran cosa, pero es un comienzo, ¿no?</p>
+</section>
+<section id="creando-tu-primer-script" class="level2">
+<h2 class="anchored" data-anchor-id="creando-tu-primer-script">Creando tu primer script</h2>
+<p>Hasta ahora, solo hemos escrito comandos directamente en la consola. Pero lo profesional es crear scripts que puedas guardar y reutilizar. Para eso, como mencionamos, usaremos la zona de “Scripts”.</p>
+<p>En el script podemos escribir lo siguiente:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Mi primer script en R</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear algunas variables</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mi_numero <span class="ot">&lt;-</span> <span class="dv">42</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>mi_texto <span class="ot">&lt;-</span> <span class="st">"La respuesta a todo"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Mostrar los valores</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mi_numero)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(mi_texto)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Un cálculo simple</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> mi_numero <span class="sc">*</span> <span class="dv">2</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"El doble de mi número es:"</span>, resultado))</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Crear un vector (algo así como una lista de valores)</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>mis_datos <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">23</span>, <span class="dv">36</span>, <span class="dv">42</span>, <span class="dv">58</span>, <span class="dv">71</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular estadísticas básicas</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Promedio:"</span>, <span class="fu">mean</span>(mis_datos)))</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Valor mínimo:"</span>, <span class="fu">min</span>(mis_datos)))</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Valor máximo:"</span>, <span class="fu">max</span>(mis_datos)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Ahora, para poder guardaro tu script, podemos usar: Ctrl+S; y podemos ponerle un nombre como “mi_primer_script.R”.</p>
+<p>Para ejecutar todo el script, selecciona todo el código (Ctrl+A) y presiona Ctrl+Enter.</p>
+<p>¡WOW! ¿Viste eso?</p>
+</section>
+<section id="y-ahora-qué" class="level2">
+<h2 class="anchored" data-anchor-id="y-ahora-qué">¿Y ahora qué?</h2>
+<p>Este es solo el comienzo de tu viaje con R.</p>
+<p>Algunas cosas que podrías explorar después:</p>
+<hr>
+<ul>
+<li>Visualización de datos con ggplot</li>
+<li>Importar datos desde CSV, Excel o bases de datos</li>
+<li>Limpiar y transformar datos con el paquete dplyr</li>
+<li>Crear visualizaciones interactivas con plotly</li>
+<li>Hacer análisis estadísticos más avanzados</li>
+<li>Crear reportes automáticos con R Markdown</li>
+</ul>
+<hr>
+</section>
+<section id="consejos-para-principiantes" class="level2">
+<h2 class="anchored" data-anchor-id="consejos-para-principiantes">Consejos para principiantes</h2>
+<p>Los errores son normales: Todos cometemos errores. Lee los mensajes de error, suelen darte pistas sobre cómo solucionarlos. Google es tu amigo: Si te atascas, busca en Google. Alguien ya ha tenido el mismo problema que tú. Stack Overflow será tu biblia: Es el sitio de referencia para resolver dudas de programación. Comenta tu código: Los comentarios (líneas que comienzan con #) te ayudarán a entender lo que hiciste cuando regreses a tu código meses después. Practica, practica, practica: La única forma de aprender es haciendo. Obviamente, usa la IA, pero úsala de manera adecuada, si realmente quieres aprender a programar, entonces, entiende lo que estás escribiendo en tus códigos!!!!!!!</p>
+</section>
+<section id="conclusión" class="level2">
+<h2 class="anchored" data-anchor-id="conclusión">Conclusión</h2>
+<p>¿Ves? No era tan difícil escribir tu primer script en R. Lo más importante es perder el miedo y comenzar. Recuerda que todos fuimos principiantes alguna vez, y que la comunidad de R es muy amigable y está dispuesta a ayudar. Ahora es tu turno: ¿Qué fue lo primero que intentaste hacer con R? ¿Tienes alguna duda específica? ¡Déjame un comentario y conversemos! P.D: Aún recuerdo la emoción cuando logré hacer mi primer gráfico en R… fue un gráfico pie!! jajaja sí!. y también recuerdo haber perdido horas de mi vida buscando errores que fueron solo por un punto “.” o una coma “,” 🤦‍♂️; leer los mensajes de error que te da R ayudan mucho, créanme, equivocarse es lo mejor que puedes hacer en esta etapa, porque de ahí se aprende.</p>
 
 
+</section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1746244800000" data-listing-file-modified-sort="1746313060842" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="283">
-<div class="thumbnail"><a href="./posts/conceptos-claves-facil/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/conceptos-claves-facil/starting.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/conceptos-claves-facil/index.html" class="no-external">Conceptos claves para Principiantes</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/conceptos-claves-facil/index.html" class="no-external">
-<p>Ciertos conceptos básicos, claves que deberías conocer</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/conceptos-claves-facil/index.html" class="no-external">
-<div class="listing-date">
-May 3, 2025
-</div>
-<div class="listing-author">
-Hans Ttito
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cHJvZ3JhbW1pbmc=" data-listing-date-sort="1746244800000" data-listing-file-modified-sort="1746319473196" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1109">
-<div class="thumbnail"><a href="./posts/docker-python/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/docker-python/image.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/docker-python/index.html" class="no-external">Desplegando mi función de Python en Docker paso a paso</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbW1pbmc='); return false;">programming</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/docker-python/index.html" class="no-external">
-<p>Un resumen de cómo desplegar una función de Python en Docker</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/docker-python/index.html" class="no-external">
-<div class="listing-date">
-May 3, 2025
-</div>
-<div class="listing-author">
-Hans Ttito
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cyUyQ3Byb2dyYW1taW5n" data-listing-date-sort="1746244800000" data-listing-file-modified-sort="1746319191442" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="783">
-<div class="thumbnail"><a href="./posts/mi-primer-script-R/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/mi-primer-script-R/mi-primer-script.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/mi-primer-script-R/index.html" class="no-external">Mi primer script de R</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbW1pbmc='); return false;">programming</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/mi-primer-script-R/index.html" class="no-external">
-<p>Guía para hacer tu primer script en R - usando R-studio</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/mi-primer-script-R/index.html" class="no-external">
-<div class="listing-date">
-May 3, 2025
-</div>
-<div class="listing-author">
-Hans Ttito
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="bmV3cyUyQ3Byb2dyYW1taW5n" data-listing-date-sort="1746244800000" data-listing-file-modified-sort="1746313918229" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="441">
-<div class="thumbnail"><a href="./posts/que-es-programacion/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/que-es-programacion/starting.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/que-es-programacion/index.html" class="no-external">¿Qué es la programación y por qué aprenderla?</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZ3JhbW1pbmc='); return false;">programming</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/que-es-programacion/index.html" class="no-external">
-<p>Un pequeño post de porqué creo que deben aprender a programar</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/que-es-programacion/index.html" class="no-external">
-<div class="listing-date">
-May 3, 2025
-</div>
-<div class="listing-author">
-Hans Ttito
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="bmV3cw==" data-listing-date-sort="1745208000000" data-listing-file-modified-sort="1746319808225" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="316">
-<div class="thumbnail"><a href="./posts/first-steps/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/first-steps/starting.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/first-steps/index.html" class="no-external">Comenzar aquí</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">news</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/first-steps/index.html" class="no-external">
-<p>Una introducción para quienes vienen de otras disciplinas y quieren iniciarse en la programación.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/first-steps/index.html" class="no-external">
-<div class="listing-date">
-Apr 21, 2025
-</div>
-<div class="listing-author">
-Hans Ttito
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

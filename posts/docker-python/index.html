@@ -164,7 +164,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           Un resumen de cómo desplegar una función de Python en Docker
         </div>
       </div>
-                </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">programming</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -219,7 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="empecemos" class="level2">
 <h2 class="anchored" data-anchor-id="empecemos">¡¡Empecemos!!</h2>
 <p>Primero y antes que nada, necesitamos nuestro script, ya sea de una función o de una aplicación que queramos ejecutar, en mi caso, solo será un script sencillo que dice hola desde docker, lo llamaremos “saluditos.py”.</p>
-<div id="fa48365f" class="cell" data-execution_count="1">
+<div id="7bae9f73" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> argparse</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -251,7 +254,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Ya teniendo nuestro código (En este apartado no voy a explicar qué significa cada detalle del código); ahora debemos crear dos archivos más, un archivo donde estén todas las librerias que necesitaremos para el correcto funcionamiento del script, y lo llamaremos “requirements.txt”; y el otro archivo lo llamaremos “Dockerfile” (sin extensión) donde pondremos la configuración adecuada para que el código se ejecute en Docker.</p>
 <p>El archivo requirements.txt, en mi caso, sería lo siguiente:</p>
-<div id="8c947fcc" class="cell" data-execution_count="2">
+<div id="e449ceed" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pandas</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>argparse</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -287,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <source src="videos/abriendo-terminal.mp4" type="video/mp4">
 </video>
 <p>Ya teniendo abierto el docker, y tu terminal, pasaremos a ejecutar las siguiente lineas de comandos.</p>
-<div id="fd571439" class="cell" data-execution_count="3">
+<div id="a38c6d89" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>docker build <span class="op">-</span>t saluditos<span class="op">-</span>docker .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Esto permitirá levantar el docker, ahora puedes abrir tu docker y deberías ver algo como:</p>
@@ -298,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Y ahora para ejecutarlo, es algo tan sencillo como:</p>
-<div id="aecdd176" class="cell" data-execution_count="4">
+<div id="771515bf" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>docker run saluditos<span class="op">-</span>docker</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Obtendrías algo como:</p>
@@ -309,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Sin embargo, me dirás..!Hans, mi función recibe parámetros! ¿cómo hago si quiero pasarle? Pues izi! usamos los siguientes comandos:</p>
-<div id="8c227bca" class="cell" data-execution_count="5">
+<div id="452c5e97" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>docker run saluditos<span class="op">-</span>docker <span class="op">--</span>nombres Hans Jaime</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Este comando nos permite agregar los argumentos en nuestro script.</p>
@@ -322,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Ahora, si eres cuidadoso, podrás observar en mi Dockerfile un detalle: en muchos otros blogs, en la última parte encontrarás solo “CMD[python, ”script.py”]”; sin embargo, en mi caso puse ENTRYPOINT, este comando me permite agregarlo como argumento lo que sea que venga después.</p>
 <p>Ahora, resulta lo siguiente, nosotros ya ejecutamos nuestro script desde docker, y ya finalizó y lo podemos verificar desde</p>
-<div id="7bd17caa" class="cell" data-execution_count="6">
+<div id="d2a84467" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>docker ps <span class="op">-</span>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>esto nos mostrará todos los contenedores que se están ejecutando o que se ejecutaron en el sistema.</p>
@@ -334,11 +337,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Sin embargo, a pesar de estar como “Exited”; siguen ocupando un espacio en el sistema, por lo que es recomendable “eliminarlos”</p>
 <p>Si queremos eliminar todos los contenedores, usamos:</p>
-<div id="b90a77bb" class="cell" data-execution_count="7">
+<div id="cb1a2402" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>docker container prune</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>ahora, si queremos eliminar uno en específico, también podemos usar el comando “rm” agregado del ID del contenedor, que lo obtuvimos al hacer docker ps -a anteriormente; en mi caso sería lo siguiente</p>
-<div id="3b531778" class="cell" data-execution_count="8">
+<div id="294ad2a4" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>docker rm db2db69bccd0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>después de esto, si verificamos con docker ps -a; ya no tenemos contenedores cargados en nuestro sistema!!</p>
