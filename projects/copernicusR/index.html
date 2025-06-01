@@ -8,7 +8,7 @@
 
 <meta name="author" content="Hans Ttito">
 <meta name="dcterms.date" content="2025-05-31">
-<meta name="description" content="Interfaz R para descarga de datos oceánicos desde Copernicus Marine usando Python.">
+<meta name="description" content="R interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.">
 
 <title>copernicusR</title>
 <style>
@@ -76,12 +76,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="copernicusR">
-<meta property="og:description" content="Interfaz R para descarga de datos oceánicos desde Copernicus Marine usando Python.">
+<meta property="og:description" content="R interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.">
 <meta property="og:image" content="https://hansttito.github.io/mi-blog/projects/copernicusR/images/copernicusR.png">
 <meta property="og:image:height" content="1297">
 <meta property="og:image:width" content="1402">
 <meta name="twitter:title" content="copernicusR">
-<meta name="twitter:description" content="Interfaz R para descarga de datos oceánicos desde Copernicus Marine usando Python.">
+<meta name="twitter:description" content="R interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.">
 <meta name="twitter:image" content="https://hansttito.github.io/mi-blog/projects/copernicusR/images/copernicusR.png">
 <meta name="twitter:image-height" content="1297">
 <meta name="twitter:image-width" content="1402">
@@ -103,11 +103,11 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../index.html"> 
-<span class="menu-text">Inicio</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">Sobre mí</span></a>
+<span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../posts.html"> 
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../projects.html"> 
-<span class="menu-text">Proyectos</span></a>
+<span class="menu-text">My Projects</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -148,12 +148,12 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">copernicusR</h1>
                   <div>
         <div class="description">
-          Interfaz R para descarga de datos oceánicos desde Copernicus Marine usando Python.
+          R interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">R</div>
-                <div class="quarto-category">Análisis de Datos</div>
+                <div class="quarto-category">python</div>
               </div>
                   </div>
   </div>
@@ -189,7 +189,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About this project</a></li>
   <li><a href="#main-features" id="toc-main-features" class="nav-link" data-scroll-target="#main-features">Main Features</a></li>
-  <li><a href="#main-features-1" id="toc-main-features-1" class="nav-link" data-scroll-target="#main-features-1">Main Features</a></li>
   <li><a href="#how-to-access" id="toc-how-to-access" class="nav-link" data-scroll-target="#how-to-access">How to access</a></li>
   </ul>
 </nav>
@@ -203,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="about-this-project" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-project">About this project</h2>
-<p>copernicusR es un paquete R que permite descargar, explorar y gestionar datos oceánicos del servicio Copernicus Marine directamente desde R, utilizando la librería oficial de Python copernicusmarine y la integración vía reticulate. Ideal para automatizar flujos de trabajo científicos y análisis marinos en R de forma multiplataforma.</p>
+<p>copernicusR is an R package that allows you to download, explore, and manage oceanographic data from the Copernicus Marine service directly within R, using the official Python library copernicusmarine and seamless integration via reticulate. It’s ideal for automating scientific workflows and marine analyses in R across platforms.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/copernicusR.png" class="img-fluid figure-img"></p>
@@ -213,9 +212,6 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="main-features" class="level2">
 <h2 class="anchored" data-anchor-id="main-features">Main Features</h2>
-</section>
-<section id="main-features-1" class="level2">
-<h2 class="anchored" data-anchor-id="main-features-1">Main Features</h2>
 <ul>
 <li>Download oceanographic datasets from Copernicus Marine (CMEMS) directly into R</li>
 <li>Search and filter available datasets by variable, region, or time range</li>
