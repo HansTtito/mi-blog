@@ -2,6 +2,7 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/copernicusR/index.html",
       "/projects/biodiversity-dashboard/index.html",
       "/projects/invasal/index.html",
       "/projects/shiny-hackathon/index.html",
