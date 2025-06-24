@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "copernicusR\n\n\n\nR\n\npython\n\n\n\nR interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.\n\n\n\nHans Ttito\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Biodiversity Dashboard\n\n\n\nShiny\n\nR\n\n\n\nShiny Biodiversity Dashboard allows the visualization of biodiversity species observations in the world\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvasal shiny app\n\n\n\nShiny\n\nR\n\n\n\nInvasal shiny app allows the visualization of catches and some biological data for salmones in Chile - Invasal\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Hackathon\n\n\n\nShiny\n\nR\n\n\n\nApplication developed in Shiny for the Appsilon Hackathon - 2025\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTivy\n\n\n\nR\n\nData Analysis\n\n\n\nToolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "fb4package\n\n\n\nR\n\nEcology\n\nData Analysis\n\n\n\nfb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization…\n\n\n\nHans Ttito\n\n\nJun 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\ncopernicusR\n\n\n\nR\n\npython\n\n\n\nR interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.\n\n\n\nHans Ttito\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Biodiversity Dashboard\n\n\n\nShiny\n\nR\n\n\n\nShiny Biodiversity Dashboard allows the visualization of biodiversity species observations in the world\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvasal shiny app\n\n\n\nShiny\n\nR\n\n\n\nInvasal shiny app allows the visualization of catches and some biological data for salmones in Chile - Invasal\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Hackathon\n\n\n\nShiny\n\nR\n\n\n\nApplication developed in Shiny for the Appsilon Hackathon - 2025\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTivy\n\n\n\nR\n\nData Analysis\n\n\n\nToolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/shiny-hackathon/index.html",
@@ -35,263 +35,81 @@
     "text": "Source code\nThe source code is available on GitHub."
   },
   {
-    "objectID": "projects/copernicusR/index.html",
-    "href": "projects/copernicusR/index.html",
-    "title": "copernicusR",
+    "objectID": "projects/fb4package/index.html",
+    "href": "projects/fb4package/index.html",
+    "title": "fb4package",
     "section": "",
-    "text": "copernicusR is an R package that allows you to download, explore, and manage oceanographic data from the Copernicus Marine service directly within R, using the official Python library copernicusmarine and seamless integration via reticulate. It’s ideal for automating scientific workflows and marine analyses in R across platforms.\n\n\n\ncopernicusR"
+    "text": "The fb4package provides a modern R-based implementation of fish bioenergetics modeling, built upon the foundation of Fish Bioenergetics 4.0 developed by Deslauriers et al. (2017). This package enables comprehensive energy budget modeling for fish growth, consumption, and metabolic processes.\n\n\n\nfb4package"
   },
   {
-    "objectID": "projects/copernicusR/index.html#about-this-project",
-    "href": "projects/copernicusR/index.html#about-this-project",
-    "title": "copernicusR",
+    "objectID": "projects/fb4package/index.html#about-this-project",
+    "href": "projects/fb4package/index.html#about-this-project",
+    "title": "fb4package",
     "section": "",
-    "text": "copernicusR is an R package that allows you to download, explore, and manage oceanographic data from the Copernicus Marine service directly within R, using the official Python library copernicusmarine and seamless integration via reticulate. It’s ideal for automating scientific workflows and marine analyses in R across platforms.\n\n\n\ncopernicusR"
+    "text": "The fb4package provides a modern R-based implementation of fish bioenergetics modeling, built upon the foundation of Fish Bioenergetics 4.0 developed by Deslauriers et al. (2017). This package enables comprehensive energy budget modeling for fish growth, consumption, and metabolic processes.\n\n\n\nfb4package"
   },
   {
-    "objectID": "projects/copernicusR/index.html#main-features",
-    "href": "projects/copernicusR/index.html#main-features",
-    "title": "copernicusR",
+    "objectID": "projects/fb4package/index.html#main-features",
+    "href": "projects/fb4package/index.html#main-features",
+    "title": "fb4package",
     "section": "Main Features",
-    "text": "Main Features\n\nDownload oceanographic datasets from Copernicus Marine (CMEMS) directly into R\nSearch and filter available datasets by variable, region, or time range\nSimple wrappers for common download and extraction tasks"
+    "text": "Main Features\n\nComprehensive Energy Budget Modeling: Complete simulation of consumption, metabolism, excretion, egestion, and growth\nMulti-Species Support: Built-in parameters for 105+ fish species models across different life stages\nAutomatic Parameter Fitting: Iterative optimization to reach target weights or consumption rates using binary search algorithms\nEnvironmental Integration: Temperature effects and habitat-dependent functions (dissolved oxygen, salinity)\nFlexible Diet Modeling: Multi-prey diet compositions with daily variation and indigestible fractions\nTemporal Dynamics: Daily resolution with seasonal environmental variation support\nResearch Reproducibility: Scriptable, version-controlled bioenergetics analyses"
   },
   {
-    "objectID": "projects/copernicusR/index.html#how-to-access",
-    "href": "projects/copernicusR/index.html#how-to-access",
-    "title": "copernicusR",
+    "objectID": "projects/fb4package/index.html#how-to-access",
+    "href": "projects/fb4package/index.html#how-to-access",
+    "title": "fb4package",
     "section": "How to access",
     "text": "How to access\nThe package is available on GitHub."
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "",
+    "objectID": "projects/biodiversity-dashboard/index.html",
+    "href": "projects/biodiversity-dashboard/index.html",
+    "title": "Shiny Biodiversity Dashboard",
     "section": "",
-    "text": "Mi primer script de Python 🐍\n\n\n\nnews\n\nprogramming\n\n\n\nGuía para hacer tu primer script en Python - usando Visual Studio Code (VSC)\n\n\n\n\n\nMay 4, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nConceptos claves para Principiantes\n\n\n\nnews\n\n\n\nCiertos conceptos básicos, claves que deberías conocer\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nDesplegando mi función de Python en Docker paso a paso\n\n\n\nprogramming\n\n\n\nUn resumen de cómo desplegar una función de Python en Docker\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nMi primer script de R\n\n\n\nnews\n\nprogramming\n\n\n\nGuía para hacer tu primer script en R - usando R-studio\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\n¿Qué es la programación y por qué aprenderla?\n\n\n\nnews\n\nprogramming\n\n\n\nUn pequeño post de porqué creo que deben aprender a programar\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nComenzar aquí\n\n\n\nnews\n\n\n\nUna introducción para quienes vienen de otras disciplinas y quieren iniciarse en la programación.\n\n\n\n\n\nApr 21, 2025\n\n\nHans Ttito\n\n\n\n\n\nNo matching items"
+    "text": "This Shiny app allows the visualization of biodiversity species observations in the world. Users can search for species by their common or scientific name, and then view their observations on an interactive map. They can also explore a timeline showing when the selected species were observed.\n\n\n\nshiny-biodiversity-dashboard"
   },
   {
-    "objectID": "posts/mi-primer-script-R/index.html",
-    "href": "posts/mi-primer-script-R/index.html",
-    "title": "Mi primer script de R",
+    "objectID": "projects/biodiversity-dashboard/index.html#about-this-project",
+    "href": "projects/biodiversity-dashboard/index.html#about-this-project",
+    "title": "Shiny Biodiversity Dashboard",
     "section": "",
-    "text": "Recuerdo clarito el primer script que escribí en R. Tenía como tres líneas y aún así me sentía un hacker de película. No entendía casi nada, pero ver que el código hacía algo fue mágico. ¿Estás empezando con R y no sabes por dónde comenzar? Tranqui, todos hemos pasado por esa etapa de “¿qué rayos estoy haciendo?”. En este post te guiaré desde cero para que puedas escribir tu primer script en R y empezar tu camino en el fascinante mundo del análisis de datos."
+    "text": "This Shiny app allows the visualization of biodiversity species observations in the world. Users can search for species by their common or scientific name, and then view their observations on an interactive map. They can also explore a timeline showing when the selected species were observed.\n\n\n\nshiny-biodiversity-dashboard"
   },
   {
-    "objectID": "posts/mi-primer-script-R/index.html#mi-primer-script-en-r",
-    "href": "posts/mi-primer-script-R/index.html#mi-primer-script-en-r",
-    "title": "Mi primer script de R",
+    "objectID": "projects/biodiversity-dashboard/index.html#how-to-access",
+    "href": "projects/biodiversity-dashboard/index.html#how-to-access",
+    "title": "Shiny Biodiversity Dashboard",
+    "section": "How to access",
+    "text": "How to access\nThe application is available on shinyapps.io."
+  },
+  {
+    "objectID": "projects/biodiversity-dashboard/index.html#source-code",
+    "href": "projects/biodiversity-dashboard/index.html#source-code",
+    "title": "Shiny Biodiversity Dashboard",
+    "section": "Source Code",
+    "text": "Source Code\nThe source code is available on GitHub."
+  },
+  {
+    "objectID": "posts/que-es-programacion/index.html",
+    "href": "posts/que-es-programacion/index.html",
+    "title": "¿Qué es la programación y por qué aprenderla?",
     "section": "",
-    "text": "Recuerdo clarito el primer script que escribí en R. Tenía como tres líneas y aún así me sentía un hacker de película. No entendía casi nada, pero ver que el código hacía algo fue mágico. ¿Estás empezando con R y no sabes por dónde comenzar? Tranqui, todos hemos pasado por esa etapa de “¿qué rayos estoy haciendo?”. En este post te guiaré desde cero para que puedas escribir tu primer script en R y empezar tu camino en el fascinante mundo del análisis de datos."
+    "text": "¡Hola, hola! Hoy quiero hablarles de algo que cambió completamente la forma en la que trabajo (y, sinceramente, también cómo pienso e incluso, cómo vivo): la programación.\nY antes de que digas “nah, eso no es para mí”, déjame contarte algo: yo soy biólogo. No ingeniero, no matemático, ni nada de eso. Aprendí a programar solo, viendo videos en YouTube, leyendo foros, copiando código que no entendía del todo, y probando hasta que algo salía. Jajaja, realmente, si te sientes identificado, esto es para tí, así partí yo, te entiendo totalmente.\nSpoiler: sí se puede. Y vale totalmente la pena."
   },
   {
-    "objectID": "posts/mi-primer-script-R/index.html#por-qué-r",
-    "href": "posts/mi-primer-script-R/index.html#por-qué-r",
-    "title": "Mi primer script de R",
-    "section": "¿Por qué R?",
-    "text": "¿Por qué R?\nAntes de meternos en código, déjame contarte por qué R es genial:\nEs gratis y open source (tu bolsillo te lo agradecerá) Tiene una comunidad enorme dispuesta a ayudar Es especializado en estadística y visualización (esas gráficas bonitas que ves en papers científicos, probablemente fueron hechas en R) Tiene más de 18,000 paquetes para casi cualquier cosa que imagines"
+    "objectID": "posts/que-es-programacion/index.html#qué-es-programar",
+    "href": "posts/que-es-programacion/index.html#qué-es-programar",
+    "title": "¿Qué es la programación y por qué aprenderla?",
+    "section": "¿Qué es programar?",
+    "text": "¿Qué es programar?\nEs básicamente darle instrucciones a una computadora para que haga lo que tú quieras. Y eso va desde algo simple como decirle “muéstrame este mensajito” hasta procesar miles de datos, hacer análisis, crear una app o automatizar tareas repetitivas.\nLa mejor parte es que tú decides qué quieres hacer con eso. Y en biología, créeme, las posibilidades son infinitas. ¿Y por qué me serviría si soy biólogo (o de otra carrera)?\nPorque vivimos en una era donde los datos están por todos lados. Y si tú sabes cómo manejarlos, analizarlos y sacarles provecho, tienes una ventaja enorme."
   },
   {
-    "objectID": "posts/mi-primer-script-R/index.html#instalando-lo-necesario",
-    "href": "posts/mi-primer-script-R/index.html#instalando-lo-necesario",
-    "title": "Mi primer script de R",
-    "section": "Instalando lo necesario",
-    "text": "Instalando lo necesario\nPrimero, necesitas dos cosas:\nR - el lenguaje de programación en sí RStudio - un entorno de desarrollo que hace que usar R sea muuucho más fácil\nDescarga R desde CRAN y RStudio desde su sitio oficial. La instalación es bastante directa, como cualquier otro programa. Abriendo RStudio por primera vez\nCuando abras RStudio, verás algo como esto:\n\n\n\nr-studio-view\n\n\nEl siguiente paso es abrir un script con el comando Ctrl + Shift + N o de la siguiente manera:\n\n\n\nopen-script\n\n\nde manera sencilla, Rstudio te ayuda a ordenarte en 4 componentes principales “Scripts”, “Consola”, “Ambiente de Variables”, “Ayuda-plots”; se visualiza en el siguiente gráfico:\n\n\n\nrstudio-structure\n\n\nLos comandos podemos escribirlos, tanto en la consola, como en la zona de los scripts, la diferencia es que, la consola es como si fuera un borrador, puedes poner lo que deseas, pero no tendrás la opción de guardarlo; por otro lado, en la zona de los scripts, tienes la opción de guardar las líneas de código que deseas, sería algo así como, en la consola haces todas las pruebas que deseas hasta encontrar el código que te sirve, y ese código, lo pasas al script para poder guardarlo luego."
-  },
-  {
-    "objectID": "posts/mi-primer-script-R/index.html#tu-primer-hola-mundo-en-r",
-    "href": "posts/mi-primer-script-R/index.html#tu-primer-hola-mundo-en-r",
-    "title": "Mi primer script de R",
-    "section": "Tu primer “Hola Mundo” en R",
-    "text": "Tu primer “Hola Mundo” en R\nVamos a empezar con algo súper simple. En la consola, escribe:\n\nprint(\"¡Hola, mundo del análisis de datos!\")\n\nPresiona Enter y… ¡BOOM! Acabas de ejecutar tu primer comando en R. No es gran cosa, pero es un comienzo, ¿no?"
-  },
-  {
-    "objectID": "posts/mi-primer-script-R/index.html#creando-tu-primer-script",
-    "href": "posts/mi-primer-script-R/index.html#creando-tu-primer-script",
-    "title": "Mi primer script de R",
-    "section": "Creando tu primer script",
-    "text": "Creando tu primer script\nHasta ahora, solo hemos escrito comandos directamente en la consola. Pero lo profesional es crear scripts que puedas guardar y reutilizar. Para eso, como mencionamos, usaremos la zona de “Scripts”.\nEn el script podemos escribir lo siguiente:\n\n# Mi primer script en R\n\n# Crear algunas variables\nmi_numero &lt;- 42\nmi_texto &lt;- \"La respuesta a todo\"\n\n# Mostrar los valores\nprint(mi_numero)\nprint(mi_texto)\n\n# Un cálculo simple\nresultado &lt;- mi_numero * 2\nprint(paste(\"El doble de mi número es:\", resultado))\n\n# Crear un vector (algo así como una lista de valores)\nmis_datos &lt;- c(15, 23, 36, 42, 58, 71)\n\n# Calcular estadísticas básicas\nprint(paste(\"Promedio:\", mean(mis_datos)))\nprint(paste(\"Valor mínimo:\", min(mis_datos)))\nprint(paste(\"Valor máximo:\", max(mis_datos)))\n\nAhora, para poder guardaro tu script, podemos usar: Ctrl+S; y podemos ponerle un nombre como “mi_primer_script.R”.\nPara ejecutar todo el script, selecciona todo el código (Ctrl+A) y presiona Ctrl+Enter.\n¡WOW! ¿Viste eso?"
-  },
-  {
-    "objectID": "posts/mi-primer-script-R/index.html#y-ahora-qué",
-    "href": "posts/mi-primer-script-R/index.html#y-ahora-qué",
-    "title": "Mi primer script de R",
-    "section": "¿Y ahora qué?",
-    "text": "¿Y ahora qué?\nEste es solo el comienzo de tu viaje con R.\nAlgunas cosas que podrías explorar después:\n\n\nVisualización de datos con ggplot\nImportar datos desde CSV, Excel o bases de datos\nLimpiar y transformar datos con el paquete dplyr\nCrear visualizaciones interactivas con plotly\nHacer análisis estadísticos más avanzados\nCrear reportes automáticos con R Markdown"
-  },
-  {
-    "objectID": "posts/mi-primer-script-R/index.html#consejos-para-principiantes",
-    "href": "posts/mi-primer-script-R/index.html#consejos-para-principiantes",
-    "title": "Mi primer script de R",
-    "section": "Consejos para principiantes",
-    "text": "Consejos para principiantes\nLos errores son normales: Todos cometemos errores. Lee los mensajes de error, suelen darte pistas sobre cómo solucionarlos. Google es tu amigo: Si te atascas, busca en Google. Alguien ya ha tenido el mismo problema que tú. Stack Overflow será tu biblia: Es el sitio de referencia para resolver dudas de programación. Comenta tu código: Los comentarios (líneas que comienzan con #) te ayudarán a entender lo que hiciste cuando regreses a tu código meses después. Practica, practica, practica: La única forma de aprender es haciendo. Obviamente, usa la IA, pero úsala de manera adecuada, si realmente quieres aprender a programar, entonces, entiende lo que estás escribiendo en tus códigos!!!!!!!"
-  },
-  {
-    "objectID": "posts/mi-primer-script-R/index.html#conclusión",
-    "href": "posts/mi-primer-script-R/index.html#conclusión",
-    "title": "Mi primer script de R",
-    "section": "Conclusión",
-    "text": "Conclusión\n¿Ves? No era tan difícil escribir tu primer script en R. Lo más importante es perder el miedo y comenzar. Recuerda que todos fuimos principiantes alguna vez, y que la comunidad de R es muy amigable y está dispuesta a ayudar. Ahora es tu turno: ¿Qué fue lo primero que intentaste hacer con R? ¿Tienes alguna duda específica? ¡Déjame un comentario y conversemos! P.D: Aún recuerdo la emoción cuando logré hacer mi primer gráfico en R… fue un gráfico pie!! jajaja sí!. y también recuerdo haber perdido horas de mi vida buscando errores que fueron solo por un punto “.” o una coma “,” 🤦‍♂️; leer los mensajes de error que te da R ayudan mucho, créanme, equivocarse es lo mejor que puedes hacer en esta etapa, porque de ahí se aprende."
-  },
-  {
-    "objectID": "posts/first-steps/index.html",
-    "href": "posts/first-steps/index.html",
-    "title": "Comenzar aquí",
-    "section": "",
-    "text": "Soy Hans Ttito, biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción. A lo largo de mi carrera he usado la programación como una herramienta para resolver preguntas científicas, automatizar procesos y explorar el impacto del cambio climático en los ecosistemas marinos.\nEste blog nace del deseo de compartir lo que he aprendido con quienes no necesariamente vienen del mundo de la informática. Si eres biólogo, sociólogo, estudiante, investigador o simplemente curioso, estás en el lugar correcto."
-  },
-  {
-    "objectID": "posts/first-steps/index.html#bienvenido-a-mi-blog",
-    "href": "posts/first-steps/index.html#bienvenido-a-mi-blog",
-    "title": "Comenzar aquí",
-    "section": "",
-    "text": "Soy Hans Ttito, biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción. A lo largo de mi carrera he usado la programación como una herramienta para resolver preguntas científicas, automatizar procesos y explorar el impacto del cambio climático en los ecosistemas marinos.\nEste blog nace del deseo de compartir lo que he aprendido con quienes no necesariamente vienen del mundo de la informática. Si eres biólogo, sociólogo, estudiante, investigador o simplemente curioso, estás en el lugar correcto."
-  },
-  {
-    "objectID": "posts/first-steps/index.html#para-quién-es-este-blog",
-    "href": "posts/first-steps/index.html#para-quién-es-este-blog",
-    "title": "Comenzar aquí",
-    "section": "🧭 ¿Para quién es este blog?",
-    "text": "🧭 ¿Para quién es este blog?\n\nPersonas sin experiencia previa en programación\nInvestigadores o estudiantes que trabajan con datos\nProfesionales que quieren automatizar tareas repetitivas\nCuriosos que quieren usar la tecnología como herramienta"
-  },
-  {
-    "objectID": "posts/first-steps/index.html#por-dónde-empezar",
-    "href": "posts/first-steps/index.html#por-dónde-empezar",
-    "title": "Comenzar aquí",
-    "section": "🚀 ¿Por dónde empezar?",
-    "text": "🚀 ¿Por dónde empezar?\nAquí te dejo una guía con algunos de los contenidos básicos y útiles para comenzar:\n\n📘 Introducción a la programación\n\n👉 ¿Qué es la programación y por qué aprenderla?\n👉 Conceptos clave explicados fácil\n\n\n\n🛠️ Primeros pasos en R y Python\n\n👉 Mi primer script en R\n👉 Mi primer script en Python\n\n\n\n🤖 Automatización útil\n\n👉 Cómo automatizar tareas con código – (En producción)\n👉 Ejemplo práctico: limpiar datos de Excel automáticamente – (En producción)\n\n\n\n📊 Visualización de datos\n\n👉 Graficar datos en R con ggplot2 – (En producción)\n👉 Visualización interactiva con plotly – (En producción)"
-  },
-  {
-    "objectID": "posts/first-steps/index.html#consejos-para-aprender-a-programar",
-    "href": "posts/first-steps/index.html#consejos-para-aprender-a-programar",
-    "title": "Comenzar aquí",
-    "section": "💡 Consejos para aprender a programar",
-    "text": "💡 Consejos para aprender a programar\n\nNo necesitas ser experto en matemáticas, solo tener curiosidad y paciencia.\nCopiar y modificar código es parte del aprendizaje.\nLos errores no son fallas, ¡son parte del camino!\nEmpieza con pequeños proyectos relacionados con lo que te apasiona."
-  },
-  {
-    "objectID": "posts/first-steps/index.html#conectemos",
-    "href": "posts/first-steps/index.html#conectemos",
-    "title": "Comenzar aquí",
-    "section": "🤝 Conectemos",
-    "text": "🤝 Conectemos\nSi tienes preguntas, sugerencias o simplemente quieres conversar sobre programación, ciencia o visualización de datos, puedes escribirme:\n\nGitHub\nEmail"
-  },
-  {
-    "objectID": "posts/first-steps/index.html#y-ahora",
-    "href": "posts/first-steps/index.html#y-ahora",
-    "title": "Comenzar aquí",
-    "section": "🌟 ¿Y ahora?",
-    "text": "🌟 ¿Y ahora?\nNavega por las secciones del blog, guarda tus artículos favoritos y no dudes en escribirme si te pierdes en el camino. ¡Estoy aquí para ayudarte!"
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html",
-    "href": "posts/conceptos-claves-facil/index.html",
-    "title": "Conceptos claves para Principiantes",
-    "section": "",
-    "text": "Ok, ahora que te animé a programar (espero … en verdad), toca aterrizar, aclarar un poco las ideas.\n¿Qué significa todo ese rollo, palabrerías… que uno escucha cuando se mete en este mundo?\nTe dejo una mini-guía sin tecnicismos innecesarios:"
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#conceptos-clave-explicados-fácil",
-    "href": "posts/conceptos-claves-facil/index.html#conceptos-clave-explicados-fácil",
-    "title": "Conceptos claves para Principiantes",
-    "section": "",
-    "text": "Ok, ahora que te animé a programar (espero … en verdad), toca aterrizar, aclarar un poco las ideas.\n¿Qué significa todo ese rollo, palabrerías… que uno escucha cuando se mete en este mundo?\nTe dejo una mini-guía sin tecnicismos innecesarios:"
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#script",
-    "href": "posts/conceptos-claves-facil/index.html#script",
-    "title": "Conceptos claves para Principiantes",
-    "section": "💻 Script",
-    "text": "💻 Script\nUn script es básicamente un archivo de texto con instrucciones para la compu. Tú le dices qué hacer, paso a paso. Ejemplo real: “abre este archivo, filtra los datos, haz un gráfico bonito, y guárdalo como imagen”. Eso es un script."
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#algoritmo",
-    "href": "posts/conceptos-claves-facil/index.html#algoritmo",
-    "title": "Conceptos claves para Principiantes",
-    "section": "🧠 Algoritmo",
-    "text": "🧠 Algoritmo\nPalabra elegante para “receta”. Es una serie de pasos lógicos para resolver un problema. Como una receta para hacer tu comida favorita (un chaufita), pero en vez de arrocito y pollito, usas datos y funciones."
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#librería-o-paquete",
-    "href": "posts/conceptos-claves-facil/index.html#librería-o-paquete",
-    "title": "Conceptos claves para Principiantes",
-    "section": "📦 Librería o paquete",
-    "text": "📦 Librería o paquete\nImagina que estás cocinando y usas una caja con especias listas para usar (el hotdog para el chaufita, okno!; me refiero más a especerías - así le decimos en mi país). Una librería en programación es eso: un conjunto de funciones ya hechas que puedes reutilizar. Ejemplo: en Python, pandas sirve para trabajar con datos tabulares. En R, ggplot2 para hacer gráficos muy fáciles y elegantes."
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#python-r",
-    "href": "posts/conceptos-claves-facil/index.html#python-r",
-    "title": "Conceptos claves para Principiantes",
-    "section": "🐍 Python / R",
-    "text": "🐍 Python / R\n\nLenguajes de programación. Yo uso ambos.\nPython: súper versátil, fácil de leer, ideal para ciencia de datos, automatización, web, todo.\nR: amado por biólogos, estadísticos y gente que ama hacer gráficos lindos; aunque igual, se puede hacer mucha ciencia de datos, y es super, super fácil de aprender."
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#automatizar",
-    "href": "posts/conceptos-claves-facil/index.html#automatizar",
-    "title": "Conceptos claves para Principiantes",
-    "section": "⚙️ Automatizar",
-    "text": "⚙️ Automatizar\nEs dejar que la compu haga el trabajo repetitivo por ti. Ejemplo: en vez de copiar y pegar 200 veces en Excel, haces un script que lo haga todo de una."
-  },
-  {
-    "objectID": "posts/conceptos-claves-facil/index.html#ejecutar-correr",
-    "href": "posts/conceptos-claves-facil/index.html#ejecutar-correr",
-    "title": "Conceptos claves para Principiantes",
-    "section": "🚀 Ejecutar / Correr",
-    "text": "🚀 Ejecutar / Correr\nEs simplemente “hacer que corra el código”. Es decir, darle play para que haga lo que escribiste."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About me",
-    "section": "",
-    "text": "I’m a fisheries biologist and a master’s student in Fisheries Science at the University of Concepción (Chile). My work focuses on studying the impact of Chinook salmon (Oncorhynchus tshawytscha) on small pelagic fish in southern Chile, exploring how invasive species, climate change, and human activities affect the sustainability of our marine resources.\n\n\nLike many scientists, my programming journey started out of necessity: analyzing large volumes of ecological and fisheries data without getting lost along the way. What began as just a tool quickly became a passion. I discovered that with R and Python I could:\n\n\n🔄 Automate repetitive tasks that used to take me days\n📊 Create visualizations that clearly communicate science\n🖥️ Build reproducible dashboards and applications\n\n\nProgramming isn’t just a technical tool; it’s a bridge between science, fisheries management, and society.\n\n\n\nI know how intimidating programming can seem, especially if you come from a natural sciences background. That’s why I created this blog: to share what I learn in an accessible and practical way. Here you’ll find:\n\n\n🐟 Practical applications of R and Python in marine sciences\n📊 Step-by-step tutorials with no unnecessary jargon\n🌍 Real examples of ecological data analysis\n📦 Recipes to automate your scientific workflow\n\n\nMy mission is to demystify programming and show that any scientist can learn to code, no matter their technical background.\n\n\n\nWhen I’m not programming or analyzing data, you’ll find me:\n\n\n📖 Researching marine ecology\n🎣 In the field, collecting samples with fishers\n☕ Reflecting on how science can contribute to marine conservation\n\n\n\n\n\nIf you’re a scientist looking to learn programming, or if you already code and are interested in marine ecology, I’d love to connect with you. You can find me on LinkedIn or email me at hansttito06@gmail.com. You can also check out my repositories on GitHub, and here’s my CV if you’re interested.\nDo you have biological data you need to process? Want to talk about programming? Or just need some help with a script? I’m here to help!\n\nIf you want it even more concise or need any adjustment in the tone, let me know!"
-  },
-  {
-    "objectID": "about.html#hi-im-hans-ttito",
-    "href": "about.html#hi-im-hans-ttito",
-    "title": "About me",
-    "section": "",
-    "text": "I’m a fisheries biologist and a master’s student in Fisheries Science at the University of Concepción (Chile). My work focuses on studying the impact of Chinook salmon (Oncorhynchus tshawytscha) on small pelagic fish in southern Chile, exploring how invasive species, climate change, and human activities affect the sustainability of our marine resources.\n\n\nLike many scientists, my programming journey started out of necessity: analyzing large volumes of ecological and fisheries data without getting lost along the way. What began as just a tool quickly became a passion. I discovered that with R and Python I could:\n\n\n🔄 Automate repetitive tasks that used to take me days\n📊 Create visualizations that clearly communicate science\n🖥️ Build reproducible dashboards and applications\n\n\nProgramming isn’t just a technical tool; it’s a bridge between science, fisheries management, and society.\n\n\n\nI know how intimidating programming can seem, especially if you come from a natural sciences background. That’s why I created this blog: to share what I learn in an accessible and practical way. Here you’ll find:\n\n\n🐟 Practical applications of R and Python in marine sciences\n📊 Step-by-step tutorials with no unnecessary jargon\n🌍 Real examples of ecological data analysis\n📦 Recipes to automate your scientific workflow\n\n\nMy mission is to demystify programming and show that any scientist can learn to code, no matter their technical background.\n\n\n\nWhen I’m not programming or analyzing data, you’ll find me:\n\n\n📖 Researching marine ecology\n🎣 In the field, collecting samples with fishers\n☕ Reflecting on how science can contribute to marine conservation\n\n\n\n\n\nIf you’re a scientist looking to learn programming, or if you already code and are interested in marine ecology, I’d love to connect with you. You can find me on LinkedIn or email me at hansttito06@gmail.com. You can also check out my repositories on GitHub, and here’s my CV if you’re interested.\nDo you have biological data you need to process? Want to talk about programming? Or just need some help with a script? I’m here to help!\n\nIf you want it even more concise or need any adjustment in the tone, let me know!"
-  },
-  {
-    "objectID": "index.html#por-qué-este-blog",
-    "href": "index.html#por-qué-este-blog",
-    "title": "",
-    "section": "¿Por qué este blog?",
-    "text": "¿Por qué este blog?\nDurante años, me enfoqué en el estudio de las ciencias del mar y la pesca, y siempre pensé que la programación era algo reservado para ingenieros o personas con una fuerte base en matemáticas. Pero al empezar mi investigación sobre los efectos del cambio climático y las interacciones entre especies, descubrí que:\n\n“La programación no es solo para crear software, es una herramienta poderosa para entender y explicar el mundo.”\n\nHoy, mi meta es ayudarte —especialmente si vienes de las ciencias, biología, pesca o áreas similares— a perderle el miedo al código y empezar a usarlo como una herramienta más en tu caja de herramientas científica."
-  },
-  {
-    "objectID": "index.html#lo-que-hace-único-a-este-blog",
-    "href": "index.html#lo-que-hace-único-a-este-blog",
-    "title": "",
-    "section": "Lo que hace único a este blog",
-    "text": "Lo que hace único a este blog\n\n\n🎯 Sin jerga innecesaria\nExplicaciones claras y ejemplos prácticos aplicados a problemas reales\n\n\n🤝 Pensado para quienes no son programadores\nUn espacio seguro para aprender desde cero, sin miedo a equivocarse\n\n\n📚 Desde lo básico a lo aplicado\nContenido que avanza paso a paso, con ejemplos del mundo de la investigación"
-  },
-  {
-    "objectID": "index.html#comienza-tu-viaje",
-    "href": "index.html#comienza-tu-viaje",
-    "title": "",
-    "section": "Comienza tu viaje",
-    "text": "Comienza tu viaje\n\nMis Primeros pasos\nUna serie de consejos y bibliografía que debes tener en cuenta antes de iniciarte en este mundo de la programación\n\n\nTu primer script en R en 10 minutos\nSí, incluso sin experiencia puedes escribir tu primer código en R hoy"
-  },
-  {
-    "objectID": "posts/docker-python/index.html",
-    "href": "posts/docker-python/index.html",
-    "title": "Desplegando mi función de Python en Docker paso a paso",
-    "section": "",
-    "text": "¡Qué tal, gente! Hoy quiero contarles una pequeña historia de supervivencia académica. Si alguna vez han estado en el infierno de la tesis, seguramente me entienden. Ahí estaba yo, con mi laptop echando humo como locomotora antigua cada vez que intentaba ejecutar esos modelitos de machine learning que tanto dolor de cabeza me causan. La pobre máquina me suplicaba “¡Déjame vivir!” mientras yo esperaba horas y HORAS para ver resultados. Una pesadilla. Hasta que un día dije: ¡BASTA! Mi laptop merece mejor vida y yo necesito conservar lo poco que queda de mi salud mental. Fue cuando descubrí mi salvación: Docker + la nube. ¿Docker? Sí, esa cosa de la que todos hablan en tech pero que suena intimidante al principio. Resulta que no es tan complicado y se ha convertido en mi mejor aliado.\nEn este apartado, me gustaría explicarles un poco sobre Docker, cómo subir sus scripts y cómo ejecutarlos."
-  },
-  {
-    "objectID": "posts/docker-python/index.html#por-qué-docker",
-    "href": "posts/docker-python/index.html#por-qué-docker",
-    "title": "Desplegando mi función de Python en Docker paso a paso",
-    "section": "¿Por qué Docker?",
-    "text": "¿Por qué Docker?\nBásicamente, Docker me permite empaquetar todo mi código y sus dependencias en un contenedor bien bonito que puedo enviar a la nube como quien manda un paquete por correo. “¡Hey, nube! Aquí te va este proceso pesadísimo, ejecútalo tú mientras yo veo Netflix, ¿va?”.\nLo mejor es que:\nMi laptop ya no suena como avión despegando Puedo seguir usando mi computadora para otras cosas mientras los procesos corren en la nube No tengo que preocuparme por “en mi máquina sí funciona” porque Docker garantiza que todo se ejecute igual donde sea\nAhora explicaré cómo normalmente suelo hacerlo\n\n\nOrganizar mi caos: Necesito 3 archvos principales, mi script de python (script.py); mi archivo de dependencias (requirements.txt) que necesita mi script para funcionar; y mi archivo Dockerfile (es la configuración adecuada para que mi script se ejecute adecuadamente)\nConstruir mi “paquete mágico”: Con un par de comandos, levanto todo en un contenedor de docker listo para ser ejecutado.\nCorrer: Finalmente, solo lo ejecuto, y ¡Plum!, maravilla, ya está!\n\n\nLes explicaré cada paso detalladamente con un ejemplo bastante sencillo"
-  },
-  {
-    "objectID": "posts/docker-python/index.html#empecemos",
-    "href": "posts/docker-python/index.html#empecemos",
-    "title": "Desplegando mi función de Python en Docker paso a paso",
-    "section": "¡¡Empecemos!!",
-    "text": "¡¡Empecemos!!\nPrimero y antes que nada, necesitamos nuestro script, ya sea de una función o de una aplicación que queramos ejecutar, en mi caso, solo será un script sencillo que dice hola desde docker, lo llamaremos “saluditos.py”.\n\nimport pandas as pd\nimport argparse\n\ndef lambda_handler(event=None, context=None):\n    if event and \"nombres\" in event:\n        nombres = event[\"nombres\"]\n    else:\n        nombres = ['Ana', 'Luis']\n\n    df = pd.DataFrame({'Nombre': nombres})\n    saludos = [f\"Hola, {nombre}, desde Docker\" for nombre in df['Nombre']]\n\n    for saludo in saludos:\n        print(saludo)\n\n    return {\n        'statusCode': 200,\n        'body': saludos\n    }\n\nif __name__ == '__main__':\n\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--nombres', nargs='*', help='Lista de nombres', default=None)\n    args = parser.parse_args()\n\n    event = {\"nombres\": args.nombres} if args.nombres else None\n    lambda_handler(event)\n\nYa teniendo nuestro código (En este apartado no voy a explicar qué significa cada detalle del código); ahora debemos crear dos archivos más, un archivo donde estén todas las librerias que necesitaremos para el correcto funcionamiento del script, y lo llamaremos “requirements.txt”; y el otro archivo lo llamaremos “Dockerfile” (sin extensión) donde pondremos la configuración adecuada para que el código se ejecute en Docker.\nEl archivo requirements.txt, en mi caso, sería lo siguiente:\n\npandas\nargparse\n\ny el Dockerfile es el siguiente:\nFROM python:3.10-slim\n\nWORKDIR /app\n\n# Copiar e instalar requisitos\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\n# Copiar script\nCOPY saluditos.py .\n\n# Ejecutar como usuario no root para mejor seguridad\nRUN useradd -m appuser\nRUN chown -R appuser:appuser /app\nUSER appuser\n\n# Ejecutar el script\nENTRYPOINT [\"python\", \"saluditos.py\"]\nTu carpeta debería quedar algo como:\n\n\n\nfiles-docker\n\n\nAhora, ya teniendo tu archivo Dockerfile (Sí tiene que llamarse así, sin ninguna extensión, y tenerlo en la misma carpeta de tu script), pasaremos a abrir docker (el programa - Docker Desktop); cualquier cosa, pueden descargarlo en este enlace.\nDespués, pasamos a abrir nuestro terminal, pero recuerda que el terminal debes abrirlo desde la misma carpeta donde están tus archivos Una manera sencilla de hacerlo, y que me gusta mucho, es la siguiente:\n\n\n\nYa teniendo abierto el docker, y tu terminal, pasaremos a ejecutar las siguiente lineas de comandos.\n\ndocker build -t saluditos-docker .\n\nEsto permitirá levantar el docker, ahora puedes abrir tu docker y deberías ver algo como:\n\n\n\nconstruyendo-imagen-docker\n\n\nY ahora para ejecutarlo, es algo tan sencillo como:\n\ndocker run saluditos-docker\n\nObtendrías algo como:\n\n\n\nrun-docker\n\n\nSin embargo, me dirás..!Hans, mi función recibe parámetros! ¿cómo hago si quiero pasarle? Pues izi! usamos los siguientes comandos:\n\ndocker run saluditos-docker --nombres Hans Jaime\n\nEste comando nos permite agregar los argumentos en nuestro script.\ny obtenemos algo como:\n\n\n\nrun-arguments\n\n\nAhora, si eres cuidadoso, podrás observar en mi Dockerfile un detalle: en muchos otros blogs, en la última parte encontrarás solo “CMD[python, ”script.py”]”; sin embargo, en mi caso puse ENTRYPOINT, este comando me permite agregarlo como argumento lo que sea que venga después.\nAhora, resulta lo siguiente, nosotros ya ejecutamos nuestro script desde docker, y ya finalizó y lo podemos verificar desde\n\ndocker ps -a\n\nesto nos mostrará todos los contenedores que se están ejecutando o que se ejecutaron en el sistema.\n\n\n\ncontainers-list\n\n\nSin embargo, a pesar de estar como “Exited”; siguen ocupando un espacio en el sistema, por lo que es recomendable “eliminarlos”\nSi queremos eliminar todos los contenedores, usamos:\n\ndocker container prune\n\nahora, si queremos eliminar uno en específico, también podemos usar el comando “rm” agregado del ID del contenedor, que lo obtuvimos al hacer docker ps -a anteriormente; en mi caso sería lo siguiente\n\ndocker rm db2db69bccd0\n\ndespués de esto, si verificamos con docker ps -a; ya no tenemos contenedores cargados en nuestro sistema!!\n¡Y eso es todo, amigos!\n¿Ven qué fácil es? Con estos sencillos pasos, acabo de liberar a mi laptop de años de tortura. Si yo pude hacerlo en medio del caos de mi tesis, créanme que ustedes también pueden. Un pequeño consejo extra: no se olviden de ese comando docker container prune después de terminar. Es como limpiar la cocina después de preparar un festín—nadie quiere hacerlo, pero todos agradecemos el espacio libre después. Mi nuevo flujo de trabajo es simple: preparar mi script, empaquetarlo en Docker, enviarlo a la nube y… ¡a disfrutar de la vida mientras las máquinas trabajan por mí! La semana pasada dejé corriendo un modelo durante 12 horas mientras me fui a pasear por ahí. ¿El resultado? Datos analizados y recuerdos creados. ¡Win-win! Si les sirvió este tutorial o tienen alguna duda, déjenme un correo o algo. Y si tienen algún truco para mejorar este proceso, ¡compártanlo! Todos estamos aprendiendo en este viaje.\nEn otro apartado, les explicaré cómo subir su contenedor a la nube.\n¡Hasta la próxima!"
+    "objectID": "posts/que-es-programacion/index.html#algunas-razones-por-las-que-a-mí-me-sirvió",
+    "href": "posts/que-es-programacion/index.html#algunas-razones-por-las-que-a-mí-me-sirvió",
+    "title": "¿Qué es la programación y por qué aprenderla?",
+    "section": "Algunas razones por las que a mí me sirvió:",
+    "text": "Algunas razones por las que a mí me sirvió:\n🧬 Pude analizar grandes volúmenes de datos sin depender de Excel (ni de terceros).\n🐟 Automatizo reportes y procesos que antes me tomaban horas.\n🐛 Puedo desarrollar herramientas propias para estudios ecológicos, pesqueros o de cualquier tipo.\n🌱 Empecé a colaborar con gente de otras disciplinas porque podía aportar desde mi área… ¡con código!\n\nY no necesitas volverte desarrollador de software. Con lo básico ya puedes hacer cosas realmente útiles. ¿Pero cómo empiezo?\nAsí empecé yo, y así puedes hacerlo tú también:\n\nCuriosidad: Lo primero es querer entender cómo demonios funciona esto.\nTutoriales en YouTube: Buscas “R o Python para principiantes”, y te armas de paciencia.\nCopiar, pegar y romper cosas: Así aprendemos.\nProyectos pequeños: Haz algo útil para ti, como automatizar un Excel o graficar tus datos.\nComunidad: Únete a foros, grupos de Discord, X o donde sea que puedas preguntar y compartir.\n\nYo comencé con Python y lo recomiendo un montón. Es fácil de leer, muy usado en ciencia, y tiene librerías para todo: desde estadísticas hasta mapas y machine learning. Lo mejor de todo\nProgramar no es solo para “techies”. Es una herramienta poderosa para cualquier disciplina. Y si eres de ciencias como yo, créeme: puede darte un superpoder.\nA mí me permitió hacer más con menos, colaborar con gente increíble y ver mi carrera desde otra perspectiva.\nAsí que si estás dudando, dale una oportunidad. Quizás no lo aprendas todo en una semana, pero poco a poco vas construyendo algo que realmente puede transformar tu forma de trabajar.\n¿Tú en qué área crees que podrías aplicar programación? ¡Te leo!"
   },
   {
     "objectID": "posts/mi-primer-script-python/index.html",
@@ -357,53 +175,263 @@
     "text": "Conclusión\nTu primer script en Python es solo el comienzo. Sigue jugando, probando y creando. La programación no es magia, pero se siente como si lo fuera cuando ves tus ideas cobrar vida en la pantalla.\nFinalmente, amigos, sé que para algunos puede ser complicado, principalmente cuando se está empezando en este mundo, correr tus líneas de código de esta manera, por lo menos para mí, al inicio lo fue, porque estaba acostumbrado a correr línea por línea al inicio, porque inicié con R. Tengo una buena noticia para ustedes, existen herramientoas que te permiten vivir una experiencia muy similar a esa, o por lo menos, con los que yo me he sentido cómodo. Estas son Anaconda, o el que me gusta más a mi: Jupyter. Probablemente más adelante me veas escribiendo más sobre este último.\nBueno chicos, esto fue todo… ¡Saludos, y buenos códigos!"
   },
   {
-    "objectID": "posts/que-es-programacion/index.html",
-    "href": "posts/que-es-programacion/index.html",
-    "title": "¿Qué es la programación y por qué aprenderla?",
+    "objectID": "posts/docker-python/index.html",
+    "href": "posts/docker-python/index.html",
+    "title": "Desplegando mi función de Python en Docker paso a paso",
     "section": "",
-    "text": "¡Hola, hola! Hoy quiero hablarles de algo que cambió completamente la forma en la que trabajo (y, sinceramente, también cómo pienso e incluso, cómo vivo): la programación.\nY antes de que digas “nah, eso no es para mí”, déjame contarte algo: yo soy biólogo. No ingeniero, no matemático, ni nada de eso. Aprendí a programar solo, viendo videos en YouTube, leyendo foros, copiando código que no entendía del todo, y probando hasta que algo salía. Jajaja, realmente, si te sientes identificado, esto es para tí, así partí yo, te entiendo totalmente.\nSpoiler: sí se puede. Y vale totalmente la pena."
+    "text": "¡Qué tal, gente! Hoy quiero contarles una pequeña historia de supervivencia académica. Si alguna vez han estado en el infierno de la tesis, seguramente me entienden. Ahí estaba yo, con mi laptop echando humo como locomotora antigua cada vez que intentaba ejecutar esos modelitos de machine learning que tanto dolor de cabeza me causan. La pobre máquina me suplicaba “¡Déjame vivir!” mientras yo esperaba horas y HORAS para ver resultados. Una pesadilla. Hasta que un día dije: ¡BASTA! Mi laptop merece mejor vida y yo necesito conservar lo poco que queda de mi salud mental. Fue cuando descubrí mi salvación: Docker + la nube. ¿Docker? Sí, esa cosa de la que todos hablan en tech pero que suena intimidante al principio. Resulta que no es tan complicado y se ha convertido en mi mejor aliado.\nEn este apartado, me gustaría explicarles un poco sobre Docker, cómo subir sus scripts y cómo ejecutarlos."
   },
   {
-    "objectID": "posts/que-es-programacion/index.html#qué-es-programar",
-    "href": "posts/que-es-programacion/index.html#qué-es-programar",
-    "title": "¿Qué es la programación y por qué aprenderla?",
-    "section": "¿Qué es programar?",
-    "text": "¿Qué es programar?\nEs básicamente darle instrucciones a una computadora para que haga lo que tú quieras. Y eso va desde algo simple como decirle “muéstrame este mensajito” hasta procesar miles de datos, hacer análisis, crear una app o automatizar tareas repetitivas.\nLa mejor parte es que tú decides qué quieres hacer con eso. Y en biología, créeme, las posibilidades son infinitas. ¿Y por qué me serviría si soy biólogo (o de otra carrera)?\nPorque vivimos en una era donde los datos están por todos lados. Y si tú sabes cómo manejarlos, analizarlos y sacarles provecho, tienes una ventaja enorme."
+    "objectID": "posts/docker-python/index.html#por-qué-docker",
+    "href": "posts/docker-python/index.html#por-qué-docker",
+    "title": "Desplegando mi función de Python en Docker paso a paso",
+    "section": "¿Por qué Docker?",
+    "text": "¿Por qué Docker?\nBásicamente, Docker me permite empaquetar todo mi código y sus dependencias en un contenedor bien bonito que puedo enviar a la nube como quien manda un paquete por correo. “¡Hey, nube! Aquí te va este proceso pesadísimo, ejecútalo tú mientras yo veo Netflix, ¿va?”.\nLo mejor es que:\nMi laptop ya no suena como avión despegando Puedo seguir usando mi computadora para otras cosas mientras los procesos corren en la nube No tengo que preocuparme por “en mi máquina sí funciona” porque Docker garantiza que todo se ejecute igual donde sea\nAhora explicaré cómo normalmente suelo hacerlo\n\n\nOrganizar mi caos: Necesito 3 archvos principales, mi script de python (script.py); mi archivo de dependencias (requirements.txt) que necesita mi script para funcionar; y mi archivo Dockerfile (es la configuración adecuada para que mi script se ejecute adecuadamente)\nConstruir mi “paquete mágico”: Con un par de comandos, levanto todo en un contenedor de docker listo para ser ejecutado.\nCorrer: Finalmente, solo lo ejecuto, y ¡Plum!, maravilla, ya está!\n\n\nLes explicaré cada paso detalladamente con un ejemplo bastante sencillo"
   },
   {
-    "objectID": "posts/que-es-programacion/index.html#algunas-razones-por-las-que-a-mí-me-sirvió",
-    "href": "posts/que-es-programacion/index.html#algunas-razones-por-las-que-a-mí-me-sirvió",
-    "title": "¿Qué es la programación y por qué aprenderla?",
-    "section": "Algunas razones por las que a mí me sirvió:",
-    "text": "Algunas razones por las que a mí me sirvió:\n🧬 Pude analizar grandes volúmenes de datos sin depender de Excel (ni de terceros).\n🐟 Automatizo reportes y procesos que antes me tomaban horas.\n🐛 Puedo desarrollar herramientas propias para estudios ecológicos, pesqueros o de cualquier tipo.\n🌱 Empecé a colaborar con gente de otras disciplinas porque podía aportar desde mi área… ¡con código!\n\nY no necesitas volverte desarrollador de software. Con lo básico ya puedes hacer cosas realmente útiles. ¿Pero cómo empiezo?\nAsí empecé yo, y así puedes hacerlo tú también:\n\nCuriosidad: Lo primero es querer entender cómo demonios funciona esto.\nTutoriales en YouTube: Buscas “R o Python para principiantes”, y te armas de paciencia.\nCopiar, pegar y romper cosas: Así aprendemos.\nProyectos pequeños: Haz algo útil para ti, como automatizar un Excel o graficar tus datos.\nComunidad: Únete a foros, grupos de Discord, X o donde sea que puedas preguntar y compartir.\n\nYo comencé con Python y lo recomiendo un montón. Es fácil de leer, muy usado en ciencia, y tiene librerías para todo: desde estadísticas hasta mapas y machine learning. Lo mejor de todo\nProgramar no es solo para “techies”. Es una herramienta poderosa para cualquier disciplina. Y si eres de ciencias como yo, créeme: puede darte un superpoder.\nA mí me permitió hacer más con menos, colaborar con gente increíble y ver mi carrera desde otra perspectiva.\nAsí que si estás dudando, dale una oportunidad. Quizás no lo aprendas todo en una semana, pero poco a poco vas construyendo algo que realmente puede transformar tu forma de trabajar.\n¿Tú en qué área crees que podrías aplicar programación? ¡Te leo!"
+    "objectID": "posts/docker-python/index.html#empecemos",
+    "href": "posts/docker-python/index.html#empecemos",
+    "title": "Desplegando mi función de Python en Docker paso a paso",
+    "section": "¡¡Empecemos!!",
+    "text": "¡¡Empecemos!!\nPrimero y antes que nada, necesitamos nuestro script, ya sea de una función o de una aplicación que queramos ejecutar, en mi caso, solo será un script sencillo que dice hola desde docker, lo llamaremos “saluditos.py”.\n\nimport pandas as pd\nimport argparse\n\ndef lambda_handler(event=None, context=None):\n    if event and \"nombres\" in event:\n        nombres = event[\"nombres\"]\n    else:\n        nombres = ['Ana', 'Luis']\n\n    df = pd.DataFrame({'Nombre': nombres})\n    saludos = [f\"Hola, {nombre}, desde Docker\" for nombre in df['Nombre']]\n\n    for saludo in saludos:\n        print(saludo)\n\n    return {\n        'statusCode': 200,\n        'body': saludos\n    }\n\nif __name__ == '__main__':\n\n    parser = argparse.ArgumentParser()\n    parser.add_argument('--nombres', nargs='*', help='Lista de nombres', default=None)\n    args = parser.parse_args()\n\n    event = {\"nombres\": args.nombres} if args.nombres else None\n    lambda_handler(event)\n\nYa teniendo nuestro código (En este apartado no voy a explicar qué significa cada detalle del código); ahora debemos crear dos archivos más, un archivo donde estén todas las librerias que necesitaremos para el correcto funcionamiento del script, y lo llamaremos “requirements.txt”; y el otro archivo lo llamaremos “Dockerfile” (sin extensión) donde pondremos la configuración adecuada para que el código se ejecute en Docker.\nEl archivo requirements.txt, en mi caso, sería lo siguiente:\n\npandas\nargparse\n\ny el Dockerfile es el siguiente:\nFROM python:3.10-slim\n\nWORKDIR /app\n\n# Copiar e instalar requisitos\nCOPY requirements.txt .\nRUN pip install --no-cache-dir -r requirements.txt\n\n# Copiar script\nCOPY saluditos.py .\n\n# Ejecutar como usuario no root para mejor seguridad\nRUN useradd -m appuser\nRUN chown -R appuser:appuser /app\nUSER appuser\n\n# Ejecutar el script\nENTRYPOINT [\"python\", \"saluditos.py\"]\nTu carpeta debería quedar algo como:\n\n\n\nfiles-docker\n\n\nAhora, ya teniendo tu archivo Dockerfile (Sí tiene que llamarse así, sin ninguna extensión, y tenerlo en la misma carpeta de tu script), pasaremos a abrir docker (el programa - Docker Desktop); cualquier cosa, pueden descargarlo en este enlace.\nDespués, pasamos a abrir nuestro terminal, pero recuerda que el terminal debes abrirlo desde la misma carpeta donde están tus archivos Una manera sencilla de hacerlo, y que me gusta mucho, es la siguiente:\n\n\n\nYa teniendo abierto el docker, y tu terminal, pasaremos a ejecutar las siguiente lineas de comandos.\n\ndocker build -t saluditos-docker .\n\nEsto permitirá levantar el docker, ahora puedes abrir tu docker y deberías ver algo como:\n\n\n\nconstruyendo-imagen-docker\n\n\nY ahora para ejecutarlo, es algo tan sencillo como:\n\ndocker run saluditos-docker\n\nObtendrías algo como:\n\n\n\nrun-docker\n\n\nSin embargo, me dirás..!Hans, mi función recibe parámetros! ¿cómo hago si quiero pasarle? Pues izi! usamos los siguientes comandos:\n\ndocker run saluditos-docker --nombres Hans Jaime\n\nEste comando nos permite agregar los argumentos en nuestro script.\ny obtenemos algo como:\n\n\n\nrun-arguments\n\n\nAhora, si eres cuidadoso, podrás observar en mi Dockerfile un detalle: en muchos otros blogs, en la última parte encontrarás solo “CMD[python, ”script.py”]”; sin embargo, en mi caso puse ENTRYPOINT, este comando me permite agregarlo como argumento lo que sea que venga después.\nAhora, resulta lo siguiente, nosotros ya ejecutamos nuestro script desde docker, y ya finalizó y lo podemos verificar desde\n\ndocker ps -a\n\nesto nos mostrará todos los contenedores que se están ejecutando o que se ejecutaron en el sistema.\n\n\n\ncontainers-list\n\n\nSin embargo, a pesar de estar como “Exited”; siguen ocupando un espacio en el sistema, por lo que es recomendable “eliminarlos”\nSi queremos eliminar todos los contenedores, usamos:\n\ndocker container prune\n\nahora, si queremos eliminar uno en específico, también podemos usar el comando “rm” agregado del ID del contenedor, que lo obtuvimos al hacer docker ps -a anteriormente; en mi caso sería lo siguiente\n\ndocker rm db2db69bccd0\n\ndespués de esto, si verificamos con docker ps -a; ya no tenemos contenedores cargados en nuestro sistema!!\n¡Y eso es todo, amigos!\n¿Ven qué fácil es? Con estos sencillos pasos, acabo de liberar a mi laptop de años de tortura. Si yo pude hacerlo en medio del caos de mi tesis, créanme que ustedes también pueden. Un pequeño consejo extra: no se olviden de ese comando docker container prune después de terminar. Es como limpiar la cocina después de preparar un festín—nadie quiere hacerlo, pero todos agradecemos el espacio libre después. Mi nuevo flujo de trabajo es simple: preparar mi script, empaquetarlo en Docker, enviarlo a la nube y… ¡a disfrutar de la vida mientras las máquinas trabajan por mí! La semana pasada dejé corriendo un modelo durante 12 horas mientras me fui a pasear por ahí. ¿El resultado? Datos analizados y recuerdos creados. ¡Win-win! Si les sirvió este tutorial o tienen alguna duda, déjenme un correo o algo. Y si tienen algún truco para mejorar este proceso, ¡compártanlo! Todos estamos aprendiendo en este viaje.\nEn otro apartado, les explicaré cómo subir su contenedor a la nube.\n¡Hasta la próxima!"
   },
   {
-    "objectID": "projects/biodiversity-dashboard/index.html",
-    "href": "projects/biodiversity-dashboard/index.html",
-    "title": "Shiny Biodiversity Dashboard",
+    "objectID": "index.html#por-qué-este-blog",
+    "href": "index.html#por-qué-este-blog",
+    "title": "",
+    "section": "¿Por qué este blog?",
+    "text": "¿Por qué este blog?\nDurante años, me enfoqué en el estudio de las ciencias del mar y la pesca, y siempre pensé que la programación era algo reservado para ingenieros o personas con una fuerte base en matemáticas. Pero al empezar mi investigación sobre los efectos del cambio climático y las interacciones entre especies, descubrí que:\n\n“La programación no es solo para crear software, es una herramienta poderosa para entender y explicar el mundo.”\n\nHoy, mi meta es ayudarte —especialmente si vienes de las ciencias, biología, pesca o áreas similares— a perderle el miedo al código y empezar a usarlo como una herramienta más en tu caja de herramientas científica."
+  },
+  {
+    "objectID": "index.html#lo-que-hace-único-a-este-blog",
+    "href": "index.html#lo-que-hace-único-a-este-blog",
+    "title": "",
+    "section": "Lo que hace único a este blog",
+    "text": "Lo que hace único a este blog\n\n\n🎯 Sin jerga innecesaria\nExplicaciones claras y ejemplos prácticos aplicados a problemas reales\n\n\n🤝 Pensado para quienes no son programadores\nUn espacio seguro para aprender desde cero, sin miedo a equivocarse\n\n\n📚 Desde lo básico a lo aplicado\nContenido que avanza paso a paso, con ejemplos del mundo de la investigación"
+  },
+  {
+    "objectID": "index.html#comienza-tu-viaje",
+    "href": "index.html#comienza-tu-viaje",
+    "title": "",
+    "section": "Comienza tu viaje",
+    "text": "Comienza tu viaje\n\nMis Primeros pasos\nUna serie de consejos y bibliografía que debes tener en cuenta antes de iniciarte en este mundo de la programación\n\n\nTu primer script en R en 10 minutos\nSí, incluso sin experiencia puedes escribir tu primer código en R hoy"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
     "section": "",
-    "text": "This Shiny app allows the visualization of biodiversity species observations in the world. Users can search for species by their common or scientific name, and then view their observations on an interactive map. They can also explore a timeline showing when the selected species were observed.\n\n\n\nshiny-biodiversity-dashboard"
+    "text": "I’m a fisheries biologist and a master’s student in Fisheries Science at the University of Concepción (Chile). My work focuses on studying the impact of Chinook salmon (Oncorhynchus tshawytscha) on small pelagic fish in southern Chile, exploring how invasive species, climate change, and human activities affect the sustainability of our marine resources.\n\n\nLike many scientists, my programming journey started out of necessity: analyzing large volumes of ecological and fisheries data without getting lost along the way. What began as just a tool quickly became a passion. I discovered that with R and Python I could:\n\n\n🔄 Automate repetitive tasks that used to take me days\n📊 Create visualizations that clearly communicate science\n🖥️ Build reproducible dashboards and applications\n\n\nProgramming isn’t just a technical tool; it’s a bridge between science, fisheries management, and society.\n\n\n\nI know how intimidating programming can seem, especially if you come from a natural sciences background. That’s why I created this blog: to share what I learn in an accessible and practical way. Here you’ll find:\n\n\n🐟 Practical applications of R and Python in marine sciences\n📊 Step-by-step tutorials with no unnecessary jargon\n🌍 Real examples of ecological data analysis\n📦 Recipes to automate your scientific workflow\n\n\nMy mission is to demystify programming and show that any scientist can learn to code, no matter their technical background.\n\n\n\nWhen I’m not programming or analyzing data, you’ll find me:\n\n\n📖 Researching marine ecology\n🎣 In the field, collecting samples with fishers\n☕ Reflecting on how science can contribute to marine conservation\n\n\n\n\n\nIf you’re a scientist looking to learn programming, or if you already code and are interested in marine ecology, I’d love to connect with you. You can find me on LinkedIn or email me at hansttito06@gmail.com. You can also check out my repositories on GitHub, and here’s my CV if you’re interested.\nDo you have biological data you need to process? Want to talk about programming? Or just need some help with a script? I’m here to help!\n\nIf you want it even more concise or need any adjustment in the tone, let me know!"
   },
   {
-    "objectID": "projects/biodiversity-dashboard/index.html#about-this-project",
-    "href": "projects/biodiversity-dashboard/index.html#about-this-project",
-    "title": "Shiny Biodiversity Dashboard",
+    "objectID": "about.html#hi-im-hans-ttito",
+    "href": "about.html#hi-im-hans-ttito",
+    "title": "About me",
     "section": "",
-    "text": "This Shiny app allows the visualization of biodiversity species observations in the world. Users can search for species by their common or scientific name, and then view their observations on an interactive map. They can also explore a timeline showing when the selected species were observed.\n\n\n\nshiny-biodiversity-dashboard"
+    "text": "I’m a fisheries biologist and a master’s student in Fisheries Science at the University of Concepción (Chile). My work focuses on studying the impact of Chinook salmon (Oncorhynchus tshawytscha) on small pelagic fish in southern Chile, exploring how invasive species, climate change, and human activities affect the sustainability of our marine resources.\n\n\nLike many scientists, my programming journey started out of necessity: analyzing large volumes of ecological and fisheries data without getting lost along the way. What began as just a tool quickly became a passion. I discovered that with R and Python I could:\n\n\n🔄 Automate repetitive tasks that used to take me days\n📊 Create visualizations that clearly communicate science\n🖥️ Build reproducible dashboards and applications\n\n\nProgramming isn’t just a technical tool; it’s a bridge between science, fisheries management, and society.\n\n\n\nI know how intimidating programming can seem, especially if you come from a natural sciences background. That’s why I created this blog: to share what I learn in an accessible and practical way. Here you’ll find:\n\n\n🐟 Practical applications of R and Python in marine sciences\n📊 Step-by-step tutorials with no unnecessary jargon\n🌍 Real examples of ecological data analysis\n📦 Recipes to automate your scientific workflow\n\n\nMy mission is to demystify programming and show that any scientist can learn to code, no matter their technical background.\n\n\n\nWhen I’m not programming or analyzing data, you’ll find me:\n\n\n📖 Researching marine ecology\n🎣 In the field, collecting samples with fishers\n☕ Reflecting on how science can contribute to marine conservation\n\n\n\n\n\nIf you’re a scientist looking to learn programming, or if you already code and are interested in marine ecology, I’d love to connect with you. You can find me on LinkedIn or email me at hansttito06@gmail.com. You can also check out my repositories on GitHub, and here’s my CV if you’re interested.\nDo you have biological data you need to process? Want to talk about programming? Or just need some help with a script? I’m here to help!\n\nIf you want it even more concise or need any adjustment in the tone, let me know!"
   },
   {
-    "objectID": "projects/biodiversity-dashboard/index.html#how-to-access",
-    "href": "projects/biodiversity-dashboard/index.html#how-to-access",
-    "title": "Shiny Biodiversity Dashboard",
+    "objectID": "posts/conceptos-claves-facil/index.html",
+    "href": "posts/conceptos-claves-facil/index.html",
+    "title": "Conceptos claves para Principiantes",
+    "section": "",
+    "text": "Ok, ahora que te animé a programar (espero … en verdad), toca aterrizar, aclarar un poco las ideas.\n¿Qué significa todo ese rollo, palabrerías… que uno escucha cuando se mete en este mundo?\nTe dejo una mini-guía sin tecnicismos innecesarios:"
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#conceptos-clave-explicados-fácil",
+    "href": "posts/conceptos-claves-facil/index.html#conceptos-clave-explicados-fácil",
+    "title": "Conceptos claves para Principiantes",
+    "section": "",
+    "text": "Ok, ahora que te animé a programar (espero … en verdad), toca aterrizar, aclarar un poco las ideas.\n¿Qué significa todo ese rollo, palabrerías… que uno escucha cuando se mete en este mundo?\nTe dejo una mini-guía sin tecnicismos innecesarios:"
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#script",
+    "href": "posts/conceptos-claves-facil/index.html#script",
+    "title": "Conceptos claves para Principiantes",
+    "section": "💻 Script",
+    "text": "💻 Script\nUn script es básicamente un archivo de texto con instrucciones para la compu. Tú le dices qué hacer, paso a paso. Ejemplo real: “abre este archivo, filtra los datos, haz un gráfico bonito, y guárdalo como imagen”. Eso es un script."
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#algoritmo",
+    "href": "posts/conceptos-claves-facil/index.html#algoritmo",
+    "title": "Conceptos claves para Principiantes",
+    "section": "🧠 Algoritmo",
+    "text": "🧠 Algoritmo\nPalabra elegante para “receta”. Es una serie de pasos lógicos para resolver un problema. Como una receta para hacer tu comida favorita (un chaufita), pero en vez de arrocito y pollito, usas datos y funciones."
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#librería-o-paquete",
+    "href": "posts/conceptos-claves-facil/index.html#librería-o-paquete",
+    "title": "Conceptos claves para Principiantes",
+    "section": "📦 Librería o paquete",
+    "text": "📦 Librería o paquete\nImagina que estás cocinando y usas una caja con especias listas para usar (el hotdog para el chaufita, okno!; me refiero más a especerías - así le decimos en mi país). Una librería en programación es eso: un conjunto de funciones ya hechas que puedes reutilizar. Ejemplo: en Python, pandas sirve para trabajar con datos tabulares. En R, ggplot2 para hacer gráficos muy fáciles y elegantes."
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#python-r",
+    "href": "posts/conceptos-claves-facil/index.html#python-r",
+    "title": "Conceptos claves para Principiantes",
+    "section": "🐍 Python / R",
+    "text": "🐍 Python / R\n\nLenguajes de programación. Yo uso ambos.\nPython: súper versátil, fácil de leer, ideal para ciencia de datos, automatización, web, todo.\nR: amado por biólogos, estadísticos y gente que ama hacer gráficos lindos; aunque igual, se puede hacer mucha ciencia de datos, y es super, super fácil de aprender."
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#automatizar",
+    "href": "posts/conceptos-claves-facil/index.html#automatizar",
+    "title": "Conceptos claves para Principiantes",
+    "section": "⚙️ Automatizar",
+    "text": "⚙️ Automatizar\nEs dejar que la compu haga el trabajo repetitivo por ti. Ejemplo: en vez de copiar y pegar 200 veces en Excel, haces un script que lo haga todo de una."
+  },
+  {
+    "objectID": "posts/conceptos-claves-facil/index.html#ejecutar-correr",
+    "href": "posts/conceptos-claves-facil/index.html#ejecutar-correr",
+    "title": "Conceptos claves para Principiantes",
+    "section": "🚀 Ejecutar / Correr",
+    "text": "🚀 Ejecutar / Correr\nEs simplemente “hacer que corra el código”. Es decir, darle play para que haga lo que escribiste."
+  },
+  {
+    "objectID": "posts/first-steps/index.html",
+    "href": "posts/first-steps/index.html",
+    "title": "Comenzar aquí",
+    "section": "",
+    "text": "Soy Hans Ttito, biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción. A lo largo de mi carrera he usado la programación como una herramienta para resolver preguntas científicas, automatizar procesos y explorar el impacto del cambio climático en los ecosistemas marinos.\nEste blog nace del deseo de compartir lo que he aprendido con quienes no necesariamente vienen del mundo de la informática. Si eres biólogo, sociólogo, estudiante, investigador o simplemente curioso, estás en el lugar correcto."
+  },
+  {
+    "objectID": "posts/first-steps/index.html#bienvenido-a-mi-blog",
+    "href": "posts/first-steps/index.html#bienvenido-a-mi-blog",
+    "title": "Comenzar aquí",
+    "section": "",
+    "text": "Soy Hans Ttito, biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción. A lo largo de mi carrera he usado la programación como una herramienta para resolver preguntas científicas, automatizar procesos y explorar el impacto del cambio climático en los ecosistemas marinos.\nEste blog nace del deseo de compartir lo que he aprendido con quienes no necesariamente vienen del mundo de la informática. Si eres biólogo, sociólogo, estudiante, investigador o simplemente curioso, estás en el lugar correcto."
+  },
+  {
+    "objectID": "posts/first-steps/index.html#para-quién-es-este-blog",
+    "href": "posts/first-steps/index.html#para-quién-es-este-blog",
+    "title": "Comenzar aquí",
+    "section": "🧭 ¿Para quién es este blog?",
+    "text": "🧭 ¿Para quién es este blog?\n\nPersonas sin experiencia previa en programación\nInvestigadores o estudiantes que trabajan con datos\nProfesionales que quieren automatizar tareas repetitivas\nCuriosos que quieren usar la tecnología como herramienta"
+  },
+  {
+    "objectID": "posts/first-steps/index.html#por-dónde-empezar",
+    "href": "posts/first-steps/index.html#por-dónde-empezar",
+    "title": "Comenzar aquí",
+    "section": "🚀 ¿Por dónde empezar?",
+    "text": "🚀 ¿Por dónde empezar?\nAquí te dejo una guía con algunos de los contenidos básicos y útiles para comenzar:\n\n📘 Introducción a la programación\n\n👉 ¿Qué es la programación y por qué aprenderla?\n👉 Conceptos clave explicados fácil\n\n\n\n🛠️ Primeros pasos en R y Python\n\n👉 Mi primer script en R\n👉 Mi primer script en Python\n\n\n\n🤖 Automatización útil\n\n👉 Cómo automatizar tareas con código – (En producción)\n👉 Ejemplo práctico: limpiar datos de Excel automáticamente – (En producción)\n\n\n\n📊 Visualización de datos\n\n👉 Graficar datos en R con ggplot2 – (En producción)\n👉 Visualización interactiva con plotly – (En producción)"
+  },
+  {
+    "objectID": "posts/first-steps/index.html#consejos-para-aprender-a-programar",
+    "href": "posts/first-steps/index.html#consejos-para-aprender-a-programar",
+    "title": "Comenzar aquí",
+    "section": "💡 Consejos para aprender a programar",
+    "text": "💡 Consejos para aprender a programar\n\nNo necesitas ser experto en matemáticas, solo tener curiosidad y paciencia.\nCopiar y modificar código es parte del aprendizaje.\nLos errores no son fallas, ¡son parte del camino!\nEmpieza con pequeños proyectos relacionados con lo que te apasiona."
+  },
+  {
+    "objectID": "posts/first-steps/index.html#conectemos",
+    "href": "posts/first-steps/index.html#conectemos",
+    "title": "Comenzar aquí",
+    "section": "🤝 Conectemos",
+    "text": "🤝 Conectemos\nSi tienes preguntas, sugerencias o simplemente quieres conversar sobre programación, ciencia o visualización de datos, puedes escribirme:\n\nGitHub\nEmail"
+  },
+  {
+    "objectID": "posts/first-steps/index.html#y-ahora",
+    "href": "posts/first-steps/index.html#y-ahora",
+    "title": "Comenzar aquí",
+    "section": "🌟 ¿Y ahora?",
+    "text": "🌟 ¿Y ahora?\nNavega por las secciones del blog, guarda tus artículos favoritos y no dudes en escribirme si te pierdes en el camino. ¡Estoy aquí para ayudarte!"
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html",
+    "href": "posts/mi-primer-script-R/index.html",
+    "title": "Mi primer script de R",
+    "section": "",
+    "text": "Recuerdo clarito el primer script que escribí en R. Tenía como tres líneas y aún así me sentía un hacker de película. No entendía casi nada, pero ver que el código hacía algo fue mágico. ¿Estás empezando con R y no sabes por dónde comenzar? Tranqui, todos hemos pasado por esa etapa de “¿qué rayos estoy haciendo?”. En este post te guiaré desde cero para que puedas escribir tu primer script en R y empezar tu camino en el fascinante mundo del análisis de datos."
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#mi-primer-script-en-r",
+    "href": "posts/mi-primer-script-R/index.html#mi-primer-script-en-r",
+    "title": "Mi primer script de R",
+    "section": "",
+    "text": "Recuerdo clarito el primer script que escribí en R. Tenía como tres líneas y aún así me sentía un hacker de película. No entendía casi nada, pero ver que el código hacía algo fue mágico. ¿Estás empezando con R y no sabes por dónde comenzar? Tranqui, todos hemos pasado por esa etapa de “¿qué rayos estoy haciendo?”. En este post te guiaré desde cero para que puedas escribir tu primer script en R y empezar tu camino en el fascinante mundo del análisis de datos."
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#por-qué-r",
+    "href": "posts/mi-primer-script-R/index.html#por-qué-r",
+    "title": "Mi primer script de R",
+    "section": "¿Por qué R?",
+    "text": "¿Por qué R?\nAntes de meternos en código, déjame contarte por qué R es genial:\nEs gratis y open source (tu bolsillo te lo agradecerá) Tiene una comunidad enorme dispuesta a ayudar Es especializado en estadística y visualización (esas gráficas bonitas que ves en papers científicos, probablemente fueron hechas en R) Tiene más de 18,000 paquetes para casi cualquier cosa que imagines"
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#instalando-lo-necesario",
+    "href": "posts/mi-primer-script-R/index.html#instalando-lo-necesario",
+    "title": "Mi primer script de R",
+    "section": "Instalando lo necesario",
+    "text": "Instalando lo necesario\nPrimero, necesitas dos cosas:\nR - el lenguaje de programación en sí RStudio - un entorno de desarrollo que hace que usar R sea muuucho más fácil\nDescarga R desde CRAN y RStudio desde su sitio oficial. La instalación es bastante directa, como cualquier otro programa. Abriendo RStudio por primera vez\nCuando abras RStudio, verás algo como esto:\n\n\n\nr-studio-view\n\n\nEl siguiente paso es abrir un script con el comando Ctrl + Shift + N o de la siguiente manera:\n\n\n\nopen-script\n\n\nde manera sencilla, Rstudio te ayuda a ordenarte en 4 componentes principales “Scripts”, “Consola”, “Ambiente de Variables”, “Ayuda-plots”; se visualiza en el siguiente gráfico:\n\n\n\nrstudio-structure\n\n\nLos comandos podemos escribirlos, tanto en la consola, como en la zona de los scripts, la diferencia es que, la consola es como si fuera un borrador, puedes poner lo que deseas, pero no tendrás la opción de guardarlo; por otro lado, en la zona de los scripts, tienes la opción de guardar las líneas de código que deseas, sería algo así como, en la consola haces todas las pruebas que deseas hasta encontrar el código que te sirve, y ese código, lo pasas al script para poder guardarlo luego."
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#tu-primer-hola-mundo-en-r",
+    "href": "posts/mi-primer-script-R/index.html#tu-primer-hola-mundo-en-r",
+    "title": "Mi primer script de R",
+    "section": "Tu primer “Hola Mundo” en R",
+    "text": "Tu primer “Hola Mundo” en R\nVamos a empezar con algo súper simple. En la consola, escribe:\n\nprint(\"¡Hola, mundo del análisis de datos!\")\n\nPresiona Enter y… ¡BOOM! Acabas de ejecutar tu primer comando en R. No es gran cosa, pero es un comienzo, ¿no?"
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#creando-tu-primer-script",
+    "href": "posts/mi-primer-script-R/index.html#creando-tu-primer-script",
+    "title": "Mi primer script de R",
+    "section": "Creando tu primer script",
+    "text": "Creando tu primer script\nHasta ahora, solo hemos escrito comandos directamente en la consola. Pero lo profesional es crear scripts que puedas guardar y reutilizar. Para eso, como mencionamos, usaremos la zona de “Scripts”.\nEn el script podemos escribir lo siguiente:\n\n# Mi primer script en R\n\n# Crear algunas variables\nmi_numero &lt;- 42\nmi_texto &lt;- \"La respuesta a todo\"\n\n# Mostrar los valores\nprint(mi_numero)\nprint(mi_texto)\n\n# Un cálculo simple\nresultado &lt;- mi_numero * 2\nprint(paste(\"El doble de mi número es:\", resultado))\n\n# Crear un vector (algo así como una lista de valores)\nmis_datos &lt;- c(15, 23, 36, 42, 58, 71)\n\n# Calcular estadísticas básicas\nprint(paste(\"Promedio:\", mean(mis_datos)))\nprint(paste(\"Valor mínimo:\", min(mis_datos)))\nprint(paste(\"Valor máximo:\", max(mis_datos)))\n\nAhora, para poder guardaro tu script, podemos usar: Ctrl+S; y podemos ponerle un nombre como “mi_primer_script.R”.\nPara ejecutar todo el script, selecciona todo el código (Ctrl+A) y presiona Ctrl+Enter.\n¡WOW! ¿Viste eso?"
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#y-ahora-qué",
+    "href": "posts/mi-primer-script-R/index.html#y-ahora-qué",
+    "title": "Mi primer script de R",
+    "section": "¿Y ahora qué?",
+    "text": "¿Y ahora qué?\nEste es solo el comienzo de tu viaje con R.\nAlgunas cosas que podrías explorar después:\n\n\nVisualización de datos con ggplot\nImportar datos desde CSV, Excel o bases de datos\nLimpiar y transformar datos con el paquete dplyr\nCrear visualizaciones interactivas con plotly\nHacer análisis estadísticos más avanzados\nCrear reportes automáticos con R Markdown"
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#consejos-para-principiantes",
+    "href": "posts/mi-primer-script-R/index.html#consejos-para-principiantes",
+    "title": "Mi primer script de R",
+    "section": "Consejos para principiantes",
+    "text": "Consejos para principiantes\nLos errores son normales: Todos cometemos errores. Lee los mensajes de error, suelen darte pistas sobre cómo solucionarlos. Google es tu amigo: Si te atascas, busca en Google. Alguien ya ha tenido el mismo problema que tú. Stack Overflow será tu biblia: Es el sitio de referencia para resolver dudas de programación. Comenta tu código: Los comentarios (líneas que comienzan con #) te ayudarán a entender lo que hiciste cuando regreses a tu código meses después. Practica, practica, practica: La única forma de aprender es haciendo. Obviamente, usa la IA, pero úsala de manera adecuada, si realmente quieres aprender a programar, entonces, entiende lo que estás escribiendo en tus códigos!!!!!!!"
+  },
+  {
+    "objectID": "posts/mi-primer-script-R/index.html#conclusión",
+    "href": "posts/mi-primer-script-R/index.html#conclusión",
+    "title": "Mi primer script de R",
+    "section": "Conclusión",
+    "text": "Conclusión\n¿Ves? No era tan difícil escribir tu primer script en R. Lo más importante es perder el miedo y comenzar. Recuerda que todos fuimos principiantes alguna vez, y que la comunidad de R es muy amigable y está dispuesta a ayudar. Ahora es tu turno: ¿Qué fue lo primero que intentaste hacer con R? ¿Tienes alguna duda específica? ¡Déjame un comentario y conversemos! P.D: Aún recuerdo la emoción cuando logré hacer mi primer gráfico en R… fue un gráfico pie!! jajaja sí!. y también recuerdo haber perdido horas de mi vida buscando errores que fueron solo por un punto “.” o una coma “,” 🤦‍♂️; leer los mensajes de error que te da R ayudan mucho, créanme, equivocarse es lo mejor que puedes hacer en esta etapa, porque de ahí se aprende."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "",
+    "section": "",
+    "text": "Mi primer script de Python 🐍\n\n\n\nnews\n\nprogramming\n\n\n\nGuía para hacer tu primer script en Python - usando Visual Studio Code (VSC)\n\n\n\n\n\nMay 4, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nConceptos claves para Principiantes\n\n\n\nnews\n\n\n\nCiertos conceptos básicos, claves que deberías conocer\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nDesplegando mi función de Python en Docker paso a paso\n\n\n\nprogramming\n\n\n\nUn resumen de cómo desplegar una función de Python en Docker\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nMi primer script de R\n\n\n\nnews\n\nprogramming\n\n\n\nGuía para hacer tu primer script en R - usando R-studio\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\n¿Qué es la programación y por qué aprenderla?\n\n\n\nnews\n\nprogramming\n\n\n\nUn pequeño post de porqué creo que deben aprender a programar\n\n\n\n\n\nMay 3, 2025\n\n\nHans Ttito\n\n\n\n\n\n\n\n\n\n\n\n\nComenzar aquí\n\n\n\nnews\n\n\n\nUna introducción para quienes vienen de otras disciplinas y quieren iniciarse en la programación.\n\n\n\n\n\nApr 21, 2025\n\n\nHans Ttito\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/copernicusR/index.html",
+    "href": "projects/copernicusR/index.html",
+    "title": "copernicusR",
+    "section": "",
+    "text": "copernicusR is an R package that allows you to download, explore, and manage oceanographic data from the Copernicus Marine service directly within R, using the official Python library copernicusmarine and seamless integration via reticulate. It’s ideal for automating scientific workflows and marine analyses in R across platforms.\n\n\n\ncopernicusR"
+  },
+  {
+    "objectID": "projects/copernicusR/index.html#about-this-project",
+    "href": "projects/copernicusR/index.html#about-this-project",
+    "title": "copernicusR",
+    "section": "",
+    "text": "copernicusR is an R package that allows you to download, explore, and manage oceanographic data from the Copernicus Marine service directly within R, using the official Python library copernicusmarine and seamless integration via reticulate. It’s ideal for automating scientific workflows and marine analyses in R across platforms.\n\n\n\ncopernicusR"
+  },
+  {
+    "objectID": "projects/copernicusR/index.html#main-features",
+    "href": "projects/copernicusR/index.html#main-features",
+    "title": "copernicusR",
+    "section": "Main Features",
+    "text": "Main Features\n\nDownload oceanographic datasets from Copernicus Marine (CMEMS) directly into R\nSearch and filter available datasets by variable, region, or time range\nSimple wrappers for common download and extraction tasks"
+  },
+  {
+    "objectID": "projects/copernicusR/index.html#how-to-access",
+    "href": "projects/copernicusR/index.html#how-to-access",
+    "title": "copernicusR",
     "section": "How to access",
-    "text": "How to access\nThe application is available on shinyapps.io."
-  },
-  {
-    "objectID": "projects/biodiversity-dashboard/index.html#source-code",
-    "href": "projects/biodiversity-dashboard/index.html#source-code",
-    "title": "Shiny Biodiversity Dashboard",
-    "section": "Source Code",
-    "text": "Source Code\nThe source code is available on GitHub."
+    "text": "How to access\nThe package is available on GitHub."
   },
   {
     "objectID": "projects/invasal/index.html",

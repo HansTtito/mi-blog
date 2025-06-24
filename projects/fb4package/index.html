@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Developed Packages and Applications">
+<meta name="author" content="Hans Ttito">
+<meta name="dcterms.date" content="2025-06-23">
+<meta name="description" content="fb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization, multi-prey diet modeling, and comprehensive energy budget simulations for fisheries research and aquaculture applications.">
 
-<title>My Projects</title>
+<title>fb4package</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,26 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-451c895cda47d75efce66772fc31bdcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-985aa47af68dae11cd4d235c71fb941e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-451c895cda47d75efce66772fc31bdcc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,75 +71,17 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <meta name="google-site-verification" content="Gs7AO35NKakebOiosdw6-f7xhEfgElw66Ho_dwzEfJs">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="My Projects">
-<meta property="og:description" content="Developed Packages and Applications">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="fb4package">
+<meta property="og:description" content="fb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization, multi-prey diet modeling, and comprehensive energy budget simulations for fisheries research and aquaculture applications.">
 <meta property="og:image" content="https://hansttito.github.io/mi-blog/projects/fb4package/images/fb4package.png">
 <meta property="og:image:height" content="1189">
 <meta property="og:image:width" content="1312">
-<meta name="twitter:title" content="My Projects">
-<meta name="twitter:description" content="Developed Packages and Applications">
+<meta name="twitter:title" content="fb4package">
+<meta name="twitter:description" content="fb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization, multi-prey diet modeling, and comprehensive energy budget simulations for fisheries research and aquaculture applications.">
 <meta name="twitter:image" content="https://hansttito.github.io/mi-blog/projects/fb4package/images/fb4package.png">
 <meta name="twitter:image-height" content="1189">
 <meta name="twitter:image-width" content="1312">
@@ -150,7 +92,7 @@ window.Quarto = {
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
             <div id="quarto-search" class="" title="Search"></div>
@@ -160,19 +102,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="../../posts.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">My Projects</span></a>
   </li>  
 </ul>
@@ -188,7 +130,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./files-docs/Cv-quarto-HK.pdf"> <i class="bi bi-file-pdf" role="img">
+    <a class="nav-link" href="../../files-docs/Cv-quarto-HK.pdf"> <i class="bi bi-file-pdf" role="img">
 </i> 
 <span class="menu-text">CV</span></a>
   </li>  
@@ -200,236 +142,95 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">fb4package</h1>
+                  <div>
+        <div class="description">
+          fb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization, multi-prey diet modeling, and comprehensive energy budget simulations for fisheries research and aquaculture applications.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">Ecology</div>
+                <div class="quarto-category">Data Analysis</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Hans Ttito </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 23, 2025</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="RGF0YSUyMEFuYWx5c2lz">Data Analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="RWNvbG9neQ==">Ecology <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHl0aG9u">python <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Ug==">R <span class="quarto-category-count">(6)</span></div><div class="category" data-category="U2hpbnk=">Shiny <span class="quarto-category-count">(3)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About this project</a></li>
+  <li><a href="#main-features" id="toc-main-features" class="nav-link" data-scroll-target="#main-features">Main Features</a></li>
+  <li><a href="#how-to-access" id="toc-how-to-access" class="nav-link" data-scroll-target="#how-to-access">How to access</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">My Projects</h1>
-</div>
-
-<div>
-  <div class="description">
-    Developed Packages and Applications
-  </div>
-</div>
-
-
-<div class="quarto-title-meta column-page-left">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="about-this-project" class="level2">
+<h2 class="anchored" data-anchor-id="about-this-project">About this project</h2>
+<p>The fb4package provides a modern R-based implementation of fish bioenergetics modeling, built upon the foundation of Fish Bioenergetics 4.0 developed by Deslauriers et al.&nbsp;(2017). This package enables comprehensive energy budget modeling for fish growth, consumption, and metabolic processes.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/fb4package.png" class="img-fluid figure-img"></p>
+<figcaption>fb4package</figcaption>
+</figure>
+</div>
+</section>
+<section id="main-features" class="level2">
+<h2 class="anchored" data-anchor-id="main-features">Main Features</h2>
+<ul>
+<li>Comprehensive Energy Budget Modeling: Complete simulation of consumption, metabolism, excretion, egestion, and growth</li>
+<li>Multi-Species Support: Built-in parameters for 105+ fish species models across different life stages</li>
+<li>Automatic Parameter Fitting: Iterative optimization to reach target weights or consumption rates using binary search algorithms</li>
+<li>Environmental Integration: Temperature effects and habitat-dependent functions (dissolved oxygen, salinity)</li>
+<li>Flexible Diet Modeling: Multi-prey diet compositions with daily variation and indigestible fractions</li>
+<li>Temporal Dynamics: Daily resolution with seasonal environmental variation support</li>
+<li>Research Reproducibility: Scriptable, version-controlled bioenergetics analyses</li>
+</ul>
+</section>
+<section id="how-to-access" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-access">How to access</h2>
+<p>The package is available on <a href="https://github.com/HansTtito/fb4package">GitHub</a>.</p>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="UiUyQ0Vjb2xvZ3klMkNEYXRhJTIwQW5hbHlzaXM=" data-listing-date-sort="1750651200000" data-listing-file-modified-sort="1750735201049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="128">
-<a href="./projects/fb4package/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/fb4package/images/fb4package.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-fb4package
-</h5>
-<div class="listing-categories">
 
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('RWNvbG9neQ=='); return false;">Ecology</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEFuYWx5c2lz'); return false;">Data Analysis</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>fb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization…</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Hans Ttito
-</div>
-<div class="listing-date">
-Jun 23, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="UiUyQ3B5dGhvbg==" data-listing-date-sort="1748664000000" data-listing-file-modified-sort="1748739675944" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="84">
-<a href="./projects/copernicusR/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/copernicusR/images/copernicusR.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-copernicusR
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>R interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Hans Ttito
-</div>
-<div class="listing-date">
-May 31, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="U2hpbnklMkNS" data-listing-date-sort="1746331200000" data-listing-file-modified-sort="1746344190634" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62">
-<a href="./projects/biodiversity-dashboard/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/biodiversity-dashboard/images/shiny-biodiversity-dashboard.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Shiny Biodiversity Dashboard
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2hpbnk='); return false;">Shiny</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Shiny Biodiversity Dashboard allows the visualization of biodiversity species observations in the world</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Hans Ttito
-</div>
-<div class="listing-date">
-May 4, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="U2hpbnklMkNS" data-listing-date-sort="1746331200000" data-listing-file-modified-sort="1746383005792" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="63">
-<a href="./projects/invasal/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/invasal/images/invasal.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Invasal shiny app
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2hpbnk='); return false;">Shiny</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Invasal shiny app allows the visualization of catches and some biological data for salmones in Chile - Invasal</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Hans Ttito
-</div>
-<div class="listing-date">
-May 4, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="U2hpbnklMkNS" data-listing-date-sort="1746331200000" data-listing-file-modified-sort="1746344177925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="29">
-<a href="./projects/shiny-hackathon/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/shiny-hackathon/images/shiny-hackathon.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Shiny Hackathon
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('U2hpbnk='); return false;">Shiny</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Application developed in Shiny for the Appsilon Hackathon - 2025</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Hans Ttito
-</div>
-<div class="listing-date">
-May 4, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="UiUyQ0RhdGElMjBBbmFseXNpcw==" data-listing-date-sort="1746331200000" data-listing-file-modified-sort="1748739774382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="71">
-<a href="./projects/Tivy/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Tivy/images/Tivy.png" class="thumbnail-image card-img" style="height: 250px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tivy
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Ug=='); return false;">R</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RGF0YSUyMEFuYWx5c2lz'); return false;">Data Analysis</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Toolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru</p>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Hans Ttito
-</div>
-<div class="listing-date">
-May 4, 2025
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -853,7 +654,7 @@ May 4, 2025
     </a>
   </li>  
     <li class="nav-item compact">
-    <a class="nav-link" href="./files-docs/Cv-quarto-HK.pdf">
+    <a class="nav-link" href="../../files-docs/Cv-quarto-HK.pdf">
       <i class="bi bi-file-pdf" role="img">
 </i> 
     </a>
