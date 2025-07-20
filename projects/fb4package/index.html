@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -189,8 +224,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About this project</a></li>
-  <li><a href="#main-features" id="toc-main-features" class="nav-link" data-scroll-target="#main-features">Main Features</a></li>
-  <li><a href="#how-to-access" id="toc-how-to-access" class="nav-link" data-scroll-target="#how-to-access">How to access</a></li>
+  <li><a href="#what-it-does" id="toc-what-it-does" class="nav-link" data-scroll-target="#what-it-does">What it does</a></li>
+  <li><a href="#quick-example" id="toc-quick-example" class="nav-link" data-scroll-target="#quick-example">Quick example</a></li>
   </ul>
 </nav>
     </div>
@@ -203,29 +238,103 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="about-this-project" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-project">About this project</h2>
-<p>The fb4package provides a modern R-based implementation of fish bioenergetics modeling, built upon the foundation of Fish Bioenergetics 4.0 developed by Deslauriers et al.&nbsp;(2017). This package enables comprehensive energy budget modeling for fish growth, consumption, and metabolic processes.</p>
+<p>I’ve been working on <code>fb4package</code>, an R implementation of the <strong>Fish Bioenergetics 4.0</strong> model developed by Deslauriers et al.&nbsp;(2017).</p>
+<p>What started as a need for more flexible fish growth modeling turned into a full package that’s way more scriptable than the original Shiny app. Perfect for when you need to run batch simulations or integrate bioenergetic modeling into larger research workflows - and actually reproducible!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/fb4package.png" class="img-fluid figure-img"></p>
 <figcaption>fb4package</figcaption>
 </figure>
 </div>
+<hr>
 </section>
-<section id="main-features" class="level2">
-<h2 class="anchored" data-anchor-id="main-features">Main Features</h2>
+<section id="what-it-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-does">What it does</h2>
 <ul>
-<li>Comprehensive Energy Budget Modeling: Complete simulation of consumption, metabolism, excretion, egestion, and growth</li>
-<li>Multi-Species Support: Built-in parameters for 105+ fish species models across different life stages</li>
-<li>Automatic Parameter Fitting: Iterative optimization to reach target weights or consumption rates using binary search algorithms</li>
-<li>Environmental Integration: Temperature effects and habitat-dependent functions (dissolved oxygen, salinity)</li>
-<li>Flexible Diet Modeling: Multi-prey diet compositions with daily variation and indigestible fractions</li>
-<li>Temporal Dynamics: Daily resolution with seasonal environmental variation support</li>
-<li>Research Reproducibility: Scriptable, version-controlled bioenergetics analyses</li>
+<li><strong>Full energy budget simulations</strong> - Models daily consumption, metabolism, excretion, egestion, and somatic growth<br>
+</li>
+<li><strong>105+ fish species</strong> with pre-loaded parameter sets across various life stages<br>
+</li>
+<li><strong>Automated parameter optimization</strong> - Throw in target weights/consumption and let it optimize<br>
+</li>
+<li><strong>Multi-prey diets</strong> - Because fish don’t eat just one thing! Variable daily proportions and indigestible components<br>
+</li>
+<li><strong>Temperature effects</strong> - Realistic seasonal physiology with environmental integration<br>
+</li>
+<li><strong>Actually reproducible</strong> - No more clicking through GUIs! Fully scriptable workflows</li>
 </ul>
+<hr>
 </section>
-<section id="how-to-access" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-access">How to access</h2>
-<p>The package is available on <a href="https://github.com/HansTtito/fb4package">GitHub</a>.</p>
+<section id="quick-example" class="level2">
+<h2 class="anchored" data-anchor-id="quick-example">Quick example</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fb4package)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load built-in species parameters</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"fish4_parameters"</span>, <span class="at">package =</span> <span class="st">"fb4package"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>chinook_params <span class="ot">&lt;-</span> fish4_parameters[[<span class="st">"Oncorhynchus tshawytscha"</span>]]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create temperature data (seasonal variation)</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>temperature_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Day =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Temperature =</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">6</span> <span class="sc">*</span> <span class="fu">sin</span>(<span class="dv">2</span> <span class="sc">*</span> pi <span class="sc">*</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>) <span class="sc">/</span> <span class="dv">365</span>)  <span class="co"># 4°C ± 6°C seasonal cycle</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Define diet composition</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>diet_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">Day =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">anchoveta =</span> <span class="fl">0.37</span>,  <span class="co"># 37% anchoveta</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">sardina =</span> <span class="fl">0.63</span>     <span class="co"># 63% sardina</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Prey energy densities (J/g)</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>prey_energy_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">Day =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">anchoveta =</span> <span class="dv">5553</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">sardina =</span> <span class="dv">5000</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Indigestible fractions</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>indigestible_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">Day =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">365</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">anchoveta =</span> <span class="fl">0.05</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">sardina =</span> <span class="fl">0.05</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Create bioenergetic object</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>bio_obj <span class="ot">&lt;-</span> <span class="fu">Bioenergetic</span>(</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_info =</span> chinook_params<span class="sc">$</span>species_info,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="at">species_params =</span> chinook_params<span class="sc">$</span>life_stages<span class="sc">$</span>adult,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>  <span class="at">environmental_data =</span> <span class="fu">list</span>(<span class="at">temperature =</span> temperature_data),</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="at">diet_data =</span> <span class="fu">list</span>(</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">proportions =</span> diet_data,</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">energies =</span> prey_energy_data,</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">indigestible =</span> indigestible_data,</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">prey_names =</span> <span class="fu">c</span>(<span class="st">"anchoveta"</span>, <span class="st">"sardina"</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="at">simulation_settings =</span> <span class="fu">list</span>(</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">initial_weight =</span> <span class="fl">11115.358</span>,  <span class="co"># Initial weight (g)</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">duration =</span> <span class="dv">365</span>               <span class="co"># Simulation days</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Set predator energy density parameters</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>bio_obj<span class="sc">$</span>species_params <span class="ot">&lt;-</span> <span class="fu">set_parameter_value</span>(bio_obj<span class="sc">$</span>species_params, <span class="st">"ED_ini"</span>, <span class="fl">6308.570</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>bio_obj<span class="sc">$</span>species_params <span class="ot">&lt;-</span> <span class="fu">set_parameter_value</span>(bio_obj<span class="sc">$</span>species_params, <span class="st">"ED_end"</span>, <span class="fl">6320.776</span>)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Run simulation with automatic fitting to target weight</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">run_fb4</span>(</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  bio_obj,</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">fit_to =</span> <span class="st">"Weight"</span>,</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">fit_value =</span> <span class="fl">14883.695</span>,  <span class="co"># Target final weight (g)</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">max_iterations =</span> <span class="dv">25</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="co"># View results</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Final weight:"</span>, <span class="fu">round</span>(results<span class="sc">$</span>summary<span class="sc">$</span>final_weight, <span class="dv">2</span>), <span class="st">"g"</span>))</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Optimal p-value:"</span>, <span class="fu">round</span>(results<span class="sc">$</span>summary<span class="sc">$</span>p_value, <span class="dv">6</span>)))</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Converged:"</span>, results<span class="sc">$</span>fit_info<span class="sc">$</span>fit_successful))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Check it out Still working on it, but you can explore what’s there: 🔗 <a href="https://github.com/HansTtito/fb4package">https://github.com/HansTtito/fb4package</a> Feedback welcome! Always looking to improve it and would love to hear what works (or breaks) for you. Built this because I got tired of manual parameter tweaking - figured others might find it useful too.</p>
+<p>Reference Deslauriers, D., Chipps, S. R., Breck, J. E., Rice, J. A., &amp; Madenjian, C. P. (2017). Fish Bioenergetics 4.0: An R-based modeling application. Transactions of the American Fisheries Society, 146(5), 901–911. https://doi.org/10.1080/03632415.2017.1377558</p>
 
 
 </section>

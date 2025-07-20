@@ -39,28 +39,28 @@
     "href": "projects/fb4package/index.html",
     "title": "fb4package",
     "section": "",
-    "text": "The fb4package provides a modern R-based implementation of fish bioenergetics modeling, built upon the foundation of Fish Bioenergetics 4.0 developed by Deslauriers et al. (2017). This package enables comprehensive energy budget modeling for fish growth, consumption, and metabolic processes.\n\n\n\nfb4package"
+    "text": "I’ve been working on fb4package, an R implementation of the Fish Bioenergetics 4.0 model developed by Deslauriers et al. (2017).\nWhat started as a need for more flexible fish growth modeling turned into a full package that’s way more scriptable than the original Shiny app. Perfect for when you need to run batch simulations or integrate bioenergetic modeling into larger research workflows - and actually reproducible!\n\n\n\nfb4package"
   },
   {
     "objectID": "projects/fb4package/index.html#about-this-project",
     "href": "projects/fb4package/index.html#about-this-project",
     "title": "fb4package",
     "section": "",
-    "text": "The fb4package provides a modern R-based implementation of fish bioenergetics modeling, built upon the foundation of Fish Bioenergetics 4.0 developed by Deslauriers et al. (2017). This package enables comprehensive energy budget modeling for fish growth, consumption, and metabolic processes.\n\n\n\nfb4package"
+    "text": "I’ve been working on fb4package, an R implementation of the Fish Bioenergetics 4.0 model developed by Deslauriers et al. (2017).\nWhat started as a need for more flexible fish growth modeling turned into a full package that’s way more scriptable than the original Shiny app. Perfect for when you need to run batch simulations or integrate bioenergetic modeling into larger research workflows - and actually reproducible!\n\n\n\nfb4package"
   },
   {
-    "objectID": "projects/fb4package/index.html#main-features",
-    "href": "projects/fb4package/index.html#main-features",
+    "objectID": "projects/fb4package/index.html#what-it-does",
+    "href": "projects/fb4package/index.html#what-it-does",
     "title": "fb4package",
-    "section": "Main Features",
-    "text": "Main Features\n\nComprehensive Energy Budget Modeling: Complete simulation of consumption, metabolism, excretion, egestion, and growth\nMulti-Species Support: Built-in parameters for 105+ fish species models across different life stages\nAutomatic Parameter Fitting: Iterative optimization to reach target weights or consumption rates using binary search algorithms\nEnvironmental Integration: Temperature effects and habitat-dependent functions (dissolved oxygen, salinity)\nFlexible Diet Modeling: Multi-prey diet compositions with daily variation and indigestible fractions\nTemporal Dynamics: Daily resolution with seasonal environmental variation support\nResearch Reproducibility: Scriptable, version-controlled bioenergetics analyses"
+    "section": "What it does",
+    "text": "What it does\n\nFull energy budget simulations - Models daily consumption, metabolism, excretion, egestion, and somatic growth\n\n105+ fish species with pre-loaded parameter sets across various life stages\n\nAutomated parameter optimization - Throw in target weights/consumption and let it optimize\n\nMulti-prey diets - Because fish don’t eat just one thing! Variable daily proportions and indigestible components\n\nTemperature effects - Realistic seasonal physiology with environmental integration\n\nActually reproducible - No more clicking through GUIs! Fully scriptable workflows"
   },
   {
-    "objectID": "projects/fb4package/index.html#how-to-access",
-    "href": "projects/fb4package/index.html#how-to-access",
+    "objectID": "projects/fb4package/index.html#quick-example",
+    "href": "projects/fb4package/index.html#quick-example",
     "title": "fb4package",
-    "section": "How to access",
-    "text": "How to access\nThe package is available on GitHub."
+    "section": "Quick example",
+    "text": "Quick example\nlibrary(fb4package)\n\n# Load built-in species parameters\ndata(\"fish4_parameters\", package = \"fb4package\")\nchinook_params &lt;- fish4_parameters[[\"Oncorhynchus tshawytscha\"]]\n\n# Create temperature data (seasonal variation)\ntemperature_data &lt;- data.frame(\n  Day = 1:365,\n  Temperature = 4 + 6 * sin(2 * pi * (1:365) / 365)  # 4°C ± 6°C seasonal cycle\n)\n\n# Define diet composition\ndiet_data &lt;- data.frame(\n  Day = 1:365,\n  anchoveta = 0.37,  # 37% anchoveta\n  sardina = 0.63     # 63% sardina\n)\n\n# Prey energy densities (J/g)\nprey_energy_data &lt;- data.frame(\n  Day = 1:365,\n  anchoveta = 5553,\n  sardina = 5000\n)\n\n# Indigestible fractions\nindigestible_data &lt;- data.frame(\n  Day = 1:365,\n  anchoveta = 0.05,\n  sardina = 0.05\n)\n\n# Create bioenergetic object\nbio_obj &lt;- Bioenergetic(\n  species_info = chinook_params$species_info,\n  species_params = chinook_params$life_stages$adult,\n  environmental_data = list(temperature = temperature_data),\n  diet_data = list(\n    proportions = diet_data,\n    energies = prey_energy_data,\n    indigestible = indigestible_data,\n    prey_names = c(\"anchoveta\", \"sardina\")\n  ),\n  simulation_settings = list(\n    initial_weight = 11115.358,  # Initial weight (g)\n    duration = 365               # Simulation days\n  )\n)\n\n# Set predator energy density parameters\nbio_obj$species_params &lt;- set_parameter_value(bio_obj$species_params, \"ED_ini\", 6308.570)\nbio_obj$species_params &lt;- set_parameter_value(bio_obj$species_params, \"ED_end\", 6320.776)\n\n# Run simulation with automatic fitting to target weight\nresults &lt;- run_fb4(\n  bio_obj,\n  fit_to = \"Weight\",\n  fit_value = 14883.695,  # Target final weight (g)\n  max_iterations = 25\n)\n\n# View results\nprint(paste(\"Final weight:\", round(results$summary$final_weight, 2), \"g\"))\nprint(paste(\"Optimal p-value:\", round(results$summary$p_value, 6)))\nprint(paste(\"Converged:\", results$fit_info$fit_successful))\nCheck it out Still working on it, but you can explore what’s there: 🔗 https://github.com/HansTtito/fb4package Feedback welcome! Always looking to improve it and would love to hear what works (or breaks) for you. Built this because I got tired of manual parameter tweaking - figured others might find it useful too.\nReference Deslauriers, D., Chipps, S. R., Breck, J. E., Rice, J. A., & Madenjian, C. P. (2017). Fish Bioenergetics 4.0: An R-based modeling application. Transactions of the American Fisheries Society, 146(5), 901–911. https://doi.org/10.1080/03632415.2017.1377558"
   },
   {
     "objectID": "projects/biodiversity-dashboard/index.html",
