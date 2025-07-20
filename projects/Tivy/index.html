@@ -8,7 +8,7 @@
 
 <meta name="author" content="Hans Ttito">
 <meta name="dcterms.date" content="2025-05-04">
-<meta name="description" content="Toolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru">
+<meta name="description" content="Toolkit for Investigation and Visualization of Young Anchovies">
 
 <title>Tivy</title>
 <style>
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -76,12 +111,12 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../../styles.css">
 <meta property="og:title" content="Tivy">
-<meta property="og:description" content="Toolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru">
+<meta property="og:description" content="Toolkit for Investigation and Visualization of Young Anchovies">
 <meta property="og:image" content="https://hansttito.github.io/mi-blog/projects/Tivy/images/Tivy.png">
 <meta property="og:image:height" content="1057">
 <meta property="og:image:width" content="1219">
 <meta name="twitter:title" content="Tivy">
-<meta name="twitter:description" content="Toolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru">
+<meta name="twitter:description" content="Toolkit for Investigation and Visualization of Young Anchovies">
 <meta name="twitter:image" content="https://hansttito.github.io/mi-blog/projects/Tivy/images/Tivy.png">
 <meta name="twitter:image-height" content="1057">
 <meta name="twitter:image-width" content="1219">
@@ -148,12 +183,15 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">Tivy</h1>
                   <div>
         <div class="description">
-          Toolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru
+          Toolkit for Investigation and Visualization of Young Anchovies
         </div>
       </div>
                           <div class="quarto-categories">
                 <div class="quarto-category">R</div>
                 <div class="quarto-category">Data Analysis</div>
+                <div class="quarto-category">Fisheries</div>
+                <div class="quarto-category">Anchovy</div>
+                <div class="quarto-category">Peru</div>
               </div>
                   </div>
   </div>
@@ -189,7 +227,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#about-this-project" id="toc-about-this-project" class="nav-link active" data-scroll-target="#about-this-project">About this project</a></li>
   <li><a href="#main-features" id="toc-main-features" class="nav-link" data-scroll-target="#main-features">Main Features</a></li>
+  <li><a href="#key-capabilities" id="toc-key-capabilities" class="nav-link" data-scroll-target="#key-capabilities">Key Capabilities</a></li>
+  <li><a href="#target-users" id="toc-target-users" class="nav-link" data-scroll-target="#target-users">Target Users</a></li>
   <li><a href="#how-to-access" id="toc-how-to-access" class="nav-link" data-scroll-target="#how-to-access">How to access</a></li>
+  <li><a href="#learn-more" id="toc-learn-more" class="nav-link" data-scroll-target="#learn-more">Learn More</a></li>
   </ul>
 </nav>
     </div>
@@ -202,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="about-this-project" class="level2">
 <h2 class="anchored" data-anchor-id="about-this-project">About this project</h2>
-<p>Tivy is an R package specialized in processing and analyzing fisheries data from Peru. It facilitates the handling of information from fishing trip logbooks, size records, hauls, and official announcements issued by the Ministry of Production for preventive closures.</p>
+<p><strong>Tivy</strong> (Toolkit for Investigation and Visualization of Young Anchovies) is an R package specialized in processing and analyzing fisheries data from Peru’s anchovy (<em>Engraulis ringens</em>) fishery. It facilitates the handling of information from fishing trip logbooks, length frequency records, haul data, and official announcements issued by Peru’s Ministry of Production for preventive closures.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Tivy.png" class="img-fluid figure-img"></p>
@@ -213,15 +254,50 @@ ul.task-list li input[type="checkbox"] {
 <section id="main-features" class="level2">
 <h2 class="anchored" data-anchor-id="main-features">Main Features</h2>
 <ul>
-<li>Loading and processing fishing logbook data.</li>
-<li>Integration of haul, size, and fishing trip data.</li>
-<li>Estimation of biological index.</li>
-<li>Analysis of preventive closures</li>
+<li><strong>🐟 Data Processing</strong>: Automated processing of fishing hauls, trips, and length frequency data</li>
+<li><strong>🗺️ Spatial Analysis</strong>: Coordinate conversion, distance calculations, and fishing zone analysis<br>
+</li>
+<li><strong>📊 Juvenile Analysis</strong>: Fish population structure analysis with length-weight relationships</li>
+<li><strong>📈 Visualization</strong>: Static (ggplot2) and interactive (leaflet) mapping capabilities</li>
+<li><strong>📋 Regulatory Integration</strong>: Processing of official fishing closure announcements from PRODUCE</li>
+</ul>
+</section>
+<section id="key-capabilities" class="level2">
+<h2 class="anchored" data-anchor-id="key-capabilities">Key Capabilities</h2>
+<ul>
+<li><strong>Biological Indicators</strong>: Calculate juvenile percentages, length-weight relationships, and population metrics</li>
+<li><strong>Spatial Tools</strong>: Convert DMS coordinates, calculate distances to coast, and analyze fishing zones</li>
+<li><strong>Data Integration</strong>: Merge logbook data from multiple sources with automated column detection</li>
+<li><strong>Regulatory Analysis</strong>: Process PDF announcements and visualize fishing closure areas</li>
+<li><strong>Comprehensive Visualization</strong>: Create publication-ready plots and interactive dashboards</li>
+</ul>
+</section>
+<section id="target-users" class="level2">
+<h2 class="anchored" data-anchor-id="target-users">Target Users</h2>
+<ul>
+<li><strong>Fisheries Researchers</strong>: Analyzing anchovy population dynamics and recruitment</li>
+<li><strong>Resource Managers</strong>: Monitoring fishing activities and regulatory compliance</li>
+<li><strong>Data Analysts</strong>: Processing large-scale fishery datasets from Peru</li>
+<li><strong>Students</strong>: Learning fisheries data analysis and visualization techniques</li>
 </ul>
 </section>
 <section id="how-to-access" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-access">How to access</h2>
-<p>The package is available on <a href="https://github.com/HansTtito/Tivy">GitHub</a>.</p>
+<p>The package is available on <a href="https://github.com/HansTtito/Tivy">GitHub</a> with comprehensive documentation and examples.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install from GitHub</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"HansTtito/Tivy"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load and start analyzing</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Tivy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Soon to be available on CRAN for easier installation.</p>
+</section>
+<section id="learn-more" class="level2">
+<h2 class="anchored" data-anchor-id="learn-more">Learn More</h2>
+<ul>
+<li>📖 <a href="https://github.com/HansTtito/Tivy">Package Documentation</a></li>
+<li>🐛 <a href="https://github.com/HansTtito/Tivy/issues">Report Issues</a></li>
+<li>📧 Contact: kvttitos@gmail.com</li>
+</ul>
 
 
 </section>

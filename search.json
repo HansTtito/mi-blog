@@ -4,7 +4,7 @@
     "href": "projects.html",
     "title": "My Projects",
     "section": "",
-    "text": "fb4package\n\n\n\nR\n\nEcology\n\nData Analysis\n\n\n\nfb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization…\n\n\n\nHans Ttito\n\n\nJun 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\ncopernicusR\n\n\n\nR\n\npython\n\n\n\nR interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.\n\n\n\nHans Ttito\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Biodiversity Dashboard\n\n\n\nShiny\n\nR\n\n\n\nShiny Biodiversity Dashboard allows the visualization of biodiversity species observations in the world\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvasal shiny app\n\n\n\nShiny\n\nR\n\n\n\nInvasal shiny app allows the visualization of catches and some biological data for salmones in Chile - Invasal\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Hackathon\n\n\n\nShiny\n\nR\n\n\n\nApplication developed in Shiny for the Appsilon Hackathon - 2025\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTivy\n\n\n\nR\n\nData Analysis\n\n\n\nToolkit for processing PRODUCE fishery logbooks and analyzing fishing areas in Peru\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "fb4package\n\n\n\nR\n\nEcology\n\nData Analysis\n\n\n\nfb4package is an R implementation of fish bioenergetics modeling based on Fish Bioenergetics 4.0 (Deslauriers et al., 2017). It provides automated parameter optimization…\n\n\n\nHans Ttito\n\n\nJun 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\ncopernicusR\n\n\n\nR\n\npython\n\n\n\nR interface for accessing and downloading oceanographic data from Copernicus Marine using Python integration.\n\n\n\nHans Ttito\n\n\nMay 31, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Biodiversity Dashboard\n\n\n\nShiny\n\nR\n\n\n\nShiny Biodiversity Dashboard allows the visualization of biodiversity species observations in the world\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nInvasal shiny app\n\n\n\nShiny\n\nR\n\n\n\nInvasal shiny app allows the visualization of catches and some biological data for salmones in Chile - Invasal\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nShiny Hackathon\n\n\n\nShiny\n\nR\n\n\n\nApplication developed in Shiny for the Appsilon Hackathon - 2025\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTivy\n\n\n\nR\n\nData Analysis\n\nFisheries\n\nAnchovy\n\nPeru\n\n\n\nToolkit for Investigation and Visualization of Young Anchovies\n\n\n\nHans Ttito\n\n\nMay 4, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/shiny-hackathon/index.html",
@@ -466,27 +466,48 @@
     "href": "projects/Tivy/index.html",
     "title": "Tivy",
     "section": "",
-    "text": "Tivy is an R package specialized in processing and analyzing fisheries data from Peru. It facilitates the handling of information from fishing trip logbooks, size records, hauls, and official announcements issued by the Ministry of Production for preventive closures.\n\n\n\nTivy"
+    "text": "Tivy (Toolkit for Investigation and Visualization of Young Anchovies) is an R package specialized in processing and analyzing fisheries data from Peru’s anchovy (Engraulis ringens) fishery. It facilitates the handling of information from fishing trip logbooks, length frequency records, haul data, and official announcements issued by Peru’s Ministry of Production for preventive closures.\n\n\n\nTivy"
   },
   {
     "objectID": "projects/Tivy/index.html#about-this-project",
     "href": "projects/Tivy/index.html#about-this-project",
     "title": "Tivy",
     "section": "",
-    "text": "Tivy is an R package specialized in processing and analyzing fisheries data from Peru. It facilitates the handling of information from fishing trip logbooks, size records, hauls, and official announcements issued by the Ministry of Production for preventive closures.\n\n\n\nTivy"
+    "text": "Tivy (Toolkit for Investigation and Visualization of Young Anchovies) is an R package specialized in processing and analyzing fisheries data from Peru’s anchovy (Engraulis ringens) fishery. It facilitates the handling of information from fishing trip logbooks, length frequency records, haul data, and official announcements issued by Peru’s Ministry of Production for preventive closures.\n\n\n\nTivy"
   },
   {
     "objectID": "projects/Tivy/index.html#main-features",
     "href": "projects/Tivy/index.html#main-features",
     "title": "Tivy",
     "section": "Main Features",
-    "text": "Main Features\n\nLoading and processing fishing logbook data.\nIntegration of haul, size, and fishing trip data.\nEstimation of biological index.\nAnalysis of preventive closures"
+    "text": "Main Features\n\n🐟 Data Processing: Automated processing of fishing hauls, trips, and length frequency data\n🗺️ Spatial Analysis: Coordinate conversion, distance calculations, and fishing zone analysis\n\n📊 Juvenile Analysis: Fish population structure analysis with length-weight relationships\n📈 Visualization: Static (ggplot2) and interactive (leaflet) mapping capabilities\n📋 Regulatory Integration: Processing of official fishing closure announcements from PRODUCE"
+  },
+  {
+    "objectID": "projects/Tivy/index.html#key-capabilities",
+    "href": "projects/Tivy/index.html#key-capabilities",
+    "title": "Tivy",
+    "section": "Key Capabilities",
+    "text": "Key Capabilities\n\nBiological Indicators: Calculate juvenile percentages, length-weight relationships, and population metrics\nSpatial Tools: Convert DMS coordinates, calculate distances to coast, and analyze fishing zones\nData Integration: Merge logbook data from multiple sources with automated column detection\nRegulatory Analysis: Process PDF announcements and visualize fishing closure areas\nComprehensive Visualization: Create publication-ready plots and interactive dashboards"
+  },
+  {
+    "objectID": "projects/Tivy/index.html#target-users",
+    "href": "projects/Tivy/index.html#target-users",
+    "title": "Tivy",
+    "section": "Target Users",
+    "text": "Target Users\n\nFisheries Researchers: Analyzing anchovy population dynamics and recruitment\nResource Managers: Monitoring fishing activities and regulatory compliance\nData Analysts: Processing large-scale fishery datasets from Peru\nStudents: Learning fisheries data analysis and visualization techniques"
   },
   {
     "objectID": "projects/Tivy/index.html#how-to-access",
     "href": "projects/Tivy/index.html#how-to-access",
     "title": "Tivy",
     "section": "How to access",
-    "text": "How to access\nThe package is available on GitHub."
+    "text": "How to access\nThe package is available on GitHub with comprehensive documentation and examples.\n# Install from GitHub\ndevtools::install_github(\"HansTtito/Tivy\")\n\n# Load and start analyzing\nlibrary(Tivy)\nSoon to be available on CRAN for easier installation."
+  },
+  {
+    "objectID": "projects/Tivy/index.html#learn-more",
+    "href": "projects/Tivy/index.html#learn-more",
+    "title": "Tivy",
+    "section": "Learn More",
+    "text": "Learn More\n\n📖 Package Documentation\n🐛 Report Issues\n📧 Contact: kvttitos@gmail.com"
   }
 ]
