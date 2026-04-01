@@ -6,35 +6,31 @@ website:
   title: ""
   description: "Un blog sobre R, Python y más..."
   favicon: "favicon.ico"
+  site-url: https://hansttito.github.io/mi-blog/
+  open-graph: true
+  twitter-card: true
   
   navbar:
     background: primary
     search: true
     left:
-      - text: "Inicio"
+      - text: "Home"
         href: index.qmd
-      - text: "Sobre mí"
+      - text: "About me"
         href: about.qmd
       - text: "Blog"
         href: posts.qmd
+      - text: "My Projects"
+        href: projects.qmd
+        
     right:
       - icon: github
         href: https://github.com/HansTtito
       - icon: linkedin
         href: https://linkedin.com/in/hansttito
-  
-  # sidebar:
-  #   style: "floating"
-  #   search: true
-  #   contents:
-  #     - section: "Blog"
-  #       contents:
-  #         - posts.qmd
-  #     - section: "Recursos"
-  #       contents:
-  #         - text: "Enlaces útiles"
-  #           href: resources.qmd
-    
+      - icon: file-pdf
+        href: files-docs/Cv-quarto-HK.pdf
+        text: "CV"
   
   page-footer:
     left: "© 2025 Hans Ttito"
@@ -43,8 +39,14 @@ website:
         href: https://github.com/HansTtito
       - icon: linkedin
         href: https://linkedin.com/in/hansttito
+      - icon: file-pdf
+        href: files-docs/Cv-quarto-HK.pdf
 
 format:
   html:
     default-theme: darkly
     css: styles.css
+    canonical-url: https://hansttito.github.io/mi-blog/
+    include-in-header:
+      text: |
+        <meta name="google-site-verification" content="Gs7AO35NKakebOiosdw6-f7xhEfgElw66Ho_dwzEfJs" />

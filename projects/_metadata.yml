@@ -1,0 +1,5 @@
+# projects/_metadata.yml
+# Configuración compartida por todas las páginas de proyectos
+title-block-banner: true
+toc: true
+page-layout: article

@@ -24,17 +24,16 @@ Hoy, mi meta es ayudarte —especialmente si vienes de las ciencias, biología, 
 
 
 ## Lo que hace único a este blog
+
 ::: {.features}
 :::: {.feature}
 ### 🎯 Sin jerga innecesaria
 Explicaciones claras y ejemplos prácticos aplicados a problemas reales
-
 ::::
 
 :::: {.feature}
 ### 🤝 Pensado para quienes no son programadores
 Un espacio seguro para aprender desde cero, sin miedo a equivocarse
-
 ::::
 
 :::: {.feature}
@@ -46,12 +45,9 @@ Contenido que avanza paso a paso, con ejemplos del mundo de la investigación
 ::: {.latest-posts}
 ## Comienza tu viaje
 
-### [¿Por qué todos deberían aprender a programar?](/posts/por-que-programar)
-Descubre cómo el código puede ayudarte incluso si vienes de biología, pesca o ciencias ambientales
+### [Mis Primeros pasos](/posts/first-steps)
+Una serie de consejos y bibliografía que debes tener en cuenta antes de iniciarte en este mundo de la programación
 
-### [Tu primer programa en 10 minutos](/posts/primer-programa)
-Sí, incluso sin experiencia puedes escribir tu primer código hoy
+### [Tu primer script en R en 10 minutos](/posts/mi-primer-script-R)
+Sí, incluso sin experiencia puedes escribir tu primer código en R hoy
 
-### [5 mitos sobre la programación que debes olvidar](/posts/mitos-programacion)
-Desmitificando las creencias que alejan a investigadores y estudiantes del código
-:::

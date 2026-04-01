@@ -1,0 +1,72 @@
+---
+title: "¿Qué es la programación y por qué aprenderla?"
+image: "starting.jpg"
+author: "Hans Ttito"
+date: "2025-05-03"
+categories: [news, programming]
+description: "Un pequeño post de porqué creo que deben aprender a programar"
+---
+
+
+¡Hola, hola! Hoy quiero hablarles de algo que cambió completamente la forma en la que trabajo (y, sinceramente, también cómo pienso e incluso, cómo vivo): la programación.
+
+Y antes de que digas “nah, eso no es para mí”, déjame contarte algo:
+yo soy biólogo. No ingeniero, no matemático, ni nada de eso. Aprendí a programar solo, viendo videos en YouTube, leyendo foros, copiando código que no entendía del todo, y probando hasta que algo salía.
+Jajaja, realmente, si te sientes identificado, esto es para tí, así partí yo, te entiendo totalmente.
+
+Spoiler: sí se puede. Y vale totalmente la pena.
+
+## ¿Qué es programar?
+
+Es básicamente darle instrucciones a una computadora para que haga lo que tú quieras.
+Y eso va desde algo simple como decirle “muéstrame este mensajito” hasta procesar miles de datos, hacer análisis, crear una app o automatizar tareas repetitivas.
+
+La mejor parte es que tú decides qué quieres hacer con eso. Y en biología, créeme, las posibilidades son infinitas.
+¿Y por qué me serviría si soy biólogo (o de otra carrera)?
+
+Porque vivimos en una era donde los datos están por todos lados. Y si tú sabes cómo manejarlos, analizarlos y sacarles provecho, tienes una ventaja enorme.
+
+---
+
+## Algunas razones por las que a mí me sirvió:
+
+🧬 Pude analizar grandes volúmenes de datos sin depender de Excel (ni de terceros).
+
+🐟 Automatizo reportes y procesos que antes me tomaban horas.
+
+🐛 Puedo desarrollar herramientas propias para estudios ecológicos, pesqueros o de cualquier tipo.
+
+🌱 Empecé a colaborar con gente de otras disciplinas porque podía aportar desde mi área… ¡con código!
+
+---
+
+Y no necesitas volverte desarrollador de software. Con lo básico ya puedes hacer cosas realmente útiles.
+¿Pero cómo empiezo?
+
+Así empecé yo, y así puedes hacerlo tú también:
+
+---
+
+Curiosidad: Lo primero es querer entender cómo demonios funciona esto.
+
+Tutoriales en YouTube: Buscas "R o Python para principiantes", y te armas de paciencia.
+
+Copiar, pegar y romper cosas: Así aprendemos.
+
+Proyectos pequeños: Haz algo útil para ti, como automatizar un Excel o graficar tus datos.
+
+Comunidad: Únete a foros, grupos de Discord, X o donde sea que puedas preguntar y compartir.
+
+---
+
+Yo comencé con Python y lo recomiendo un montón. Es fácil de leer, muy usado en ciencia, y tiene librerías para todo: desde estadísticas hasta mapas y machine learning.
+Lo mejor de todo
+
+Programar no es solo para “techies”. Es una herramienta poderosa para cualquier disciplina. Y si eres de ciencias como yo, créeme: puede darte un superpoder.
+
+A mí me permitió hacer más con menos, colaborar con gente increíble y ver mi carrera desde otra perspectiva.
+
+Así que si estás dudando, dale una oportunidad. Quizás no lo aprendas todo en una semana, pero poco a poco vas construyendo algo que realmente puede transformar tu forma de trabajar.
+
+¿Tú en qué área crees que podrías aplicar programación?
+¡Te leo!

@@ -1,5 +1,6 @@
 ---
 title: "Comenzar aquí"
+image: "first-steps.jpg"
 author: "Hans Ttito"
 date: "2025-04-21"
 categories: [news]
@@ -28,20 +29,20 @@ Este blog nace del deseo de **compartir lo que he aprendido con quienes no neces
 Aquí te dejo una guía con algunos de los contenidos básicos y útiles para comenzar:
 
 ### 📘 Introducción a la programación
-- 👉 [¿Qué es la programación y por qué aprenderla?](tutoriales/que-es-programacion.qmd)
-- 👉 [Conceptos clave explicados fácil](tutoriales/conceptos-basicos.qmd)
+- 👉 [¿Qué es la programación y por qué aprenderla?](/posts/que-es-programacion)
+- 👉 [Conceptos clave explicados fácil](/posts/conceptos-claves-facil)
 
 ### 🛠️ Primeros pasos en R y Python
-- 👉 [Mi primer script en R](tutoriales/primer-script-r.qmd)
-- 👉 [Mi primer script en Python](tutoriales/primer-script-python.qmd)
+- 👉 [Mi primer script en R](/posts/mi-primer-script-R)
+- 👉 [Mi primer script en Python](/posts/mi-primer-script-python)
 
 ### 🤖 Automatización útil
-- 👉 [Cómo automatizar tareas con código](tutoriales/automatizacion.qmd)
-- 👉 [Ejemplo práctico: limpiar datos de Excel automáticamente](tutoriales/limpieza-datos.qmd)
+- 👉 [Cómo automatizar tareas con código](/posts/automatizacion.qmd)  -- (En producción)
+- 👉 [Ejemplo práctico: limpiar datos de Excel automáticamente](/posts/limpieza-datos.qmd)  -- (En producción)
 
 ### 📊 Visualización de datos
-- 👉 [Graficar datos en R con ggplot2](tutoriales/ggplot2-intro.qmd)
-- 👉 [Visualización interactiva con plotly](tutoriales/plotly.qmd)
+- 👉 [Graficar datos en R con ggplot2](/posts/ggplot2-intro.qmd)  -- (En producción)
+- 👉 [Visualización interactiva con plotly](/posts/plotly.qmd)  -- (En producción)
 
 ---
 
@@ -65,7 +66,8 @@ Si tienes preguntas, sugerencias o simplemente quieres conversar sobre programac
 
 ## 🌟 ¿Y ahora?
 
-Navega por las secciones del blog, guarda tus artículos favoritos y no dudes en escribirme si te pierdes en el camino. ¡Estoy aquí para ayudarte!
+Navega por las secciones del blog, guarda tus artículos favoritos y no dudes en escribirme si te pierdes en el camino. 
+¡Estoy aquí para ayudarte!
 
 ---
 

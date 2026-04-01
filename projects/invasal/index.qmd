@@ -1,0 +1,24 @@
+---
+title: "Invasal shiny app"
+description: "Invasal shiny app allows the visualization of catches and some biological data for salmones in Chile - Invasal"
+author: "Hans Ttito"
+date: "2025-05-04"
+image: "images/invasal.png"
+categories: [Shiny, R]
+---
+
+## About this project
+
+This Shiny app was developed to provide an interactive interface for exploring data collected by [Invasal](https://invasal.cl/), an initiative focused 
+on monitoring invasive salmonid species in Chile.
+The app enables users to visualize catch records and biological information, such as size and GSI, across different regions and time periods.
+
+![invasal-shiny-app](images/invasal.png)
+
+## How to access
+
+The application is available on [shinyapps.io](https://kevin-ttito.shinyapps.io/invasal/).
+
+## Source Code
+
+The source code is available on [GitHub](https://github.com/HansTtito/invasal).

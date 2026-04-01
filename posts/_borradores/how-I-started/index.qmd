@@ -1,0 +1,27 @@
+---
+title: "Una historia"
+image: ""
+author: "Hans Ttito"
+date: "2025-04-30"
+categories: [news]
+description: "Un poco de mi historia..."
+draft: true
+---
+
+## ¿Cómo empecé?
+
+Sé que a muchos no les va a interesar este post, no hablo de programación, pero quería un espacio para poder contar mi historia... 
+¿cómo llegué a conocer el mundo de la programación? ... y ¿en qué se ha llegado a convertir ahora en mi día a día?...
+
+Recuerdo en el año 2014, con mis 21 años, empezaba a hacer mis prácticas en el Instituto del Mar del Perú; 
+salía de la universidad, con muchas aspiraciones, sueños, con ganas de "comerme" al mundo; con mis conocimientos en pesquerías, 
+y habiendo pasado un por un ligero entreamiento en surfer, excel y SPSS.
+Pobre chico ingenuo; no tenía ni idea de lo que era programación; en pleno 2014!!!. Recuerdo un compañero del imarpe, me presentó si conocía sobre R;
+¿R?, ¿qué es eso?, ¿para qué sirve?; me dijo, ven ven, abrió un programa (R-studio) y me dijo, mira, esto es R, (vi una serie de lineas de código); 
+agarró, sombreó todo y aplastó un botón (Run); y maravilla, se hizo un gráfico. Jajajaja! Un bendito gráfico, que no entendía hasta ese momento cómo,
+pero la tontería estaba ahí en mi cara, le dije que me enseñara, me dijo, mira, este es mi archivo, acá le cambio parámetros, sombreo todo y se hace el gráfico!.
+
+Creo que hasta este punto, ya muchos sabrán, que mi compañero en ese entonces, no sabía ni lo que estaba haciendo, pero como muchas personas, empezamos solo corriendo
+líneas de código, sin siquiera entenderlo
+
+

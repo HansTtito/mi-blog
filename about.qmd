@@ -1,5 +1,5 @@
 ---
-title: "Sobre mí"
+title: "About me"
 image: profile.jpg
 about:
   template: jolla
@@ -15,49 +15,67 @@ about:
     - icon: envelope
       text: Email
       href: mailto:hansttito06@gmail.com
+    - icon: file-pdf
+      text: Curriculum
+      href: /mi-blog/files-docs/Cv-quarto-HK.pdf
 ---
 
-## ¡Hola! Soy Hans Ttito 👋
 
-Soy Biólogo pesquero y estudiante de Magíster en Ciencias con mención en Pesquerías en la Universidad de Concepción (Chile). Me especializo en estudiar el impacto del salmón Chinook (*Oncorhynchus tshawytscha*) sobre peces pelágicos pequeños en el sur de Chile, explorando cómo las especies invasoras, el cambio climático y las actividades humanas afectan la sostenibilidad de nuestros recursos marinos.
+## Hi! I'm Hans Ttito 👋
 
-### Mi viaje hacia la programación
+I'm a fisheries biologist and a master's student in Fisheries Science at the University of Concepción (Chile).
+My work focuses on studying the impact of Chinook salmon (*Oncorhynchus tshawytscha*) on small pelagic fish in southern Chile,
+exploring how invasive species, climate change, and human activities affect the sustainability of our marine resources.
 
-Como muchos científicos, mi camino en la programación nació de una necesidad: analizar grandes volúmenes de datos ecológicos y pesqueros sin perderme en el proceso. Lo que comenzó como una herramienta se convirtió en una pasión. Descubrí que con **R y Python** podía:
+### My Journey into Programming
 
-:::{.feature}
-- 🔄 Automatizar tareas repetitivas que antes me tomaban días
-- 📊 Crear visualizaciones que comunican ciencia de manera clara 
-- 🖥️ Construir dashboards y aplicaciones reproducibles
-:::
-
-La programación no es solo una herramienta técnica; es un puente entre la ciencia, la gestión pesquera y la sociedad.
-
-### ¿Por qué "Programación para no programadores"?
-
-Sé lo intimidante que puede ser empezar a programar, especialmente cuando tu formación es en ciencias naturales. Por eso creé este blog: para compartir lo que aprendo de manera accesible y práctica. Aquí encontrarás:
+Like many scientists, my programming journey started out of necessity: analyzing large volumes of ecological and fisheries data without getting lost along the way.
+What began as just a tool quickly became a passion. I discovered that with **R and Python** I could:
 
 :::{.feature}
-- 🐟 Aplicaciones prácticas de R y Python en ciencias marinas
-- 📊 Tutoriales paso a paso sin jerga técnica innecesaria
-- 🌍 Ejemplos reales de análisis de datos ecológicos
-- 📦 Recetas para automatizar tu flujo de trabajo científico
+
+* 🔄 Automate repetitive tasks that used to take me days
+* 📊 Create visualizations that clearly communicate science
+* 🖥️ Build reproducible dashboards and applications
 :::
 
-Mi misión es desmitificar la programación y mostrar que cualquier científico puede aprender a codificar, sin importar su background técnico.
+Programming isn’t just a technical tool; it’s a bridge between science, fisheries management, and society.
 
-### Más allá del código
+### Why “Programming for Non-Programmers”?
 
-Cuando no estoy programando o analizando datos, me encontrarás:
+I know how intimidating programming can seem, especially if you come from a natural sciences background.
+That’s why I created this blog: to share what I learn in an accessible and practical way. Here you’ll find:
 
 :::{.feature}
-- 📖 Investigando sobre ecología marina
-- 🎣 En terreno, recolectando muestras con pescadores
-- ☕ Pensando en cómo la ciencia puede contribuir a la conservación marina
+
+* 🐟 Practical applications of R and Python in marine sciences
+* 📊 Step-by-step tutorials with no unnecessary jargon
+* 🌍 Real examples of ecological data analysis
+* 📦 Recipes to automate your scientific workflow
 :::
 
-### ¡Conectemos!
+My mission is to demystify programming and show that any scientist can learn to code, no matter their technical background.
 
-Si eres científico y quieres aprender a programar, o si ya programas y te interesa la ecología marina, me encantaría conectar contigo. Puedes encontrarme en [github](https://github.com/HansTtito) o escribirme a [hansttito06@gmail.com](mailto:hansttito06@gmail.com).
+### Beyond Coding
 
-¿Tienes datos biológicos que necesitas procesar? ¿Quieres aprender a modelar una red trófica? ¿O simplemente necesitas ayuda para dar tus primeros pasos en programación? ¡Estoy aquí para ayudarte!
+When I’m not programming or analyzing data, you’ll find me:
+
+:::{.feature}
+
+* 📖 Researching marine ecology
+* 🎣 In the field, collecting samples with fishers
+* ☕ Reflecting on how science can contribute to marine conservation
+:::
+
+### Let’s Connect!
+
+If you’re a scientist looking to learn programming, or if you already code and are interested in marine ecology, I’d love to connect with you.
+You can find me on [LinkedIn](https://linkedin.com/in/hansttito) or email me at [hansttito06@gmail.com](mailto:hansttito06@gmail.com).
+You can also check out my repositories on [GitHub](https://github.com/HansTtito), and here’s my [CV](/files-docs/Cv-quarto-HK.pdf) if you’re interested.
+
+Do you have biological data you need to process? Want to talk about programming?
+Or just need some help with a script? I’m here to help!
+
+---
+
+If you want it even more concise or need any adjustment in the tone, let me know!

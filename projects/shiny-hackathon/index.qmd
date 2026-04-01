@@ -1,0 +1,22 @@
+---
+title: "Shiny Hackathon"
+description: "Application developed in Shiny for the Appsilon Hackathon - 2025"
+author: "Hans Ttito"
+date: "2025-05-04"
+image: "images/shiny-hackathon.png"
+categories: [Shiny, R]
+---
+
+## About this project
+
+This web application was developed as part of the Hackathon organized by [Appsilon](https://www.appsilon.com/)
+
+![shiny-hackathon](images/shiny-hackathon.png)
+
+## How to access
+
+The application is available on [shinyapps.io](https://kevin-ttito.shinyapps.io/shiny-tiny-hackathon/).
+
+## Source code
+
+The source code is available on [GitHub](https://github.com/HansTtito/shiny-tiny-hackathon).

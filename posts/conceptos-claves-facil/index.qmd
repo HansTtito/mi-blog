@@ -1,0 +1,53 @@
+---
+title: "Conceptos claves para Principiantes"
+image: "starting.jpg"
+author: "Hans Ttito"
+date: "2025-05-03"
+categories: [news]
+description: "Ciertos conceptos básicos, claves que deberías conocer"
+---
+
+## 👉 Conceptos clave explicados fácil
+
+Ok, ahora que te animé a programar (espero ... en verdad), toca aterrizar, aclarar un poco las ideas.
+
+¿Qué significa todo ese rollo, palabrerías... que uno escucha cuando se mete en este mundo? 
+
+Te dejo una mini-guía sin tecnicismos innecesarios:
+
+## 💻 Script
+
+Un script es básicamente un archivo de texto con instrucciones para la compu. Tú le dices qué hacer, paso a paso.
+Ejemplo real: “abre este archivo, filtra los datos, haz un gráfico bonito, y guárdalo como imagen”. Eso es un script.
+
+## 🧠 Algoritmo
+
+Palabra elegante para “receta”. Es una serie de pasos lógicos para resolver un problema.
+Como una receta para hacer tu comida favorita (un chaufita), pero en vez de arrocito y pollito, usas datos y funciones.
+
+## 📦 Librería o paquete
+
+Imagina que estás cocinando y usas una caja con especias listas para usar (el hotdog para el chaufita, okno!; me refiero más a especerías - así le decimos en mi país).
+Una librería en programación es eso: un conjunto de funciones ya hechas que puedes reutilizar.
+Ejemplo: en Python, pandas sirve para trabajar con datos tabulares. En R, ggplot2 para hacer gráficos muy fáciles y elegantes.
+
+## 🐍 Python / R
+
+---
+
+Lenguajes de programación. Yo uso ambos.
+
+Python: súper versátil, fácil de leer, ideal para ciencia de datos, automatización, web, todo.
+
+R: amado por biólogos, estadísticos y gente que ama hacer gráficos lindos; aunque igual, se puede hacer mucha ciencia de datos, y es super, super fácil de aprender.
+
+--- 
+
+## ⚙️ Automatizar
+
+Es dejar que la compu haga el trabajo repetitivo por ti.
+Ejemplo: en vez de copiar y pegar 200 veces en Excel, haces un script que lo haga todo de una.
+
+## 🚀 Ejecutar / Correr
+
+Es simplemente “hacer que corra el código”. Es decir, darle play para que haga lo que escribiste.

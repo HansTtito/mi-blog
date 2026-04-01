@@ -6,3 +6,15 @@ freeze: true
 
 # Enable banner style title blocks
 title-block-banner: true
+
+comments:
+  giscus:
+    repo: "HansTtito/mi-blog"
+    repo-id: "R_kgDOOddWpA"    # Copiado de giscus.app
+    category: "[NOMBRE CATEGORÍA]"
+    category-id: "[ID CATEGORÍA]"   # Copiado de giscus.app
+    mapping: "pathname"
+    reactions-enabled: true
+    input-position: "bottom"
+    theme: "dark"
+    loading: "lazy"
