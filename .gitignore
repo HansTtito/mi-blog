@@ -1,3 +1,9 @@
-/docs/
+# Quarto
+.quarto/
 /.quarto/
-profile.jpg
+
+# Personal notes
+deploy-command.txt
+
+# Draft posts (not ready to publish)
+posts/_borradores/
