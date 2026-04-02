@@ -73,7 +73,7 @@ Temperature drives virtually every rate in the bioenergetics model, so you need 
 ```r
 set.seed(42)
 days     <- 1:180
-base_temp <- 7 + 7 * sin(pi * (days - 20) / 180)   # sinusoidal season
+base_temp <- 9 + 7 * sin(pi * (days - 20) / 180)   # sinusoidal season
 temp_vec  <- pmax(2, base_temp + rnorm(180, 0, 0.4)) # small daily noise
 
 temp_data <- data.frame(
