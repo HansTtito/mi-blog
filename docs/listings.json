@@ -1,0 +1,27 @@
+[
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/fishing-closures-areas-peru/index.html",
+      "/projects/fb4package/index.html",
+      "/projects/copernicusR/index.html",
+      "/projects/biodiversity-dashboard/index.html",
+      "/projects/invasal/index.html",
+      "/projects/shiny-hackathon/index.html",
+      "/projects/Tivy/index.html",
+      "/projects/record-vessel/index.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/fb4package/index.html",
+      "/posts/mi-primer-script-python/index.html",
+      "/posts/conceptos-claves-facil/index.html",
+      "/posts/docker-python/index.html",
+      "/posts/mi-primer-script-R/index.html",
+      "/posts/que-es-programacion/index.html",
+      "/posts/first-steps/index.html"
+    ]
+  }
+]
